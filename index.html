@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4Apero - Discover Castellane, Provence region, France</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <nav class="nav-container">
+            <div class="nav-logo">
+                <h1>4<span>Apero</span></h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#retreats" class="nav-link">Retreats</a></li>
+                <li><a href="https://www.avignon-et-provence.com/en/tourism-provence/castellane" class="nav-link" target="_blank">About Castellane</a></li>
+                <li><a href="#about" class="nav-link" onclick="showAboutHostsModal(); return false;">About Hosts</a></li>
+                <li><a href="#contact" class="nav-link" onclick="showContactModal(); return false;">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Discover <span class="highlight">Castellane, France</span>
+                </h1>
+                <div class="hero-description">
+                    <h3 class="hero-subtitle">A Hidden Gem in the Heart of Provence</h3>
+                    <p class="hero-text">
+                        Nestled between lavender fields and the turquoise waters of the Verdon River, Castellane invites you to slow down, breathe deeply, and reconnect with what truly matters. Over five unforgettable days and four restorative nights, immerse yourself in a sensorial journey that blends nature, art, wellness, and the timeless charm of Southern France.
+                    </p>
+                    <p class="hero-text">
+                        Wake up to the scent of wild herbs and the distant echo of church bells from the Notre-Dame du Roc chapel perched high above the village. Wander through cobbled streets lined with pastel façades, taste the region's finest cheeses and rosé, and let the golden Provençal light awaken your creativity and calm.
+                    </p>
+                    <p class="hero-text">
+                        Our exclusive retreats combine luxury comfort with authentic local experiences — from guided nature walks and riverside picnics to artisan workshops and mindful evenings under the stars. Whether you come to paint, heal, meditate, or simply rest, Castellane offers the perfect harmony of adventure and serenity.
+                    </p>
+                    <div class="hero-highlights">
+                        <h4>✨ Highlights</h4>
+                        <ul>
+                            <li>Boutique accommodation with panoramic mountain views</li>
+                            <li>Gourmet Provençal cuisine and local wines</li>
+                            <li>Personalized wellness or creative workshops</li>
+                            <li>Visits to Grasse, the world's perfume capital</li>
+                            <li>Time to explore the Verdon Gorges and lavender valleys</li>
+                        </ul>
+                        <p class="hero-text"><strong>🌸 5 Days / 4 Nights of Reconnection and Renewal</strong></p>
+                        <p class="hero-text"><em>Let Provence remind you how good life can feel.</em></p>
+                        <p class="hero-text">Book your retreat in Castellane today — where nature, color, and calm meet.</p>
+                    </div>
+                </div>
+                <button class="cta-button">
+                    <span>Book now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="hero-image">
+                <img src="./images/hero-provence.jpeg" alt="Beautiful Castellane region in Provence" class="region-photo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Cards Section -->
+    <section id="retreats" class="retreats">
+        <div class="container">
+            <div class="section-header">
+                <h2>Upcoming Retreats</h2>
+                <p>Find your perfect escape in the heart of Provence</p>
+            </div>
+            <div class="travel-cards" id="travelCards">
+                <!-- Cards will be dynamically generated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>4<span>Apero</span></h3>
+                    <p>Your gateway to Castellane, Provence region, France</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="#retreats">Retreats</a></li>
+                            <li><a href="https://www.avignon-et-provence.com/en/tourism-provence/castellane" target="_blank">About Castellane</a></li>
+                            <li><a href="#about" onclick="showAboutHostsModal(); return false;">About Hosts</a></li>
+                            <li><a href="#contact" onclick="showContactModal(); return false;">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 4Apero. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
