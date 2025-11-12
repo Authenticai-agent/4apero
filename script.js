@@ -888,4 +888,65 @@ style.textContent = `
         transform: rotate(-45deg) translateY(-8px);
     }
 `;
+
+// Language Toggle Functionality
+let currentLanguage = 'en'; // Default language is English
+
+function toggleLanguage() {
+    const ltPromo = document.querySelector('.lt-promo');
+    const languageButton = document.querySelector('.language-toggle');
+    
+    if (currentLanguage === 'en') {
+        // Switch to Lithuanian
+        currentLanguage = 'lt';
+        ltPromo.style.display = 'block';
+        languageButton.textContent = 'English';
+        
+        // Translate navigation
+        document.querySelectorAll('.nav-link').forEach((link, index) => {
+            const translations = ['Pradžia', 'Kelionės', 'Apie Castellane', 'Apie šeimininkus', 'Kontaktai'];
+            if (index < translations.length) {
+                link.textContent = translations[index];
+            }
+        });
+        
+        // Translate hero title
+        const heroTitle = document.querySelector('.hero-title');
+        if (heroTitle) {
+            heroTitle.innerHTML = 'Atraskite <span class="highlight">Castellane, Prancūzija</span>';
+        }
+        
+        // Translate hero subtitle
+        const heroSubtitle = document.querySelector('.hero-subtitle');
+        if (heroSubtitle) {
+            heroSubtitle.textContent = 'Paslėptas brangakmenis Provansui širdyje';
+        }
+        
+    } else {
+        // Switch back to English
+        currentLanguage = 'en';
+        ltPromo.style.display = 'none';
+        languageButton.textContent = 'Lietuviškai';
+        
+        // Restore English navigation
+        document.querySelectorAll('.nav-link').forEach((link, index) => {
+            const translations = ['Home', 'Retreats', 'About Castellane', 'About Hosts', 'Contact'];
+            if (index < translations.length) {
+                link.textContent = translations[index];
+            }
+        });
+        
+        // Restore English hero title
+        const heroTitle = document.querySelector('.hero-title');
+        if (heroTitle) {
+            heroTitle.innerHTML = 'Discover <span class="highlight">Castellane, France</span>';
+        }
+        
+        // Restore English hero subtitle
+        const heroSubtitle = document.querySelector('.hero-subtitle');
+        if (heroSubtitle) {
+            heroSubtitle.textContent = 'A Hidden Gem in the Heart of Provence';
+        }
+    }
+}
 document.head.appendChild(style);

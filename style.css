@@ -112,6 +112,24 @@ body {
     width: 100%;
 }
 
+.language-toggle {
+    background: #059669;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: 1rem;
+}
+
+.language-toggle:hover {
+    background: #047857;
+    transform: translateY(-1px);
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -131,6 +149,73 @@ body {
 }
 
 /* Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(249, 250, 251, 0.95) 100%), url('./images/hero-provence.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 20px 80px;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Lithuanian Promotional Section */
+.lt-promo {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border: 2px solid #059669;
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lt-promo .promo-title {
+    color: #059669;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.lt-promo .promo-content {
+    color: #000000;
+    line-height: 1.8;
+}
+
+.lt-promo .promo-content p {
+    margin-bottom: 1rem;
+}
+
+.lt-promo .price-highlight {
+    background: #059669;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.lt-promo .promo-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.lt-promo .promo-list li {
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.lt-promo .promo-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #059669;
+    font-weight: bold;
+}
+
 .hero {
     min-height: 100vh;
     display: flex;
