@@ -962,11 +962,11 @@ const translations = {
             contact: 'Kontaktai'
         },
         hero: {
-            title: 'Atraskite <span class="highlight">Castellane, Prancūzija</span>',
+            title: 'Atraskite <span class="highlight">Castellane, Prancūziją</span>',
             subtitle: 'Paslėptas brangakmenis Provanso širdyje',
-            text1: 'Tarp levandų laukų ir turkio spalvos Verdono upės vandenų įsikūręs Castellane kviečia sulėtinti, giliai įkvėpti ir iš naujo susieti su tuo, kas iš tiesų svarbu. Per penkias nepamirštamas dienas ir keturias atgaivinančias naktis pasinerkite į juslių kelionę, kuri sujungia gamtą, meną, sveikatą ir amžiną Pietų Prancūzijos žavesį.',
-            text2: 'Pabuskite pajutę laukinių žolelių aromatą ir tolimą varpų skambėjimą iš Notre-Dame du Roc koplyčios, stūksančios aukštai virš kaimo. Pasivaikščiokite pasteliniais fasadais išmargintomis akmenimis grįstomis gatvelėmis, paragaukite geriausių regiono sūrių ir rožinio vyno ir leiskite auksinei Provansalo šviesai pažadinti jūsų kūrybiškumą ir ramybę.',
-            text3: 'Mūsų išskirtinės kelionės sujungia prabangų komfortą su autentiškomis vietinėmis patirtimis – nuo vadovaujamų gamtos žygių ir piknikų prie upės iki amatininkų dirbtuvių ir sąmoningų vakarų po žvaigždėmis. Nesvarbu, ar atvykstate tapyti, gydytis, medituoti ar tiesiog pailsėti, Castellane siūlo tobulą nuotykio ir ramybės harmoniją.',
+            text1: 'Tarp levandų laukų ir turkio spalvos Verdono upės vandenų įsikūręs Castellane miestas kviečia sulėtinti, giliai įkvėpti ir iš naujo susisieti su tuo, kas iš tiesų svarbu. Per tris nepamirštamas dienas ir keturias atgaivinančias naktis pasinerkite į jausmų pilną kelionę, kuri sujungia gamtą, meną, sveikatą ir amžiną Pietų Prancūzijos žavesį.',
+            text2: 'Pabuskite pajutę laukinių žolelių aromatą ir tolimą varpų skambėjimą iš Notre-Dame du Roc koplyčios, stūksančios aukštai virš kaimo. Pasivaikščiokite pasteliniais fasadais išmargintomis akmenimis grįstomis gatvelėmis, paragaukite geriausių regiono sūrių ir rožinio vyno ir leiskite auksinei Provanso šviesai pažadinti jūsų kūrybiškumą ir ramybę.',
+            text3: 'Mūsų išskirtinės kelionės sujungia jaukų komfortą su autentiškomis vietinėmis patirtimis, nuo žygių i gamtą ir piknikų prie upės iki amatininkų dirbtuvių ir nuostabių vakarų po žvaigždėmis. Nesvarbu, ar atvykstate tapyti, gydytis, medituoti ar tiesiog pailsėti, Castellane siūlo tobulą nuotykio ir ramybės harmoniją.',
             highlightsTitle: 'Pagrindinis'
         },
         retreats: {
