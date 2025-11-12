@@ -1,45 +1,91 @@
+// Language Toggle Functionality
+let currentLanguage = 'en'; // Default language is English
+
 // Retreat data - Update the image paths with your own images
-const retreats = [
-    {
-        id: 1,
-        name: "SAGE SMOKE - Meat & Fish Smoking Workshop",
-        description: "Discover the ancient art of fire, smoke, and preservation. Learn how to salt, dry, smoke, and prepare your own local delicacies. Enjoy smoky aromas and creative cooking as you transform simple ingredients into rich, complex flavors. Experience the satisfaction of mastering age-old techniques that connect you to tradition, nature, and the true essence of slow, mindful cuisine.<br><br><strong>Program Highlights:</strong><br>• Hands-on smoking workshop using Ausra's two smokers<br>• Preparation of local meats and fish<br>• Grilling techniques, marinades & smoky flavors<br>• Culinary creativity: the art of fire & taste<br>• 4 apéro evenings with local cheeses, wine & conversation<br>• Daily guided local excursions and hidden village visits<br>• Shopping in local artisan stores<br>• All meals and French wines included",
-        location: "Castellane, France",
-        date: "5 days/4 nights retreat",
-        time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
-        price: "Full price €xxxxx/ per person",
-        image: "./images/sageandmeat.png", // Add your image path here
-        highlights: [
-            "Group of 4-6 people. Hands-on smoking workshop using Ausra's two smokers",
-            "Preparation of local meats and fish",
-            "Grilling techniques, marinades & smoky flavors",
-            "Culinary creativity: the art of fire & taste",
-            "4 apéro evenings with local cheeses, wine & conversation",
-            "Daily guided local excursions and hidden village visits",
-            "Shopping in local artisan stores",
-            "Accommodation, all meals and French wines included"
-        ]
-    },
-    {
-        id: 2,
-        name: "PERFUME & COLOR — Grasse & Castellane",
-        description: "Embark on a sensorial journey that weaves together scent, color, and creation. Visit Grasse, the perfume capital of the world, and craft your own signature fragrance. Discover the secrets of aromatic blending, experiment with rare essences, and leave with a scent that captures your story and spirit.<br><br><strong>Program Highlights:</strong><br>• Guided visit to a traditional perfume house in Grasse<br>• Workshop: create your own natural perfume (personal blend)<br>• Dinner with floral & aromatic accents<br>• 4 apéro experiences pairing scent & taste<br>• Guided tours through local villages and nature trails<br>• Shopping in local perfume & artisan boutiques<br>• All meals, wines, and drinks included",
-        location: "Grasse & Castellane, France",
-        date: "5 days/4 nights retreat",
-        time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
-        price: "Full price €xxxxx/ per person",
-        image: "./images/perfumeandcolor.png", // Add your image path here
-        highlights: [
-            "Group of 4-6 people. Guided visit to a traditional perfume house in Grasse",
-            "Workshop: create your own natural perfume (personal blend)",
-            "Dinner with floral & aromatic accents",
-            "4 apéro experiences pairing scent & taste",
-            "Guided tours through local villages and nature trails",
-            "Shopping in local perfume & artisan boutiques",
-            "Accommodation, all meals, wines, and drinks included"
-        ]
-    }
-];
+const retreatsData = {
+    en: [
+        {
+            id: 1,
+            name: "SAGE SMOKE - Meat & Fish Smoking Workshop",
+            description: "Discover the ancient art of fire, smoke, and preservation. Learn how to salt, dry, smoke, and prepare your own local delicacies. Enjoy smoky aromas and creative cooking as you transform simple ingredients into rich, complex flavors. Experience the satisfaction of mastering age-old techniques that connect you to tradition, nature, and the true essence of slow, mindful cuisine.<br><br><strong>Program Highlights:</strong><br>• Hands-on smoking workshop using Ausra's two smokers<br>• Preparation of local meats and fish<br>• Grilling techniques, marinades & smoky flavors<br>• Culinary creativity: the art of fire & taste<br>• 4 apéro evenings with local cheeses, wine & conversation<br>• Daily guided local excursions and hidden village visits<br>• Shopping in local artisan stores<br>• All meals and French wines included",
+            location: "Castellane, France",
+            date: "5 days/4 nights retreat",
+            time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
+            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% OFF</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 per person</strong><br><small style="color: #666;">Inaugural price</small>',
+            image: "./images/sageandmeat.png",
+            highlights: [
+                "Group of 4-6 people. Hands-on smoking workshop using Ausra's two smokers",
+                "Preparation of local meats and fish",
+                "Grilling techniques, marinades & smoky flavors",
+                "Culinary creativity: the art of fire & taste",
+                "4 apéro evenings with local cheeses, wine & conversation",
+                "Daily guided local excursions and hidden village visits",
+                "Shopping in local artisan stores",
+                "Accommodation, all meals and French wines included"
+            ]
+        },
+        {
+            id: 2,
+            name: "PERFUME & COLOR — Grasse & Castellane",
+            description: "Embark on a sensorial journey that weaves together scent, color, and creation. Visit Grasse, the perfume capital of the world, and craft your own signature fragrance. Discover the secrets of aromatic blending, experiment with rare essences, and leave with a scent that captures your story and spirit.<br><br><strong>Program Highlights:</strong><br>• Guided visit to a traditional perfume house in Grasse<br>• Workshop: create your own natural perfume (personal blend)<br>• Dinner with floral & aromatic accents<br>• 4 apéro experiences pairing scent & taste<br>• Guided tours through local villages and nature trails<br>• Shopping in local perfume & artisan boutiques<br>• All meals, wines, and drinks included",
+            location: "Grasse & Castellane, France",
+            date: "5 days/4 nights retreat",
+            time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
+            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% OFF</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 per person</strong><br><small style="color: #666;">Inaugural price</small>',
+            image: "./images/perfumeandcolor.png",
+            highlights: [
+                "Group of 4-6 people. Guided visit to a traditional perfume house in Grasse",
+                "Workshop: create your own natural perfume (personal blend)",
+                "Dinner with floral & aromatic accents",
+                "4 apéro experiences pairing scent & taste",
+                "Guided tours through local villages and nature trails",
+                "Shopping in local perfume & artisan boutiques",
+                "Accommodation, all meals, wines, and drinks included"
+            ]
+        }
+    ],
+    lt: [
+        {
+            id: 1,
+            name: "ŠALAVIJO DŪMAI - Mėsos ir žuvies rūkymo dirbtuvės",
+            description: "Atraskite senovinį ugnies, dūmų ir konservavimo meną. Išmokite sūdyti, džiovinti, rūkyti ir ruošti savo vietinius skanėstus. Mėgaukitės dūmų aromatais ir kūrybišku gaminimo procesu, kai paprastus ingredientus paverčiate sodriomis, sudėtingomis skonių gamomis. Patirkite pasitenkinimą įvaldydami amžius senuosius metodus, kurie jus sieja su tradicija, gamta ir tikrąja lėtos, sąmoningos virtuvės esme.<br><br><strong>Programos akcentai:</strong><br>• Praktinės rūkymo dirbtuvės naudojant Ausros du rūkyklus<br>• Vietinės mėsos ir žuvies paruošimas<br>• Kepimo ant grotelių technikos, marinuotės ir dūminiai skoniai<br>• Kulinarinis kūrybiškumas: ugnies ir skonio menas<br>• 4 aperityviniai vakarai su vietiniais sūriais, vynu ir pokalbiais<br>• Kasdieninės vadovaujamos vietinės išvykos ir paslėptų kaimų aplankymai<br>• Apsipirkimas vietinėse amatininkų parduotuvėse<br>• Visi patiekalai ir prancūziški vynai įskaičiuoti",
+            location: "Castellane, Prancūzija",
+            date: "5 dienų / 4 naktų kelionė",
+            time: "Atvykimas: 15:00, Išvykimas: 10:00",
+            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Pradžios kaina</small>',
+            image: "./images/sageandmeat.png",
+            highlights: [
+                "4-6 žmonių grupė. Praktinės rūkymo dirbtuvės naudojant Ausros du rūkyklus",
+                "Vietinės mėsos ir žuvies paruošimas",
+                "Kepimo ant grotelių technikos, marinuotės ir dūminiai skoniai",
+                "Kulinarinis kūrybiškumas: ugnies ir skonio menas",
+                "4 aperityviniai vakarai su vietiniais sūriais, vynu ir pokalbiais",
+                "Kasdieninės vadovaujamos vietinės išvykos ir paslėptų kaimų aplankymai",
+                "Apsipirkimas vietinėse amatininkų parduotuvėse",
+                "Apgyvendinimas, visi patiekalai ir prancūziški vynai įskaičiuoti"
+            ]
+        },
+        {
+            id: 2,
+            name: "KVEPALAI IR SPALVA — Grasse ir Castellane",
+            description: "Pradėkite juslių kelionę, kuri sujungia kvapą, spalvą ir kūrimą. Aplankykite Grasse, pasaulio kvepalų sostinę, ir sukurkite savo unikalius kvepalus. Atraskite aromatingų mišinių paslaptis, eksperimentuokite su retomis esencijomis ir išvykite su kvapu, kuris išreiškia jūsų istoriją ir dvasią.<br><br><strong>Programos akcentai:</strong><br>• Vadovaujama ekskursija į tradicinę kvepalų gamyklą Grasse<br>• Dirbtuvės: sukurkite savo natūralius kvepalus (asmeninį mišinį)<br>• Vakarienė su gėlių ir aromatiniais akcentais<br>• 4 aperityviniai vakarai, derinantys kvapą ir skonį<br>• Vadovaujamos ekskursijos po vietinius kaimus ir gamtos takus<br>• Apsipirkimas vietinėse kvepalų ir amatininkų parduotuvėse<br>• Visi patiekalai, vynai ir gėrimai įskaičiuoti",
+            location: "Grasse ir Castellane, Prancūzija",
+            date: "5 dienų / 4 naktų kelionė",
+            time: "Atvykimas: 15:00, Išvykimas: 10:00",
+            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Pradžios kaina</small>',
+            image: "./images/perfumeandcolor.png",
+            highlights: [
+                "4-6 žmonių grupė. Vadovaujama ekskursija į tradicinę kvepalų gamyklą Grasse",
+                "Dirbtuvės: sukurkite savo natūralius kvepalus (asmeninį mišinį)",
+                "Vakarienė su gėlių ir aromatiniais akcentais",
+                "4 aperityviniai vakarai, derinantys kvapą ir skonį",
+                "Vadovaujamos ekskursijos po vietinius kaimus ir gamtos takus",
+                "Apsipirkimas vietinėse kvepalų ir amatininkų parduotuvėse",
+                "Apgyvendinimas, visi patiekalai, vynai ir gėrimai įskaičiuoti"
+            ]
+        }
+    ]
+};
 
 // DOM Elements
 const travelCardsContainer = document.getElementById('travelCards');
@@ -60,6 +106,9 @@ document.addEventListener('DOMContentLoaded', function() {
 // Render travel cards
 function renderTravelCards() {
     if (!travelCardsContainer) return;
+    
+    // Get retreats for current language
+    const retreats = retreatsData[currentLanguage] || retreatsData.en;
     
     // Show loading state
     travelCardsContainer.innerHTML = '<div class="loading"><div class="loading-spinner"></div></div>';
@@ -895,9 +944,6 @@ style.textContent = `
     }
 `;
 
-// Language Toggle Functionality
-let currentLanguage = 'en'; // Default language is English
-
 // Translation dictionary
 const translations = {
     en: {
@@ -1022,6 +1068,8 @@ function toggleLanguage() {
         ltPromo.style.display = 'none';
     }
     
+    // Re-render retreat cards with new language
+    renderTravelCards();
     updatePageContent();
 }
 
