@@ -52,7 +52,7 @@ const retreatsData = {
             location: "Castellane, Prancūzija",
             date: "4 dienų / 3naktų kelionė",
             time: "Atvykimas: 15:00, Išvykimas: 10:00",
-            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Pradžios kaina</small>',
+            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
             image: "./images/sageandmeat.png",
             highlights: [
                 "4-6 žmonių grupė. Praktinės rūkymo dirbtuvės naudojant Ausros rūkyklas",
@@ -72,7 +72,7 @@ const retreatsData = {
             location: "Grasse ir Castellane, Prancūzija",
             date: "5 dienų / 4 naktų kelionė",
             time: "Atvykimas: 15:00, Išvykimas: 10:00",
-            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Pradžios kaina</small>',
+            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
             image: "./images/perfumeandcolor.png",
             highlights: [
                 "4-6 žmonių grupė. Vadovaujama ekskursija į tradicinę kvepalų gamyklą Grasse",
