@@ -485,19 +485,19 @@ function showAboutHostsModal() {
             <img src="./images/host-photo.jpg" alt="Ausra - Your Host" style="width: 150px; height: 150px; object-fit: cover; border-radius: 8px; flex-shrink: 0;">
             <div style="color: #000000; line-height: 1.6; font-size: 1rem;">
                 <p style="margin-bottom: 1rem;">
-                    I am Ausra, professional artist of painting, drawing, calligraphy and stained glass art, deeply empowered by holistic conjuncture of spiritual human senses in everyday human life: touch, sight, hearing, smell, taste, extrasensory perception.
+                    ${t.bio1}
                 </p>
                 <p style="margin-bottom: 1rem;">
-                    Painting by inner emotional sense, rising from music sounds&observing performance of musicians is an inseparable part of my compositions. Most surprising creative collaborations were experienced with Lille National Orchestra from France in 2009 by creating a line of peintures « Traits d'Orchestre » and with Dayton Philharmonic Orchestra from USA in 2017, called « Symphony of Lines »
+                    ${t.bio2}
                 </p>
                 <p style="margin-bottom: 1rem;">
-                    My passion for drawing and painting, combined with sacred process of the unconscious mind flows into the colors, shapes, textures and different techniques turned out into bravely and ambitiously experiment in stained glass art, finishing «Stained glass» and «Art therapy» studies in France and finally opening the « French stained glass » studio in Singapore in 2013.
+                    ${t.bio3}
                 </p>
                 <p style="margin-bottom: 1rem;">
-                    Living in 4 totally different countries (Lithuania, France, USA, and Singapore), gathering impressions and experiences, made a deep imprint to my art: joyful soul of different cultures and traditions, expanded boundaries of world vision, linking universal human senses in vivid compositions.
+                    ${t.bio4}
                 </p>
                 <p style="margin-bottom: 1rem;">
-                    While traveling abroad, inspiration of colors, tones and shapes revealed my passion for cooking and food smoking. I'm certified in food protection in Ohio, USA. Also for the last 14 years I have been teaching a drawing, painting and creation of stained glass in Universities and private schools in France, Singapore and USA.
+                    ${t.bio5}
                 </p>
             </div>
         </div>
@@ -979,7 +979,12 @@ const translations = {
             cancel: 'Cancel'
         },
         aboutHostModal: {
-            title: 'About Your Host'
+            title: 'About Your Host',
+            bio1: 'I am Ausra, professional artist of painting, drawing, calligraphy and stained glass art, deeply empowered by holistic conjuncture of spiritual human senses in everyday human life: touch, sight, hearing, smell, taste, extrasensory perception.',
+            bio2: 'Painting by inner emotional sense, rising from music sounds&observing performance of musicians is an inseparable part of my compositions. Most surprising creative collaborations were experienced with Lille National Orchestra from France in 2009 by creating a line of peintures « Traits d\'Orchestre » and with Dayton Philharmonic Orchestra from USA in 2017, called « Symphony of Lines »',
+            bio3: 'My passion for drawing and painting, combined with sacred process of the unconscious mind flows into the colors, shapes, textures and different techniques turned out into bravely and ambitiously experiment in stained glass art, finishing «Stained glass» and «Art therapy» studies in France and finally opening the « French stained glass » studio in Singapore in 2013.',
+            bio4: 'Living in 4 totally different countries (Lithuania, France, USA, and Singapore), gathering impressions and experiences, made a deep imprint to my art: joyful soul of different cultures and traditions, expanded boundaries of world vision, linking universal human senses in vivid compositions.',
+            bio5: 'While traveling abroad, inspiration of colors, tones and shapes revealed my passion for cooking and food smoking. I\'m certified in food protection in Ohio, USA. Also for the last 14 years I have been teaching a drawing, painting and creation of stained glass in Universities and private schools in France, Singapore and USA.'
         },
         contactModal: {
             title: 'Contact Us',
@@ -1032,7 +1037,12 @@ const translations = {
             cancel: 'Atšaukti'
         },
         aboutHostModal: {
-            title: 'Apie jūsų šeimininkę'
+            title: 'Apie jūsų šeimininkę',
+            bio1: 'Aš esu Aušra, profesionali tapybos, piešimo, kaligrafijos ir vitražo meno menininkė, giliai įkvėpta dvasinių žmogiškųjų pojūčių holistinio derinio kasdienėje žmogaus gyvenime: lytėjimo, regos, klausos, uoslės, skonio, ekstrasensorinio suvokimo.',
+            bio2: 'Tapymas vidiniu emociniu pojūčiu, kylančiu iš muzikos garsų ir stebint muzikantų pasirodymą, yra neatskiriama mano kompozicijų dalis. Labiausiai stebinanti kūrybinė bendradarbiavimas buvo patirtas su Lilio nacionaliniu orkestru iš Prancūzijos 2009 m., sukuriant paveikslų liniją « Traits d\'Orchestre » ir su Deitono filharmonijos orkestru iš JAV 2017 m., pavadintą « Symphony of Lines ».',
+            bio3: 'Mano aistra piešimui ir tapybai, sujungta su šventu pasąmonės procesu, tekančiu į spalvas, formas, tekstūras ir skirtingas technikas, pavirto drąsiais ir ambicingais eksperimentais vitražo mene, baigus «Vitražo» ir «Meno terapijos» studijas Prancūzijoje ir galiausiai atidarant « French stained glass » studiją Singapūre 2013 m.',
+            bio4: 'Gyvenimas 4 visiškai skirtingose šalyse (Lietuvoje, Prancūzijoje, JAV ir Singapūre), renkant įspūdžius ir patirtis, padarė gilų įspaudą mano menui: džiugią skirtingų kultūrų ir tradicijų sielą, išplėstus pasaulio vizijos ribas, sujungiant universalius žmogiškuosius pojūčius ryškiose kompozicijose.',
+            bio5: 'Keliaujant užsienyje, spalvų, tonų ir formų įkvėpimas atskleidė mano aistrą maisto gaminimui ir rūkymui. Esu sertifikuota maisto apsaugos srityje Ohajo valstijoje, JAV. Taip pat pastaruosius 14 metų dėstau piešimą, tapybą ir vitražo kūrimą universitetuose ir privačiose mokyklose Prancūzijoje, Singapūre ir JAV.'
         },
         contactModal: {
             title: 'Susisiekite su mumis',
