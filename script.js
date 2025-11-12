@@ -1048,6 +1048,12 @@ function updatePageContent() {
     if (heroTexts[1]) heroTexts[1].textContent = t.hero.text2;
     if (heroTexts[2]) heroTexts[2].textContent = t.hero.text3;
     
+    // Show/hide hero highlights based on language
+    const heroHighlights = document.querySelector('.hero-highlights');
+    if (heroHighlights) {
+        heroHighlights.style.display = currentLanguage === 'en' ? 'block' : 'none';
+    }
+    
     const highlightsTitle = document.querySelector('.highlights-title');
     if (highlightsTitle) highlightsTitle.textContent = t.hero.highlightsTitle;
     
