@@ -123,6 +123,8 @@ function handleCardClick(retreat) {
 
 // Show booking modal with form
 function showBookingModal(retreat) {
+    const t = translations[currentLanguage].bookingModal;
+    
     // Create modal overlay
     const modalOverlay = document.createElement('div');
     modalOverlay.className = 'modal-overlay';
@@ -158,33 +160,33 @@ function showBookingModal(retreat) {
     `;
     
     modalContent.innerHTML = `
-        <h2 style="color: #000000; margin-bottom: 1rem; font-size: 1.5rem;">Book Your Retreat</h2>
+        <h2 style="color: #000000; margin-bottom: 1rem; font-size: 1.5rem;">${t.title}</h2>
         <h3 style="margin-bottom: 0.5rem; color: #000000;">${retreat.name}</h3>
         <p style="color: #333333; margin-bottom: 1.5rem;">${retreat.description}</p>
         
         <form id="bookingForm" style="margin-bottom: 1.5rem;">
             <div style="margin-bottom: 1rem;">
-                <label style="display: block; margin-bottom: 0.5rem; color: #000000; font-weight: 500;">First Name *</label>
+                <label style="display: block; margin-bottom: 0.5rem; color: #000000; font-weight: 500;">${t.firstName} *</label>
                 <input type="text" name="firstName" required style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 1rem;">
             </div>
             
             <div style="margin-bottom: 1rem;">
-                <label style="display: block; margin-bottom: 0.5rem; color: #000000; font-weight: 500;">Last Name *</label>
+                <label style="display: block; margin-bottom: 0.5rem; color: #000000; font-weight: 500;">${t.lastName} *</label>
                 <input type="text" name="lastName" required style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 1rem;">
             </div>
             
             <div style="margin-bottom: 1rem;">
-                <label style="display: block; margin-bottom: 0.5rem; color: #000000; font-weight: 500;">Phone *</label>
+                <label style="display: block; margin-bottom: 0.5rem; color: #000000; font-weight: 500;">${t.phone} *</label>
                 <input type="tel" name="phone" required style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 1rem;">
             </div>
             
             <div style="margin-bottom: 1rem;">
-                <label style="display: block; margin-bottom: 0.5rem; color: #000000; font-weight: 500;">Email *</label>
+                <label style="display: block; margin-bottom: 0.5rem; color: #000000; font-weight: 500;">${t.email} *</label>
                 <input type="email" name="email" required style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 1rem;">
             </div>
             
             <div style="margin-bottom: 1rem;">
-                <label style="display: block; margin-bottom: 0.5rem; color: #000000; font-weight: 500;">How Many People *</label>
+                <label style="display: block; margin-bottom: 0.5rem; color: #000000; font-weight: 500;">${t.people} *</label>
                 <select name="people" required style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 1rem;">
                     <option value="">Select number</option>
                     <option value="1">1 person</option>
@@ -197,7 +199,7 @@ function showBookingModal(retreat) {
             </div>
             
             <div style="margin-bottom: 1.5rem;">
-                <label style="display: block; margin-bottom: 0.5rem; color: #000000; font-weight: 500;">Preferred Date *</label>
+                <label style="display: block; margin-bottom: 0.5rem; color: #000000; font-weight: 500;">${t.date} *</label>
                 <input type="date" name="date" required style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 1rem;">
             </div>
             
@@ -205,8 +207,8 @@ function showBookingModal(retreat) {
             <input type="hidden" name="retreatPrice" value="${retreat.price}">
             
             <div style="display: flex; gap: 1rem;">
-                <button type="submit" class="cta-button" style="flex: 1;">Submit</button>
-                <button type="button" class="cancel-button" style="flex: 1; background: #e5e7eb; color: #000000; padding: 1rem 2rem; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">Cancel</button>
+                <button type="submit" class="cta-button" style="flex: 1;">${t.confirmBooking}</button>
+                <button type="button" class="cancel-button" style="flex: 1; background: #e5e7eb; color: #000000; padding: 1rem 2rem; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">${t.cancel}</button>
             </div>
         </form>
     `;
@@ -391,6 +393,8 @@ The 4apero.com Team
 
 // Show About Hosts modal
 function showAboutHostsModal() {
+    const t = translations[currentLanguage].aboutHostModal;
+    
     const modalOverlay = document.createElement('div');
     modalOverlay.className = 'modal-overlay';
     modalOverlay.style.cssText = `
@@ -425,7 +429,7 @@ function showAboutHostsModal() {
     
     modalContent.innerHTML = `
         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
-            <h2 style="color: #000000; font-size: 1.8rem; margin: 0;">About Your Host</h2>
+            <h2 style="color: #000000; font-size: 1.8rem; margin: 0;">${t.title}</h2>
             <button onclick="this.closest('.modal-overlay').remove()" style="background: none; border: none; font-size: 1.5rem; color: #666; cursor: pointer; padding: 0.5rem; line-height: 1; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 4px; transition: background 0.2s;" onmouseover="this.style.background='#f3f4f6'" onmouseout="this.style.background='none'">×</button>
         </div>
         <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem;">
@@ -484,6 +488,8 @@ function showAboutHostsModal() {
 
 // Show Contact modal
 function showContactModal() {
+    const t = translations[currentLanguage].contactModal;
+    
     const modalOverlay = document.createElement('div');
     modalOverlay.className = 'modal-overlay';
     modalOverlay.style.cssText = `
@@ -515,23 +521,23 @@ function showContactModal() {
     `;
     
     modalContent.innerHTML = `
-        <h2 style="color: #000000; margin-bottom: 1.5rem; font-size: 1.8rem;">Contact Us</h2>
+        <h2 style="color: #000000; margin-bottom: 1.5rem; font-size: 1.8rem;">${t.title}</h2>
         <form id="contactForm">
             <div style="margin-bottom: 1.5rem;">
-                <label style="display: block; color: #000000; margin-bottom: 0.5rem; font-weight: 500;">Name</label>
+                <label style="display: block; color: #000000; margin-bottom: 0.5rem; font-weight: 500;">${t.name}</label>
                 <input type="text" name="name" required style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 1rem;">
             </div>
             <div style="margin-bottom: 1.5rem;">
-                <label style="display: block; color: #000000; margin-bottom: 0.5rem; font-weight: 500;">Email</label>
+                <label style="display: block; color: #000000; margin-bottom: 0.5rem; font-weight: 500;">${t.email}</label>
                 <input type="email" name="email" required style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 1rem;">
             </div>
             <div style="margin-bottom: 1.5rem;">
-                <label style="display: block; color: #000000; margin-bottom: 0.5rem; font-weight: 500;">Message</label>
+                <label style="display: block; color: #000000; margin-bottom: 0.5rem; font-weight: 500;">${t.message}</label>
                 <textarea name="message" required rows="5" style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 1rem; resize: vertical;"></textarea>
             </div>
             <div style="display: flex; gap: 1rem;">
-                <button type="submit" class="cta-button" style="flex: 1;">Send Message</button>
-                <button type="button" class="cancel-button" style="flex: 1; background: #f3f4f6; color: #000000; border: 1px solid #e5e7eb;">Cancel</button>
+                <button type="submit" class="cta-button" style="flex: 1;">${t.send}</button>
+                <button type="button" class="cancel-button" style="flex: 1; background: #f3f4f6; color: #000000; border: 1px solid #e5e7eb;">${t.cancel}</button>
             </div>
         </form>
     `;
@@ -892,61 +898,186 @@ style.textContent = `
 // Language Toggle Functionality
 let currentLanguage = 'en'; // Default language is English
 
+// Translation dictionary
+const translations = {
+    en: {
+        nav: {
+            home: 'Home',
+            retreats: 'Retreats',
+            aboutCastellane: 'About Castellane',
+            aboutHosts: 'About Hosts',
+            contact: 'Contact'
+        },
+        hero: {
+            title: 'Discover <span class="highlight">Castellane, France</span>',
+            subtitle: 'A Hidden Gem in the Heart of Provence',
+            text1: 'Nestled between lavender fields and the turquoise waters of the Verdon River, Castellane invites you to slow down, breathe deeply, and reconnect with what truly matters. Over five unforgettable days and four restorative nights, immerse yourself in a sensorial journey that blends nature, art, wellness, and the timeless charm of Southern France.',
+            text2: 'Wake up to the scent of wild herbs and the distant echo of church bells from the Notre-Dame du Roc chapel perched high above the village. Wander through cobbled streets lined with pastel façades, taste the region\'s finest cheeses and rosé, and let the golden Provençal light awaken your creativity and calm.',
+            text3: 'Our exclusive retreats combine luxury comfort with authentic local experiences — from guided nature walks and riverside picnics to artisan workshops and mindful evenings under the stars. Whether you come to paint, heal, meditate, or simply rest, Castellane offers the perfect harmony of adventure and serenity.',
+            highlightsTitle: 'Highlights'
+        },
+        retreats: {
+            sectionTitle: 'Our Retreats',
+            sectionSubtitle: 'Find your perfect escape in the heart of Provence',
+            bookNow: 'Book Now'
+        },
+        bookingModal: {
+            title: 'Book Your Retreat',
+            firstName: 'First Name',
+            lastName: 'Last Name',
+            phone: 'Phone',
+            email: 'Email',
+            people: 'Number of People',
+            date: 'Preferred Date',
+            confirmBooking: 'Confirm Booking',
+            cancel: 'Cancel'
+        },
+        aboutHostModal: {
+            title: 'About Your Host'
+        },
+        contactModal: {
+            title: 'Contact Us',
+            name: 'Name',
+            email: 'Email',
+            message: 'Message',
+            send: 'Send Message',
+            cancel: 'Cancel'
+        },
+        footer: {
+            tagline: 'Your gateway to Castellane, Provence region, France',
+            explore: 'Explore',
+            retreats: 'Retreats',
+            aboutCastellane: 'About Castellane',
+            aboutHosts: 'About Hosts',
+            contactUs: 'Contact Us',
+            rights: '© 2025 4Apero. All rights reserved.'
+        }
+    },
+    lt: {
+        nav: {
+            home: 'Pradžia',
+            retreats: 'Kelionės',
+            aboutCastellane: 'Apie Castellane',
+            aboutHosts: 'Apie šeimininkus',
+            contact: 'Kontaktai'
+        },
+        hero: {
+            title: 'Atraskite <span class="highlight">Castellane, Prancūzija</span>',
+            subtitle: 'Paslėptas brangakmenis Provanso širdyje',
+            text1: 'Tarp levandų laukų ir turkio spalvos Verdono upės vandenų įsikūręs Castellane kviečia sulėtinti, giliai įkvėpti ir iš naujo susieti su tuo, kas iš tiesų svarbu. Per penkias nepamirštamas dienas ir keturias atgaivinančias naktis pasinerkite į juslių kelionę, kuri sujungia gamtą, meną, sveikatą ir amžiną Pietų Prancūzijos žavesį.',
+            text2: 'Pabuskite pajutę laukinių žolelių aromatą ir tolimą varpų skambėjimą iš Notre-Dame du Roc koplyčios, stūksančios aukštai virš kaimo. Pasivaikščiokite pasteliniais fasadais išmargintomis akmenimis grįstomis gatvelėmis, paragaukite geriausių regiono sūrių ir rožinio vyno ir leiskite auksinei Provansalo šviesai pažadinti jūsų kūrybiškumą ir ramybę.',
+            text3: 'Mūsų išskirtinės kelionės sujungia prabangų komfortą su autentiškomis vietinėmis patirtimis – nuo vadovaujamų gamtos žygių ir piknikų prie upės iki amatininkų dirbtuvių ir sąmoningų vakarų po žvaigždėmis. Nesvarbu, ar atvykstate tapyti, gydytis, medituoti ar tiesiog pailsėti, Castellane siūlo tobulą nuotykio ir ramybės harmoniją.',
+            highlightsTitle: 'Pagrindinis'
+        },
+        retreats: {
+            sectionTitle: 'Mūsų kelionės',
+            sectionSubtitle: 'Raskite savo tobulą pabėgimą Provanso širdyje',
+            bookNow: 'Rezervuoti dabar'
+        },
+        bookingModal: {
+            title: 'Rezervuokite savo kelionę',
+            firstName: 'Vardas',
+            lastName: 'Pavardė',
+            phone: 'Telefonas',
+            email: 'El. paštas',
+            people: 'Žmonių skaičius',
+            date: 'Pageidaujama data',
+            confirmBooking: 'Patvirtinti rezervaciją',
+            cancel: 'Atšaukti'
+        },
+        aboutHostModal: {
+            title: 'Apie jūsų šeimininkę'
+        },
+        contactModal: {
+            title: 'Susisiekite su mumis',
+            name: 'Vardas',
+            email: 'El. paštas',
+            message: 'Žinutė',
+            send: 'Siųsti žinutę',
+            cancel: 'Atšaukti'
+        },
+        footer: {
+            tagline: 'Jūsų vartai į Castellane, Provanso regioną, Prancūziją',
+            explore: 'Naršyti',
+            retreats: 'Kelionės',
+            aboutCastellane: 'Apie Castellane',
+            aboutHosts: 'Apie šeimininkus',
+            contactUs: 'Susisiekite su mumis',
+            rights: '© 2025 4Apero. Visos teisės saugomos.'
+        }
+    }
+};
+
 function toggleLanguage() {
     const ltPromo = document.querySelector('.lt-promo');
     const languageButton = document.querySelector('.language-toggle');
     
     if (currentLanguage === 'en') {
-        // Switch to Lithuanian
         currentLanguage = 'lt';
-        ltPromo.style.display = 'block';
         languageButton.textContent = 'English';
-        
-        // Translate navigation
-        document.querySelectorAll('.nav-link').forEach((link, index) => {
-            const translations = ['Pradžia', 'Kelionės', 'Apie Castellane', 'Apie šeimininkus', 'Kontaktai'];
-            if (index < translations.length) {
-                link.textContent = translations[index];
-            }
-        });
-        
-        // Translate hero title
-        const heroTitle = document.querySelector('.hero-title');
-        if (heroTitle) {
-            heroTitle.innerHTML = 'Atraskite <span class="highlight">Castellane, Prancūzija</span>';
-        }
-        
-        // Translate hero subtitle
-        const heroSubtitle = document.querySelector('.hero-subtitle');
-        if (heroSubtitle) {
-            heroSubtitle.textContent = 'Paslėptas brangakmenis Provansui širdyje';
-        }
-        
+        ltPromo.style.display = 'block';
     } else {
-        // Switch back to English
         currentLanguage = 'en';
-        ltPromo.style.display = 'none';
         languageButton.textContent = 'Lietuviškai';
-        
-        // Restore English navigation
-        document.querySelectorAll('.nav-link').forEach((link, index) => {
-            const translations = ['Home', 'Retreats', 'About Castellane', 'About Hosts', 'Contact'];
-            if (index < translations.length) {
-                link.textContent = translations[index];
-            }
-        });
-        
-        // Restore English hero title
-        const heroTitle = document.querySelector('.hero-title');
-        if (heroTitle) {
-            heroTitle.innerHTML = 'Discover <span class="highlight">Castellane, France</span>';
-        }
-        
-        // Restore English hero subtitle
-        const heroSubtitle = document.querySelector('.hero-subtitle');
-        if (heroSubtitle) {
-            heroSubtitle.textContent = 'A Hidden Gem in the Heart of Provence';
-        }
+        ltPromo.style.display = 'none';
     }
+    
+    updatePageContent();
+}
+
+function updatePageContent() {
+    const t = translations[currentLanguage];
+    
+    // Update Navigation
+    const navLinks = document.querySelectorAll('.nav-link');
+    if (navLinks[0]) navLinks[0].textContent = t.nav.home;
+    if (navLinks[1]) navLinks[1].textContent = t.nav.retreats;
+    if (navLinks[2]) navLinks[2].textContent = t.nav.aboutCastellane;
+    if (navLinks[3]) navLinks[3].textContent = t.nav.aboutHosts;
+    if (navLinks[4]) navLinks[4].textContent = t.nav.contact;
+    
+    // Update Hero Section
+    const heroTitle = document.querySelector('.hero-title');
+    if (heroTitle) heroTitle.innerHTML = t.hero.title;
+    
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+    if (heroSubtitle) heroSubtitle.textContent = t.hero.subtitle;
+    
+    const heroTexts = document.querySelectorAll('.hero-text');
+    if (heroTexts[0]) heroTexts[0].textContent = t.hero.text1;
+    if (heroTexts[1]) heroTexts[1].textContent = t.hero.text2;
+    if (heroTexts[2]) heroTexts[2].textContent = t.hero.text3;
+    
+    const highlightsTitle = document.querySelector('.highlights-title');
+    if (highlightsTitle) highlightsTitle.textContent = t.hero.highlightsTitle;
+    
+    // Update Retreats Section
+    const sectionTitle = document.querySelector('.section-header h2');
+    if (sectionTitle) sectionTitle.textContent = t.retreats.sectionTitle;
+    
+    const sectionSubtitle = document.querySelector('.section-header p');
+    if (sectionSubtitle) sectionSubtitle.textContent = t.retreats.sectionSubtitle;
+    
+    // Update all Book Now buttons
+    const bookButtons = document.querySelectorAll('.card-book-button');
+    bookButtons.forEach(button => {
+        button.textContent = t.retreats.bookNow;
+    });
+    
+    // Update Footer
+    const footerTagline = document.querySelector('.footer-logo p');
+    if (footerTagline) footerTagline.textContent = t.footer.tagline;
+    
+    const footerExplore = document.querySelector('.link-group h4');
+    if (footerExplore) footerExplore.textContent = t.footer.explore;
+    
+    const footerLinks = document.querySelectorAll('.footer-links a');
+    if (footerLinks[0]) footerLinks[0].textContent = t.footer.retreats;
+    if (footerLinks[1]) footerLinks[1].textContent = t.footer.aboutCastellane;
+    if (footerLinks[2]) footerLinks[2].textContent = t.footer.aboutHosts;
+    if (footerLinks[3]) footerLinks[3].textContent = t.footer.contactUs;
+    
+    const footerRights = document.querySelector('.footer-bottom p');
+    if (footerRights) footerRights.textContent = t.footer.rights;
 }
 document.head.appendChild(style);
