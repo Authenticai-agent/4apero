@@ -70,7 +70,7 @@ const retreatsData = {
             name: "KVEPALAI IR SPALVOS — Grasse ir Castellane",
             description: "Pradėkite jausmų pilną kelionę, kuri sujungia kvapą, spalvą ir kūrybą. Aplankykite Grasse, pasaulio kvepalų sostinę, ir sukurkite savo unikalius kvepalus. Atraskite aromatingų mišinių paslaptis, eksperimentuokite su retomis esencijomis ir išvykite su kvapu, kuris išreiškia jūsų istoriją ir atspindi jūsų dvasią.<br><br><strong>Programos akcentai:</strong><br>• Vadovaujama ekskursija į tradicinę kvepalų gamyklą Grasse<br>• Dirbtuvės: sukurkite savo natūralius kvepalus (asmeninį mišinį)<br>• Vakarienė su gėlių ir aromatiniais akcentais<br>• 4 aperityviniai vakarai, derinantys kvapą ir skonį<br>• Ekskursijos po vietinius kaimus ir gamtos takus<br>• Apsipirkimas vietinėse kvepalų ir amatininkų parduotuvėse<br>• Visi patiekalai, vynai ir gėrimai įskaičiuoti",
             location: "Grasse ir Castellane, Prancūzija",
-            date: "5 dienų / 4 naktų kelionė",
+            date: "4 dienų / 3 naktų kelionė",
             time: "Atvykimas: 15:00, Išvykimas: 10:00",
             price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
             image: "./images/perfumeandcolor.png",
