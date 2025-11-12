@@ -9,9 +9,9 @@ const retreatsData = {
             name: "SAGE SMOKE - Meat & Fish Smoking Workshop",
             description: "Discover the ancient art of fire, smoke, and preservation. Learn how to salt, dry, smoke, and prepare your own local delicacies. Enjoy smoky aromas and creative cooking as you transform simple ingredients into rich, complex flavors. Experience the satisfaction of mastering age-old techniques that connect you to tradition, nature, and the true essence of slow, mindful cuisine.<br><br><strong>Program Highlights:</strong><br>• Hands-on smoking workshop using Ausra's two smokers<br>• Preparation of local meats and fish<br>• Grilling techniques, marinades & smoky flavors<br>• Culinary creativity: the art of fire & taste<br>• 4 apéro evenings with local cheeses, wine & conversation<br>• Daily guided local excursions and hidden village visits<br>• Shopping in local artisan stores<br>• All meals and French wines included",
             location: "Castellane, France",
-            date: "5 days/4 nights retreat",
+            date: "4 days / 3 nights retreat",
             time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
-            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% OFF</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 per person</strong><br><small style="color: #666;">Inaugural price</small>',
+            price: '<strong style="color: #059669; font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">4 days / 3 nights retreat</small>',
             image: "./images/sageandmeat.png",
             highlights: [
                 "Group of 4-6 people. Hands-on smoking workshop using Ausra's two smokers",
@@ -29,9 +29,9 @@ const retreatsData = {
             name: "PERFUME & COLOR — Grasse & Castellane",
             description: "Embark on a sensorial journey that weaves together scent, color, and creation. Visit Grasse, the perfume capital of the world, and craft your own signature fragrance. Discover the secrets of aromatic blending, experiment with rare essences, and leave with a scent that captures your story and spirit.<br><br><strong>Program Highlights:</strong><br>• Guided visit to a traditional perfume house in Grasse<br>• Workshop: create your own natural perfume (personal blend)<br>• Dinner with floral & aromatic accents<br>• 4 apéro experiences pairing scent & taste<br>• Guided tours through local villages and nature trails<br>• Shopping in local perfume & artisan boutiques<br>• All meals, wines, and drinks included",
             location: "Grasse & Castellane, France",
-            date: "5 days/4 nights retreat",
+            date: "4 days / 3 nights retreat",
             time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
-            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% OFF</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 per person</strong><br><small style="color: #666;">Inaugural price</small>',
+            price: '<strong style="color: #059669; font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">4 days / 3 nights retreat</small>',
             image: "./images/perfumeandcolor.png",
             highlights: [
                 "Group of 4-6 people. Guided visit to a traditional perfume house in Grasse",
