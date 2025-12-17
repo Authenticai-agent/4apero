@@ -32,7 +32,7 @@ const retreatsData = {
             date: "4 days / 3 nights retreat",
             time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
             price: '<strong style="color: #059669; font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">4 days / 3 nights retreat</small>',
-            image: "./images/perfumeandcolor.png",
+            image: "./images/image05903.jpeg",
             highlights: [
                 "Group of 4-6 people. Guided visit to a traditional perfume house in Grasse",
                 "Workshop: create your own natural perfume (personal blend)",
@@ -66,7 +66,7 @@ const retreatsData = {
             date: "4 dienų / 3 naktų kelionė",
             time: "Atvykimas: 15:00, Išvykimas: 10:00",
             price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
-            image: "./images/perfumeandcolor.png",
+            image: "./images/image05903.jpeg",
             highlights: [
                 "1 diena: Atvykimas į Nicą, kelionė į Castellane, įsikūrimas ir karališka prancūziška vakarienė.",
                 "2 diena: Pusryčiai. Kelionė per Verdono kanjoną, St. Croix ežeras, kalnų kaimeliai, piknikas gamtoje ir vakarienė Castellane.",
