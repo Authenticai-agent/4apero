@@ -93,7 +93,14 @@
                 </button>
             </div>
             <div class="hero-image">
-                <img src="./images/hero-provence.jpeg" alt="Beautiful Castellane region in Provence" class="region-photo">
+                <div class="gallery-container">
+                    <img id="mainGalleryImage" src="./images/hero-provence.jpeg" alt="Beautiful Castellane region in Provence" class="region-photo">
+                    <div class="gallery-thumbnails">
+                        <img src="./images/hero-provence.jpeg" alt="Provence landscape" class="thumbnail active" onclick="changeGalleryImage('./images/hero-provence.jpeg', this)">
+                        <img src="./images/sageandmeat.png" alt="Culinary experience" class="thumbnail" onclick="changeGalleryImage('./images/sageandmeat.png', this)">
+                        <img src="./images/perfumeandcolor.png" alt="Perfume workshop" class="thumbnail" onclick="changeGalleryImage('./images/perfumeandcolor.png', this)">
+                    </div>
+                </div>
             </div>
         </div>
     </section>

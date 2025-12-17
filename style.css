@@ -407,6 +407,44 @@ body {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), var(--shadow-neon);
 }
 
+/* Gallery Styles */
+.gallery-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.gallery-thumbnails {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+}
+
+.thumbnail:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.thumbnail.active {
+    border-color: #059669;
+    opacity: 1;
+    box-shadow: 0 0 0 2px rgba(5, 150, 105, 0.2);
+}
+
 /* Travel Cards Section */
 .retreats {
     padding: 5rem 0;

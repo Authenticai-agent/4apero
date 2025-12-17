@@ -1139,4 +1139,20 @@ function updatePageContent() {
     const footerRights = document.querySelector('.footer-bottom p');
     if (footerRights) footerRights.textContent = t.footer.rights;
 }
+
+// Gallery image change function
+function changeGalleryImage(imageSrc, thumbnail) {
+    const mainImage = document.getElementById('mainGalleryImage');
+    if (mainImage) {
+        mainImage.src = imageSrc;
+    }
+    
+    // Update active thumbnail
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    thumbnails.forEach(thumb => thumb.classList.remove('active'));
+    if (thumbnail) {
+        thumbnail.classList.add('active');
+    }
+}
+
 document.head.appendChild(style);
