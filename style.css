@@ -495,9 +495,10 @@ body {
 
 .travel-card-image {
     width: 100%;
-    height: 350px;
+    height: 400px;
     object-fit: contain;
     background-color: #f9fafb;
+    padding: 1rem;
 }
 
 .travel-card-content {
