@@ -12,7 +12,7 @@ const retreatsData = {
             date: "4 days / 3 nights retreat",
             time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
             price: '<strong style="color: #059669; font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">4 days / 3 nights retreat</small>',
-            image: "./images/sageandmeat.png",
+            image: "./images/image06380.jpeg",
             highlights: [
                 "Group of 4-6 people. Hands-on smoking workshop using Ausra's two smokers",
                 "Preparation of local meats and fish",
@@ -53,7 +53,7 @@ const retreatsData = {
             date: "4 dienų / 3 naktų kelionė",
             time: "Atvykimas: 15:00, Išvykimas: 10:00",
             price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
-            image: "./images/sageandmeat.png",
+            image: "./images/image06380.jpeg",
             highlights: [
                 "Per šią kelionę: IŠMOKSITE \n Paruošti žuvį ir mėsą pagal tradicines prancūziškas technikas. \n Rūkyti žuvį ir mėsą šaltu ir karštu būdu. \n Gamyti prancūzišką pâté, kepti savo duoną ir bagetę. \n Virti legendinę Bouillabaisse sriubą. \n Gaminti tapenade ir kitus regioninius skanėstus. \n SUŽINOSITE \n Rūkymo paslaptis: medienos rūšys, temperatūros, laikai. \n Kaip atrinkti, brandinti, marinuoti ir džiovinti mėsą bei žuvį. \n Kaip derinti patiekalus su vietiniais vynais ir sūriais. \n Provanso kulinarinės kultūros pagrindus. \n PAMATYSITE \n Įspūdingą Verdono kanjoną, St. Croix ežerą ir kalnų kaimelius. \n Provanso gamtos grožį ir kepyklas. \n Rūkymo procesus nuo ruošimo iki degustacijos. \n Rūkymo procesus nuo ruošimo iki degustacijos."
             ]
