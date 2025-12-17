@@ -122,12 +122,17 @@ function createTravelCard(retreat, index) {
     card.style.animation = 'fadeInUp 0.6s ease-out forwards';
     card.style.opacity = '0';
     
+    const highlightsList = retreat.highlights && retreat.highlights.length > 0 
+        ? `<ul class="travel-card-highlights">${retreat.highlights.map(h => `<li>${h}</li>`).join('')}</ul>` 
+        : '';
+    
     card.innerHTML = `
         <img src="${retreat.image}" alt="${retreat.name}" class="travel-card-image" loading="lazy">
         <div class="travel-card-content">
             <div>
                 <h3 class="travel-card-title">${retreat.name}</h3>
                 <p class="travel-card-description">${retreat.description}</p>
+                ${highlightsList}
             </div>
             <div>
                 <div class="travel-card-details">
