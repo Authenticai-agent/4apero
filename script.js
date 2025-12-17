@@ -47,41 +47,31 @@ const retreatsData = {
     lt: [
         {
             id: 1,
-            name: "ŠALAVIJO DŪMAI - Mėsos ir žuvies rūkymo dirbtuvės",
-            description: "Atraskite senovinį ugnies, dūmų ir konservavimo meną. Išmokite sūdyti, džiovinti, rūkyti ir ruošti savo vietinius skanėstus. Mėgaukitės dūmų aromatais ir kūrybišku gaminimo procesu, kai paprastus ingredientus paverčiate sodriomis, sudėtingomis skonių gamomis. Patirkite pasitenkinimą įvaldydami senuosius metodus, kurie jus sieja su tradicijom, gamta ir tikrąja lėtos, sąmoningos virtuvės esme.<br><br><strong>Programos akcentai:</strong><br>• Praktinės rūkymo dirbtuvės naudojant Ausros rūkyklas<br>• Vietinės mėsos ir žuvies paruošimas<br>• Kepimo ant grotelių technikos, marinuotės ir dūminiai skoniai<br>• Kulinarinis kūrybiškumas: ugnies ir skonio menas<br>• 4 aperityviniai vakarai su vietiniais sūriais, vynu ir pokalbiais<br>• Kasdieninės vietinės išvykos ir paslėptų kaimų aplankymai<br>• Apsipirkimas vietinėse amatininkų parduotuvėse<br>• Visi patiekalai ir prancūziški vynai įskaičiuoti",
+            name: "4 dienų kulinarinė kelionė Castellane regione",
+            description: "4 dienų kulinarinė kelionė Castellane regione. Per keturias įkvepiančias dienas išmoksite, sužinosite ir pamatysite svarbiausias prancūziškos gastronomijos paslaptis. O svarbiausia – ragau­sit­e, valgysite ir gersite tiek, kiek širdis geidžia, niekuo nereikės rūpintis – jums beliks tik mėgautis.",
             location: "Castellane, Prancūzija",
-            date: "4 dienų / 3naktų kelionė",
+            date: "4 dienų / 3 naktų kelionė",
             time: "Atvykimas: 15:00, Išvykimas: 10:00",
             price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
             image: "./images/sageandmeat.png",
             highlights: [
-                "4-6 žmonių grupė. Praktinės rūkymo dirbtuvės naudojant Ausros rūkyklas",
-                "Vietinės mėsos ir žuvies paruošimas",
-                "Kepimo ant grotelių technikos, marinuotės ir dūminiai skoniai",
-                "Kulinarinis kūrybiškumas: ugnies ir skonio menas",
-                "4 aperityviniai vakarai su vietiniais sūriais, vynu ir pokalbiais",
-                "Kasdieninės vadovaujamos vietinės išvykos ir paslėptų kaimų aplankymai",
-                "Apsipirkimas vietinėse amatininkų parduotuvėse",
-                "Apgyvendinimas, visi patiekalai ir prancūziški vynai įskaičiuoti"
+                "Per šią kelionę: IŠMOKSITE \n Paruošti žuvį ir mėsą pagal tradicines prancūziškas technikas. \n Rūkyti žuvį ir mėsą šaltu ir karštu būdu. \n Gamyti prancūzišką pâté, kepti savo duoną ir bagetę. \n Virti legendinę Bouillabaisse sriubą. \n Gaminti tapenade ir kitus regioninius skanėstus. \n SUŽINOSITE \n Rūkymo paslaptis: medienos rūšys, temperatūros, laikai. \n Kaip atrinkti, brandinti, marinuoti ir džiovinti mėsą bei žuvį. \n Kaip derinti patiekalus su vietiniais vynais ir sūriais. \n Provanso kulinarinės kultūros pagrindus. \n PAMATYSITE \n Įspūdingą Verdono kanjoną, St. Croix ežerą ir kalnų kaimelius. \n Provanso gamtos grožį ir kepyklas. \n Rūkymo procesus nuo ruošimo iki degustacijos. \n Rūkymo procesus nuo ruošimo iki degustacijos."
             ]
         },
         {
             id: 2,
             name: "KVEPALAI IR SPALVOS — Grasse ir Castellane",
-            description: "Pradėkite jausmų pilną kelionę, kuri sujungia kvapą, spalvą ir kūrybą. Aplankykite Grasse, pasaulio kvepalų sostinę, ir sukurkite savo unikalius kvepalus. Atraskite aromatingų mišinių paslaptis, eksperimentuokite su retomis esencijomis ir išvykite su kvapu, kuris išreiškia jūsų istoriją ir atspindi jūsų dvasią.<br><br><strong>Programos akcentai:</strong><br>• Vadovaujama ekskursija į tradicinę kvepalų gamyklą Grasse<br>• Dirbtuvės: sukurkite savo natūralius kvepalus (asmeninį mišinį)<br>• Vakarienė su gėlių ir aromatiniais akcentais<br>• 4 aperityviniai vakarai, derinantys kvapą ir skonį<br>• Ekskursijos po vietinius kaimus ir gamtos takus<br>• Apsipirkimas vietinėse kvepalų ir amatininkų parduotuvėse<br>• Visi patiekalai, vynai ir gėrimai įskaičiuoti",
+            description: "4 dienų kvapų ir skonių kelionė į Castellane",
             location: "Grasse ir Castellane, Prancūzija",
             date: "4 dienų / 3 naktų kelionė",
             time: "Atvykimas: 15:00, Išvykimas: 10:00",
             price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
             image: "./images/perfumeandcolor.png",
             highlights: [
-                "4-6 žmonių grupė. Vadovaujama ekskursija į tradicinę kvepalų gamyklą Grasse",
-                "Dirbtuvės: sukurkite savo natūralius kvepalus (asmeninį mišinį)",
-                "Vakarienė su gėlių ir aromatiniais akcentais",
-                "4 aperityviniai vakarai, derinantys kvapą ir skonį",
-                "Ekskursijos po vietinius kaimus ir gamtos takus",
-                "Apsipirkimas vietinėse kvepalų ir amatininkų parduotuvėse",
-                "Apgyvendinimas, visi patiekalai, vynai ir gėrimai įskaičiuoti"
+                "1 diena: Atvykimas į Nicą, kelionė į Castellane, įsikūrimas ir karališka prancūziška vakarienė.",
+                "2 diena: Pusryčiai. Kelionė per Verdono kanjoną, St. Croix ežeras, kalnų kaimeliai, piknikas gamtoje ir vakarienė Castellane.",
+                "3 diena: Pusryčiai. Vizitas į L’Occitane gamyklą ir muziejų, piknikas kalnuose, grįžimas ir vakarienė.",
+                "4 diena: Pusryčiai. Kelionė į Grasse, apsilankymas Fragonard parfumerijoje, pietūs kelyje, išvykimas į Nicos oro uostą."
             ]
         }
     ]
@@ -1015,7 +1005,7 @@ const translations = {
         hero: {
             title: 'Atraskite <span class="highlight">Castellane, Prancūziją</span>',
             subtitle: 'Paslėptas brangakmenis Provanso širdyje',
-            text1: 'Tarp levandų laukų ir turkio spalvos Verdono upės vandenų įsikūręs Castellane miestas kviečia sulėtinti, giliai įkvėpti ir iš naujo susisieti su tuo, kas iš tiesų svarbu. Per tris nepamirštamas dienas ir keturias atgaivinančias naktis pasinerkite į jausmų pilną kelionę, kuri sujungia gamtą, meną, sveikatą ir amžiną Pietų Prancūzijos žavesį.',
+            text1: 'Tarp levandų laukų ir turkio spalvos Verdono upės vandenų įsikūręs Castellane miestas kviečia sulėtinti, giliai įkvėpti ir iš naujo susisieti su tuo, kas iš tiesų svarbu. Per keturias nepamirštamas dienas ir tris atgaivinančias naktis pasinerkite į jausmų pilną kelionę, kuri sujungia gamtą, meną, sveikatą ir amžiną Pietų Prancūzijos žavesį.',
             text2: 'Pabuskite pajutę laukinių žolelių aromatą ir tolimą varpų skambėjimą iš Notre-Dame du Roc koplyčios, stūksančios aukštai virš kaimo. Pasivaikščiokite pasteliniais fasadais išmargintomis akmenimis grįstomis gatvelėmis, paragaukite geriausių regiono sūrių ir rožinio vyno ir leiskite auksinei Provanso šviesai pažadinti jūsų kūrybiškumą ir ramybę.',
             text3: 'Mūsų išskirtinės kelionės sujungia jaukų komfortą su autentiškomis vietinėmis patirtimis, nuo žygių i gamtą ir piknikų prie upės iki amatininkų dirbtuvių ir nuostabių vakarų po žvaigždėmis. Nesvarbu, ar atvykstate tapyti, gydytis, medituoti ar tiesiog pailsėti, Castellane siūlo tobulą nuotykio ir ramybės harmoniją.',
             highlightsTitle: 'Pagrindinis'
@@ -1037,12 +1027,12 @@ const translations = {
             cancel: 'Atšaukti'
         },
         aboutHostModal: {
-            title: 'Apie jūsų šeimininkę',
-            bio1: 'Aš esu Aušra, profesionali tapybos, piešimo, kaligrafijos ir vitražo meno menininkė, giliai įkvėpta dvasinių žmogiškųjų pojūčių holistinio derinio kasdienėje žmogaus gyvenime: lytėjimo, regos, klausos, uoslės, skonio, ekstrasensorinio suvokimo.',
-            bio2: 'Tapymas vidiniu emociniu pojūčiu, kylančiu iš muzikos garsų ir stebint muzikantų pasirodymą, yra neatskiriama mano kompozicijų dalis. Labiausiai stebinanti kūrybinė bendradarbiavimas buvo patirtas su Lilio nacionaliniu orkestru iš Prancūzijos 2009 m., sukuriant paveikslų liniją « Traits d\'Orchestre » ir su Deitono filharmonijos orkestru iš JAV 2017 m., pavadintą « Symphony of Lines ».',
-            bio3: 'Mano aistra piešimui ir tapybai, sujungta su šventu pasąmonės procesu, tekančiu į spalvas, formas, tekstūras ir skirtingas technikas, pavirto drąsiais ir ambicingais eksperimentais vitražo mene, baigus «Vitražo» ir «Meno terapijos» studijas Prancūzijoje ir galiausiai atidarant « French stained glass » studiją Singapūre 2013 m.',
-            bio4: 'Gyvenimas 4 visiškai skirtingose šalyse (Lietuvoje, Prancūzijoje, JAV ir Singapūre), renkant įspūdžius ir patirtis, padarė gilų įspaudą mano menui: džiugią skirtingų kultūrų ir tradicijų sielą, išplėstus pasaulio vizijos ribas, sujungiant universalius žmogiškuosius pojūčius ryškiose kompozicijose.',
-            bio5: 'Keliaujant užsienyje, spalvų, tonų ir formų įkvėpimas atskleidė mano aistrą maisto gaminimui ir rūkymui. Esu sertifikuota maisto apsaugos srityje Ohajo valstijoje, JAV. Taip pat pastaruosius 14 metų dėstau piešimą, tapybą ir vitražo kūrimą universitetuose ir privačiose mokyklose Prancūzijoje, Singapūre ir JAV.'
+            title: 'Apie jūsų šeimininkę Aušrą',
+            bio1: 'Sveiki, aš esu Aušra, grafikė ir vitražistė. Didžiausia mano kūrybos įkvėpimo jėga visada buvo kelionės, žmonės ir įvairių pasaulio grožio formų įvairovė.',
+            bio2: 'Gyvenau ir kūriau Lietuvoje, Prancūzijoje, JAV ir Singapūre – keturiose labai skirtingose šalyse, kurios paliko gilių įspūdžių ir atvėrė mano kūrybai bei virtuvei dar platesnį pasaulį. Laikui bėgant menas natūraliai susijungė su mano meile maistui. Gastronomija, degustacijos ir vietinių skonių atradimas tapo antra mano kūrybos forma.',
+            bio3: 'Jau penkerius metus kartu su vyru prancūzu, gyvename Castellane, Pietų Prancūzijoje. Mūsų namai visada atviri svečiams. Čia dalijamės tuo, ką patys labiausiai mylime: ramybe, kalnų grožiu, naminiu maistu ir prancūziškais atradimais.',
+            bio4: 'Kviečiu atvykti taip, tarsi lankytumėtės pas seniai matytą gerą draugą – šiltai, paprastai ir nuoširdžiai. Aš pasirūpinsiu viskuo, o jums liks tik mėgautis Pietų Prancūzijos ritmu ir skoniais.',
+            bio5: 'Esu sertifikuota maisto saugos srityje, todėl užtikrinsiu, kad viskas būtų ne tik skanu, bet ir saugu. Labai jūsų lauksime, Aušra'
         },
         contactModal: {
             title: 'Susisiekite su mumis',
