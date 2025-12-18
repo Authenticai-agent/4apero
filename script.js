@@ -42,6 +42,23 @@ const retreatsData = {
                 "Shopping in local perfume & artisan boutiques",
                 "Accommodation, all meals, wines, and drinks included"
             ]
+        },
+        {
+            id: 3,
+            name: "Petardier Festival – Premium 4-Day Culinary & Cultural Escape in Castellane",
+            description: "Experience an exceptional getaway in the heart of Provence during the legendary Petardier Festival in Castellane, where centuries-old traditions meet French gastronomy and lifestyle.",
+            location: "Castellane, France",
+            date: "January 30 – February 2",
+            time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
+            price: '<strong style="color: #059669; font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">Jan 30 – Feb 2</small>',
+            image: "./images/image03242.jpeg",
+            highlights: [
+                "Exclusive access to the Petardier Festival, Castellane’s iconic historical celebration",
+                "Traditional Castellane meals, shared with locals",
+                "Guided tours of Castellane and surrounding villages, exploring heritage, nature, and charming towns",
+                "Exclusive culinary workshops: learn to bake artisanal baguettes and prepare quiches and regional specialties",
+                "Moments of tasting, sharing, and conviviality, celebrating authentic Provence"
+            ]
         }
     ],
     lt: [
@@ -73,6 +90,23 @@ const retreatsData = {
                 "2 diena: Pusryčiai. Kelionė per Verdono kanjoną, St. Croix ežeras, kalnų kaimeliai, piknikas gamtoje ir vakarienė Castellane.",
                 "3 diena: Pusryčiai. Vizitas į L’Occitane gamyklą ir muziejų, piknikas kalnuose, grįžimas ir vakarienė.",
                 "4 diena: Pusryčiai. Kelionė į Grasse, apsilankymas Fragonard parfumerijoje, pietūs kelyje, išvykimas į Nicos oro uostą."
+            ]
+        },
+        {
+            id: 3,
+            name: "Petardier šventė – prabangus 4 dienų kulinarinis ir kultūrinis poilsis Castellane",
+            description: "Patirkite išskirtinę akimirką Provanso širdyje, dalyvaudami legendinėje Petardier šventėje Castellane, kur susilieja senovinės tradicijos, prancūziška gastronomija ir gyvenimo džiaugsmas.",
+            location: "Castellane, Prancūzija",
+            date: "sausio 30 – vasario 2",
+            time: "Atvykimas: 15:00, Išvykimas: 10:00",
+            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">sausio 30 – vasario 2</small>',
+            image: "./images/image03242.jpeg",
+            highlights: [
+                "Išskirtinė prieiga prie Petardier šventės, Castellane istorinio renginio",
+                "Tradiciniai Castellane patiekalai, dalinami su vietiniais gyventojais",
+                "Ekskursijos po Castellane ir apylinkes, atrandant paveldą, gamtą ir žavingus kaimelius",
+                "Išskirtiniai kulinariniai užsiėmimai: kepkite rankų darbo bagetes ir gaminkite quiches bei regioninius patiekalus",
+                "Degustacijos, bendrystė ir malonūs potyriai, švenčiant autentišką Provansą"
             ]
         }
     ]
@@ -162,6 +196,8 @@ function renderTravelCards() {
             const card = createTravelCard(retreat, index);
             travelCardsContainer.appendChild(card);
         });
+
+        updatePageContent();
     }, 500);
 }
 
@@ -172,6 +208,9 @@ function createTravelCard(retreat, index) {
     card.style.animationDelay = `${index * 0.1}s`;
     card.style.animation = 'fadeInUp 0.6s ease-out forwards';
     card.style.opacity = '0';
+
+    const t = translations[currentLanguage];
+    const bookNowLabel = t && t.retreats && t.retreats.bookNow ? t.retreats.bookNow : 'Book Now';
 
     const highlightsIntro = retreat.highlightsIntro
         ? `<p class="travel-card-highlights-intro" style="white-space: pre-line; color: #111827; margin: 0 0 0.75rem; line-height: 1.6;">${retreat.highlightsIntro}</p>`
@@ -206,7 +245,7 @@ function createTravelCard(retreat, index) {
                     </div>
                 </div>
                 <div class="travel-card-price">${retreat.price}</div>
-                <button class="card-book-button" onclick="handleCardClick(${JSON.stringify(retreat).replace(/"/g, '&quot;')})">Book Now</button>
+                <button class="card-book-button" onclick="handleCardClick(${JSON.stringify(retreat).replace(/"/g, '&quot;')})">${bookNowLabel}</button>
             </div>
         </div>
     `;
