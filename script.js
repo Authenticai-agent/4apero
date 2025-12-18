@@ -136,7 +136,7 @@ const retreatsData = {
                 "Group of 4-6 people. Guided visit to a traditional perfume house in Grasse",
                 "Workshop: create your own natural perfume (personal blend)",
                 "Dinner with floral & aromatic accents",
-                "4 apéro experiences pairing scent & taste",
+                "2 apéro experiences pairing scent & taste",
                 "Guided tours through local villages and nature trails",
                 "Shopping in local perfume & artisan boutiques",
                 "Accommodation, all meals, wines, and drinks included"
