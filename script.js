@@ -55,7 +55,7 @@ const retreatsData = {
             price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
             image: "./images/image06380.jpeg",
             highlights: [
-                "Per šią kelionę: IŠMOKSITE \n Paruošti žuvį ir mėsą pagal tradicines prancūziškas technikas. \n Rūkyti žuvį ir mėsą šaltu ir karštu būdu. \n Gamyti prancūzišką pâté, kepti savo duoną ir bagetę. \n Virti legendinę Bouillabaisse sriubą. \n Gaminti tapenade ir kitus regioninius skanėstus. \n SUŽINOSITE \n Rūkymo paslaptis: medienos rūšys, temperatūros, laikai. \n Kaip atrinkti, brandinti, marinuoti ir džiovinti mėsą bei žuvį. \n Kaip derinti patiekalus su vietiniais vynais ir sūriais. \n Provanso kulinarinės kultūros pagrindus. \n PAMATYSITE \n Įspūdingą Verdono kanjoną, St. Croix ežerą ir kalnų kaimelius. \n Provanso gamtos grožį ir kepyklas. \n Rūkymo procesus nuo ruošimo iki degustacijos. \n Rūkymo procesus nuo ruošimo iki degustacijos."
+                "Per šią kelionę: IŠMOKSITE \n Paruošti žuvį ir mėsą pagal tradicines prancūziškas technikas. \n Rūkyti žuvį ir mėsą šaltu ir karštu būdu. \n Gamyti prancūzišką pâté, kepti savo duoną ir bagetę. \n Virti legendinę Bouillabaisse sriubą. \n Gaminti tapenade ir kitus regioninius skanėstus. \n SUŽINOSITE \n Rūkymo paslaptis: medienos rūšys, temperatūros, laikai. \n Kaip atrinkti, brandinti, marinuoti ir džiovinti mėsą bei žuvį. \n Kaip derinti patiekalus su vietiniais vynais ir sūriais. \n Provanso kulinarinės kultūros pagrindus. \n PAMATYSITE \n Įspūdingą Verdono kanjoną, St. Croix ežerą ir kalnų kaimelius. \n Provanso gamtos grožį ir kepyklas. \n Rūkymo procesus nuo ruošimo iki degustacijos."
             ]
         },
         {
@@ -67,6 +67,7 @@ const retreatsData = {
             time: "Atvykimas: 15:00, Išvykimas: 10:00",
             price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
             image: "./images/image05903.jpeg",
+            highlightsIntro: "Kelionė pilna kvapų ir prancūziškų skanumynų\n\nQuiche, Bourguignon, Tartiflette, Taboulé, Foie Gras, austres, sūriai, vynas, šampanas…\nKelionė, kurios tikrai nepamiršite!\n\nVos 1 val. 30 min. kelio – ir Jūs L’Occitane gamykloje.\nĮspūdinga ekskursija, kurios metu sužinosite apie prekės ženklo istoriją, ingredientus ir gamybos procesus.\nPo jos – boutique’as su fabriko kainomis – tobula proga parsivežti kvapnių atradimų.\n\nAplankysime ir Galimard / Fragonard Grasse – vietą, kur gimė Prancūzijos parfumerija.\nSusipažinsite su tradicine kvepalų gamyba, sužinosite, kaip gimsta aromatai, ir pasinersite į kvapų istorijas pačioje Grasse širdyje.\n\nKą patirsite šios kelionės metu\n\nTai ne tik degustacinė ir pažintinė kelionė, bet ir jutiminė patirtis, leidžianti atsipalaiduoti ir atitrūkti nuo kasdienybės.\nJūsų lauks dažų liejimas ant drobių – kūrybinis procesas be taisyklių, kuriame spalvos, judesys ir emocijos susilieja į unikalų rezultatą. Ši veikla padės paleisti kontrolę, pasinerti į momentą ir sukurti savo asmeninį kelionės prisiminimą.\n\nSužinosite, kaip gyvena prancūzai, kokios jų tradicijos, etiketas ir elgesys prie stalo.\nIšmoksite, kada valgomas sūris, kaip derinti skonius ir kaip ragauti taip, kaip tai daro vietiniai.\n\nAtraskite, kaip atskirti vynus iš skirtingų Prancūzijos regionų, kuo jie išsiskiria ir kaip juos teisingai derinti prie maisto.",
             highlights: [
                 "1 diena: Atvykimas į Nicą, kelionė į Castellane, įsikūrimas ir karališka prancūziška vakarienė.",
                 "2 diena: Pusryčiai. Kelionė per Verdono kanjoną, St. Croix ežeras, kalnų kaimeliai, piknikas gamtoje ir vakarienė Castellane.",
@@ -171,6 +172,10 @@ function createTravelCard(retreat, index) {
     card.style.animationDelay = `${index * 0.1}s`;
     card.style.animation = 'fadeInUp 0.6s ease-out forwards';
     card.style.opacity = '0';
+
+    const highlightsIntro = retreat.highlightsIntro
+        ? `<p class="travel-card-highlights-intro" style="white-space: pre-line; color: #111827; margin: 0 0 0.75rem; line-height: 1.6;">${retreat.highlightsIntro}</p>`
+        : '';
     
     const highlightsList = retreat.highlights && retreat.highlights.length > 0 
         ? `<ul class="travel-card-highlights">${retreat.highlights.map(h => `<li>${h}</li>`).join('')}</ul>` 
@@ -182,6 +187,7 @@ function createTravelCard(retreat, index) {
             <div>
                 <h3 class="travel-card-title">${retreat.name}</h3>
                 <p class="travel-card-description">${retreat.description}</p>
+                ${highlightsIntro}
                 ${highlightsList}
             </div>
             <div>
@@ -1010,10 +1016,10 @@ const translations = {
         retreats: {
             sectionTitle: 'Our Retreats',
             sectionSubtitle: 'Find your perfect escape in the heart of Provence',
-            bookNow: 'Book Now'
+            bookNow: 'More information'
         },
         bookingModal: {
-            title: 'Book Your Retreat',
+            title: 'Inquiry',
             firstName: 'First Name',
             lastName: 'Last Name',
             phone: 'Phone',
@@ -1069,10 +1075,10 @@ const translations = {
         retreats: {
             sectionTitle: 'Mūsų kelionės',
             sectionSubtitle: 'Raskite savo tobulą pabėgimą Provanso širdyje',
-            bookNow: 'Rezervuoti dabar'
+            bookNow: 'Užklausimas'
         },
         bookingModal: {
-            title: 'Rezervuokite savo kelionę',
+            title: 'Užklausimas',
             firstName: 'Vardas',
             lastName: 'Pavardė',
             phone: 'Telefonas',
