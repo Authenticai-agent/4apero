@@ -1,6 +1,103 @@
 // Language Toggle Functionality
 let currentLanguage = 'en'; // Default language is English
 
+const heroGalleryOrder = [
+    "./images/image03242.jpeg",
+    "./images/image03245.jpeg",
+    "./images/image03246.jpeg",
+    "./images/image03248.jpeg",
+    "./images/image03253.jpeg",
+    "./images/image05054.jpeg",
+    "./images/image05056.jpeg",
+    "./images/image05060.jpeg",
+    "./images/image05336.jpeg",
+    "./images/image05339.jpeg",
+    "./images/image05342.jpeg",
+    "./images/image05343.jpeg",
+    "./images/image05348.jpeg",
+    "./images/image05451.jpeg",
+    "./images/image05455.jpeg",
+    "./images/image05456.jpeg",
+    "./images/image05457.jpeg",
+    "./images/image05458.jpeg",
+    "./images/image05462.jpeg",
+    "./images/image05463.jpeg",
+    "./images/image05467.jpeg",
+    "./images/image05470.jpeg",
+    "./images/image05633.jpeg",
+    "./images/image05634.jpeg",
+    "./images/image05637.jpeg",
+    "./images/image05638.jpeg",
+    "./images/image05642.jpeg",
+    "./images/image05643.jpeg",
+    "./images/image05645.jpeg",
+    "./images/image05647.jpeg",
+    "./images/image05648.jpeg",
+    "./images/image05649.jpeg",
+    "./images/image05652.jpeg",
+    "./images/image05653.jpeg",
+    "./images/image05654.jpeg",
+    "./images/image05655.jpeg",
+    "./images/image05656.jpeg",
+    "./images/image05658.jpeg",
+    "./images/image05899.jpeg",
+    "./images/image05900.jpeg",
+    "./images/image05903.jpeg",
+    "./images/image05904.jpeg",
+    "./images/image05910.jpeg",
+    "./images/image05912.jpeg",
+    "./images/image05913.jpeg",
+    "./images/image05914.jpeg",
+    "./images/image05918.jpeg",
+    "./images/image05919.jpeg",
+    "./images/image05920.jpeg",
+    "./images/image05922.jpeg",
+    "./images/image05924.jpeg",
+    "./images/image05928.jpeg",
+    "./images/image05930.jpeg",
+    "./images/image05934.jpeg",
+    "./images/image05936.jpeg",
+    "./images/image05937.jpeg",
+    "./images/image05938.jpeg",
+    "./images/image05954.jpeg",
+    "./images/image05955.jpeg",
+    "./images/image06367.jpeg",
+    "./images/image06369.jpeg",
+    "./images/image06370.jpeg",
+    "./images/image06378.jpeg",
+    "./images/image06379.jpeg",
+    "./images/image06380.jpeg",
+    "./images/image06381.jpeg",
+    "./images/image06382.jpeg",
+    "./images/image06383.jpeg",
+    "./images/image06384.jpeg",
+    "./images/image06385.jpeg",
+    "./images/image06386.jpeg",
+    "./images/image06389.jpeg",
+    "./images/image06390.jpeg",
+    "./images/image06391.jpeg",
+    "./images/image06392.jpeg",
+    "./images/image06393.jpeg",
+    "./images/image06403.jpeg",
+    "./images/image06404.jpeg",
+    "./images/image06405.jpeg",
+    "./images/image06406.jpeg"
+];
+
+function uniqueImages(arr) {
+    const seen = new Set();
+    return arr.filter((x) => {
+        if (!x) return false;
+        if (seen.has(x)) return false;
+        seen.add(x);
+        return true;
+    });
+}
+
+function photosByNumber(numbers) {
+    return uniqueImages(numbers.map((n) => heroGalleryOrder[n - 1]).filter(Boolean));
+}
+
 // Retreat data - Update the image paths with your own images
 const retreatsData = {
     en: [
@@ -12,7 +109,8 @@ const retreatsData = {
             date: "4 days / 3 nights retreat",
             time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
             price: '<strong style="color: #059669; font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">4 days / 3 nights retreat</small>',
-            image: "./images/image06380.jpeg",
+            images: photosByNumber([3, 8, 9, 13, 16, 18, 20, 34, 44, 45, 51, 56, 57, 60, 63, 64, 66, 67, 71, 72, 74, 80]),
+            image: photosByNumber([3, 8, 9, 13, 16, 18, 20, 34, 44, 45, 51, 56, 57, 60, 63, 64, 66, 67, 71, 72, 74, 80])[0] || "./images/image06380.jpeg",
             highlights: [
                 "Group of 4-6 people. Hands-on smoking workshop using Ausra's two smokers",
                 "Preparation of local meats and fish",
@@ -32,7 +130,8 @@ const retreatsData = {
             date: "4 days / 3 nights retreat",
             time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
             price: '<strong style="color: #059669; font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">4 days / 3 nights retreat</small>',
-            image: "./images/image05903.jpeg",
+            images: photosByNumber([1, 2, 10, 11, 14, 19, 23, 28, 42, 53, 78, 69]),
+            image: photosByNumber([1, 2, 10, 11, 14, 19, 23, 28, 42, 53, 78, 69])[0] || "./images/image05903.jpeg",
             highlights: [
                 "Group of 4-6 people. Guided visit to a traditional perfume house in Grasse",
                 "Workshop: create your own natural perfume (personal blend)",
@@ -51,7 +150,8 @@ const retreatsData = {
             date: "January 30 – February 2",
             time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
             price: '<strong style="color: #059669; font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">Jan 30 – Feb 2</small>',
-            image: "./images/image03242.jpeg",
+            images: uniqueImages(["./images/image05919.jpeg", ...photosByNumber([4, 5, 7, 12, 15, 22, 26, 27, 29, 32, 33, 37, 38, 48, 49, 50, 76])]),
+            image: "./images/image05919.jpeg",
             highlights: [
                 "Exclusive access to the Petardier Festival, Castellane’s iconic historical celebration",
                 "Traditional Castellane meals, shared with locals",
@@ -70,7 +170,8 @@ const retreatsData = {
             date: "4 dienų / 3 naktų kelionė",
             time: "Atvykimas: 15:00, Išvykimas: 10:00",
             price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
-            image: "./images/image06380.jpeg",
+            images: photosByNumber([3, 8, 9, 13, 16, 18, 20, 34, 44, 45, 51, 56, 57, 60, 63, 64, 66, 67, 71, 72, 74, 80]),
+            image: photosByNumber([3, 8, 9, 13, 16, 18, 20, 34, 44, 45, 51, 56, 57, 60, 63, 64, 66, 67, 71, 72, 74, 80])[0] || "./images/image06380.jpeg",
             highlights: [
                 "Per šią kelionę: IŠMOKSITE \n Paruošti žuvį ir mėsą pagal tradicines prancūziškas technikas. \n Rūkyti žuvį ir mėsą šaltu ir karštu būdu. \n Gamyti prancūzišką pâté, kepti savo duoną ir bagetę. \n Virti legendinę Bouillabaisse sriubą. \n Gaminti tapenade ir kitus regioninius skanėstus. \n SUŽINOSITE \n Rūkymo paslaptis: medienos rūšys, temperatūros, laikai. \n Kaip atrinkti, brandinti, marinuoti ir džiovinti mėsą bei žuvį. \n Kaip derinti patiekalus su vietiniais vynais ir sūriais. \n Provanso kulinarinės kultūros pagrindus. \n PAMATYSITE \n Įspūdingą Verdono kanjoną, St. Croix ežerą ir kalnų kaimelius. \n Provanso gamtos grožį ir kepyklas. \n Rūkymo procesus nuo ruošimo iki degustacijos."
             ]
@@ -83,7 +184,8 @@ const retreatsData = {
             date: "4 dienų / 3 naktų kelionė",
             time: "Atvykimas: 15:00, Išvykimas: 10:00",
             price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
-            image: "./images/image05903.jpeg",
+            images: photosByNumber([1, 2, 10, 11, 14, 19, 23, 28, 42, 53, 78, 69]),
+            image: photosByNumber([1, 2, 10, 11, 14, 19, 23, 28, 42, 53, 78, 69])[0] || "./images/image05903.jpeg",
             highlightsIntro: "Kelionė pilna kvapų ir prancūziškų skanumynų\n\nQuiche, Bourguignon, Tartiflette, Taboulé, Foie Gras, austres, sūriai, vynas, šampanas…\nKelionė, kurios tikrai nepamiršite!\n\nVos 1 val. 30 min. kelio – ir Jūs L’Occitane gamykloje.\nĮspūdinga ekskursija, kurios metu sužinosite apie prekės ženklo istoriją, ingredientus ir gamybos procesus.\nPo jos – boutique’as su fabriko kainomis – tobula proga parsivežti kvapnių atradimų.\n\nAplankysime ir Galimard / Fragonard Grasse – vietą, kur gimė Prancūzijos parfumerija.\nSusipažinsite su tradicine kvepalų gamyba, sužinosite, kaip gimsta aromatai, ir pasinersite į kvapų istorijas pačioje Grasse širdyje.\n\nKą patirsite šios kelionės metu\n\nTai ne tik degustacinė ir pažintinė kelionė, bet ir jutiminė patirtis, leidžianti atsipalaiduoti ir atitrūkti nuo kasdienybės.\nJūsų lauks dažų liejimas ant drobių – kūrybinis procesas be taisyklių, kuriame spalvos, judesys ir emocijos susilieja į unikalų rezultatą. Ši veikla padės paleisti kontrolę, pasinerti į momentą ir sukurti savo asmeninį kelionės prisiminimą.\n\nSužinosite, kaip gyvena prancūzai, kokios jų tradicijos, etiketas ir elgesys prie stalo.\nIšmoksite, kada valgomas sūris, kaip derinti skonius ir kaip ragauti taip, kaip tai daro vietiniai.\n\nAtraskite, kaip atskirti vynus iš skirtingų Prancūzijos regionų, kuo jie išsiskiria ir kaip juos teisingai derinti prie maisto.",
             highlights: [
                 "1 diena: Atvykimas į Nicą, kelionė į Castellane, įsikūrimas ir karališka prancūziška vakarienė.",
@@ -100,7 +202,8 @@ const retreatsData = {
             date: "sausio 30 – vasario 2",
             time: "Atvykimas: 15:00, Išvykimas: 10:00",
             price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">sausio 30 – vasario 2</small>',
-            image: "./images/image03242.jpeg",
+            images: uniqueImages(["./images/image05919.jpeg", ...photosByNumber([4, 5, 7, 12, 15, 22, 26, 27, 29, 32, 33, 37, 38, 48, 49, 50, 76])]),
+            image: "./images/image05919.jpeg",
             highlights: [
                 "Išskirtinė prieiga prie Petardier šventės, Castellane istorinio renginio",
                 "Tradiciniai Castellane patiekalai, dalinami su vietiniais gyventojais",
@@ -245,7 +348,7 @@ function createTravelCard(retreat, index) {
                     </div>
                 </div>
                 <div class="travel-card-price">${retreat.price}</div>
-                <button class="card-book-button" onclick="handleCardClick(${JSON.stringify(retreat).replace(/"/g, '&quot;')})">${bookNowLabel}</button>
+                <button class="card-book-button" onclick="handleCardClickById(${retreat.id})">${bookNowLabel}</button>
             </div>
         </div>
     `;
@@ -258,6 +361,17 @@ function handleCardClick(retreat) {
     console.log('Card clicked:', retreat.name);
     // Here you could open a modal, navigate to a detail page, or trigger a booking flow
     showBookingModal(retreat);
+}
+
+function handleCardClickById(retreatId) {
+    const retreats = retreatsData[currentLanguage] || retreatsData.en;
+    const retreat = Array.isArray(retreats) ? retreats.find((r) => r && r.id === retreatId) : null;
+    if (!retreat) {
+        console.warn('Retreat not found for id:', retreatId);
+        return;
+    }
+
+    handleCardClick(retreat);
 }
 
 // Show booking modal with form
@@ -298,7 +412,25 @@ function showBookingModal(retreat) {
         overflow-y: auto;
     `;
     
+    const modalImages = Array.isArray(retreat.images) && retreat.images.length
+        ? retreat.images
+        : (retreat.image ? [retreat.image] : []);
+
+    const galleryHtml = modalImages.length
+        ? `
+        <div style="margin-bottom: 1rem;">
+            <img id="modalMainImage" src="${modalImages[0]}" alt="${retreat.name}" style="width: 100%; height: auto; border-radius: 8px; background: #f3f4f6; object-fit: cover; aspect-ratio: 16 / 9;">
+            ${modalImages.length > 1 ? `
+                <div style="display: flex; gap: 0.5rem; overflow-x: auto; padding-top: 0.75rem; -webkit-overflow-scrolling: touch;">
+                    ${modalImages.map((src, i) => `<img src="${src}" alt="${retreat.name} ${i + 1}" style="width: 64px; height: 64px; border-radius: 6px; object-fit: cover; cursor: pointer; flex: 0 0 auto; border: 2px solid ${i === 0 ? '#059669' : 'transparent'};" onclick="document.getElementById('modalMainImage').src='${src}'; Array.from(this.parentNode.children).forEach((el)=>el.style.borderColor='transparent'); this.style.borderColor='#059669';">`).join('')}
+                </div>
+            ` : ''}
+        </div>
+        `
+        : '';
+
     modalContent.innerHTML = `
+        ${galleryHtml}
         <h2 style="color: #000000; margin-bottom: 1rem; font-size: 1.5rem;">${t.title}</h2>
         <h3 style="margin-bottom: 0.5rem; color: #000000;">${retreat.name}</h3>
         <p style="color: #333333; margin-bottom: 1.5rem;">${retreat.description}</p>
