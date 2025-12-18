@@ -437,9 +437,8 @@ function showBookingModal(retreat) {
         <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 10px; padding: 1rem; margin-bottom: 1.25rem;">
             <p style="color: #064e3b; margin: 0; line-height: 1.7; font-weight: 600;">${t.instructions}</p>
         </div>
-        <div style="display: flex; gap: 1rem;">
-            <button type="button" class="thank-you-button cta-button" style="flex: 1;">${t.thankYou}</button>
-            <button type="button" class="cancel-button" style="flex: 1; background: #e5e7eb; color: #000000; padding: 1rem 2rem; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">${t.cancel}</button>
+        <div>
+            <button type="button" class="thank-you-button cta-button" style="width: 100%;">${t.thankYou}</button>
         </div>
     `;
     
@@ -466,8 +465,6 @@ function showBookingModal(retreat) {
     modalOverlay.addEventListener('click', (e) => {
         if (e.target === modalOverlay) closeModal();
     });
-    
-    modalContent.querySelector('.cancel-button').addEventListener('click', closeModal);
 
     const thankYouBtn = modalContent.querySelector('.thank-you-button');
     if (thankYouBtn) {
@@ -938,8 +935,7 @@ const translations = {
             date: 'Preferred Date',
             confirmBooking: 'Ask for details',
             instructions: 'Please send your inquiry to info@4apero.com, add your name, email, number of people, and desired dates. And we will get back to you as soon as possible.',
-            thankYou: 'Thank you',
-            cancel: 'Cancel'
+            thankYou: 'Thank you'
         },
         aboutHostModal: {
             title: 'About Your Host',
@@ -997,8 +993,7 @@ const translations = {
             date: 'Pageidaujama data',
             confirmBooking: 'Klausti',
             instructions: 'Prašome siųsti užklausą į info@4apero.com, nurodykite savo vardą, el. paštą, žmonių skaičių ir pageidaujamas datas. Atsakysime kuo greičiau.',
-            thankYou: 'Ačiū',
-            cancel: 'Atšaukti'
+            thankYou: 'Ačiū'
         },
         aboutHostModal: {
             title: 'Apie jūsų šeimininkę Aušrą',
