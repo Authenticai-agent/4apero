@@ -1172,7 +1172,6 @@ const translations = {
         nav: {
             home: 'Home',
             retreats: 'Retreats',
-            aboutCastellane: 'About Castellane',
             aboutHosts: 'About Hosts',
             contact: 'Contact'
         },
@@ -1220,7 +1219,6 @@ const translations = {
             tagline: 'Your gateway to Castellane, Provence region, France',
             explore: 'Explore',
             retreats: 'Retreats',
-            aboutCastellane: 'About Castellane',
             aboutHosts: 'About Hosts',
             contactUs: 'Contact Us',
             rights: '© 2025 4Apero. All rights reserved.'
@@ -1230,7 +1228,6 @@ const translations = {
         nav: {
             home: 'Pradžia',
             retreats: 'Kelionės',
-            aboutCastellane: 'Apie Castellane',
             aboutHosts: 'Apie šeimininkus',
             contact: 'Kontaktai'
         },
@@ -1279,7 +1276,6 @@ const translations = {
             tagline: 'Jūsų vartai į Castellane, Provanso regioną, Prancūziją',
             explore: 'Naršyti',
             retreats: 'Kelionės',
-            aboutCastellane: 'Apie Castellane',
             aboutHosts: 'Apie šeimininkus',
             contactUs: 'Susisiekite su mumis',
             rights: '© 2025 4Apero. Visos teisės saugomos.'
@@ -1313,9 +1309,8 @@ function updatePageContent() {
     const navLinks = document.querySelectorAll('.nav-link');
     if (navLinks[0]) navLinks[0].textContent = t.nav.home;
     if (navLinks[1]) navLinks[1].textContent = t.nav.retreats;
-    if (navLinks[2]) navLinks[2].textContent = t.nav.aboutCastellane;
-    if (navLinks[3]) navLinks[3].textContent = t.nav.aboutHosts;
-    if (navLinks[4]) navLinks[4].textContent = t.nav.contact;
+    if (navLinks[2]) navLinks[2].textContent = t.nav.aboutHosts;
+    if (navLinks[3]) navLinks[3].textContent = t.nav.contact;
     
     // Update Hero Section
     const heroTitle = document.querySelector('.hero-title');
@@ -1402,9 +1397,8 @@ function updatePageContent() {
     
     const footerLinks = document.querySelectorAll('.footer-links a');
     if (footerLinks[0]) footerLinks[0].textContent = t.footer.retreats;
-    if (footerLinks[1]) footerLinks[1].textContent = t.footer.aboutCastellane;
-    if (footerLinks[2]) footerLinks[2].textContent = t.footer.aboutHosts;
-    if (footerLinks[3]) footerLinks[3].textContent = t.footer.contactUs;
+    if (footerLinks[1]) footerLinks[1].textContent = t.footer.aboutHosts;
+    if (footerLinks[2]) footerLinks[2].textContent = t.footer.contactUs;
     
     const footerRights = document.querySelector('.footer-bottom p');
     if (footerRights) footerRights.textContent = t.footer.rights;
