@@ -110,7 +110,7 @@ const retreatsData = {
             time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
             price: '<strong style="color: #059669; font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">4 days / 3 nights retreat</small>',
             images: photosByNumber([3, 8, 9, 13, 16, 18, 20, 34, 44, 45, 51, 56, 57, 60, 63, 64, 66, 67, 71, 72, 74, 80]),
-            image: "./images/sageandmeat.png",
+            image: "./images/image05654.jpeg",
             highlights: [
                 "Group of 4-6 people. Hands-on smoking workshop using Ausra's two smokers",
                 "Preparation of local meats and fish",
@@ -131,7 +131,7 @@ const retreatsData = {
             time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
             price: '<strong style="color: #059669; font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">4 days / 3 nights retreat</small>',
             images: photosByNumber([1, 2, 10, 11, 14, 19, 23, 28, 42, 53, 78, 69]),
-            image: "./images/perfumeandcolor.png",
+            image: "./images/image05903.jpeg",
             highlights: [
                 "Group of 4-6 people. Guided visit to a traditional perfume house in Grasse",
                 "Workshop: create your own natural perfume (personal blend)",
@@ -171,7 +171,7 @@ const retreatsData = {
             time: "Atvykimas: 15:00, Išvykimas: 10:00",
             price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
             images: photosByNumber([3, 8, 9, 13, 16, 18, 20, 34, 44, 45, 51, 56, 57, 60, 63, 64, 66, 67, 71, 72, 74, 80]),
-            image: "./images/sageandmeat.png",
+            image: "./images/image05654.jpeg",
             highlights: [
                 "Per šią kelionę: IŠMOKSITE \n Paruošti žuvį ir mėsą pagal tradicines prancūziškas technikas. \n Rūkyti žuvį ir mėsą šaltu ir karštu būdu. \n Gamyti prancūzišką pâté, kepti savo duoną ir bagetę. \n Virti legendinę Bouillabaisse sriubą. \n Gaminti tapenade ir kitus regioninius skanėstus. \n SUŽINOSITE \n Rūkymo paslaptis: medienos rūšys, temperatūros, laikai. \n Kaip atrinkti, brandinti, marinuoti ir džiovinti mėsą bei žuvį. \n Kaip derinti patiekalus su vietiniais vynais ir sūriais. \n Provanso kulinarinės kultūros pagrindus. \n PAMATYSITE \n Įspūdingą Verdono kanjoną, St. Croix ežerą ir kalnų kaimelius. \n Provanso gamtos grožį ir kepyklas. \n Rūkymo procesus nuo ruošimo iki degustacijos."
             ]
@@ -185,7 +185,7 @@ const retreatsData = {
             time: "Atvykimas: 15:00, Išvykimas: 10:00",
             price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
             images: photosByNumber([1, 2, 10, 11, 14, 19, 23, 28, 42, 53, 78, 69]),
-            image: "./images/perfumeandcolor.png",
+            image: "./images/image05903.jpeg",
             highlightsIntro: "Kelionė pilna kvapų ir prancūziškų skanumynų\n\nQuiche, Bourguignon, Tartiflette, Taboulé, Foie Gras, austres, sūriai, vynas, šampanas…\nKelionė, kurios tikrai nepamiršite!\n\nVos 1 val. 30 min. kelio – ir Jūs L’Occitane gamykloje.\nĮspūdinga ekskursija, kurios metu sužinosite apie prekės ženklo istoriją, ingredientus ir gamybos procesus.\nPo jos – boutique’as su fabriko kainomis – tobula proga parsivežti kvapnių atradimų.\n\nAplankysime ir Galimard / Fragonard Grasse – vietą, kur gimė Prancūzijos parfumerija.\nSusipažinsite su tradicine kvepalų gamyba, sužinosite, kaip gimsta aromatai, ir pasinersite į kvapų istorijas pačioje Grasse širdyje.\n\nKą patirsite šios kelionės metu\n\nTai ne tik degustacinė ir pažintinė kelionė, bet ir jutiminė patirtis, leidžianti atsipalaiduoti ir atitrūkti nuo kasdienybės.\nJūsų lauks dažų liejimas ant drobių – kūrybinis procesas be taisyklių, kuriame spalvos, judesys ir emocijos susilieja į unikalų rezultatą. Ši veikla padės paleisti kontrolę, pasinerti į momentą ir sukurti savo asmeninį kelionės prisiminimą.\n\nSužinosite, kaip gyvena prancūzai, kokios jų tradicijos, etiketas ir elgesys prie stalo.\nIšmoksite, kada valgomas sūris, kaip derinti skonius ir kaip ragauti taip, kaip tai daro vietiniai.\n\nAtraskite, kaip atskirti vynus iš skirtingų Prancūzijos regionų, kuo jie išsiskiria ir kaip juos teisingai derinti prie maisto.",
             highlights: [
                 "1 diena: Atvykimas į Nicą, kelionė į Castellane, įsikūrimas ir karališka prancūziška vakarienė.",
