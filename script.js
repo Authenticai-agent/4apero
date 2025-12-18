@@ -429,19 +429,16 @@ function showBookingModal(retreat) {
         `
         : '';
 
-    const mailToEmail = 'info@4apero.com';
-    const mailSubject = encodeURIComponent(`${t.emailSubjectPrefix} ${retreat.name}`);
-    const mailBody = encodeURIComponent(`${t.emailBodyIntro}\n\n${t.emailBodyFields}\n\n${t.emailBodyOutro}`);
-    const mailtoHref = `mailto:${mailToEmail}?subject=${mailSubject}&body=${mailBody}`;
-
     modalContent.innerHTML = `
         ${galleryHtml}
         <h2 style="color: #000000; margin-bottom: 1rem; font-size: 1.5rem;">${t.title}</h2>
         <h3 style="margin-bottom: 0.5rem; color: #000000;">${retreat.name}</h3>
         <p style="color: #333333; margin-bottom: 1.5rem;">${retreat.description}</p>
-        <p style="color: #111827; margin-bottom: 1rem; line-height: 1.6;">${t.instructions}</p>
-        <a href="${mailtoHref}" class="cta-button" style="display: inline-flex; justify-content: center; align-items: center; width: 100%; text-decoration: none; margin-bottom: 1rem;">${t.emailCta}</a>
+        <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 10px; padding: 1rem; margin-bottom: 1.25rem;">
+            <p style="color: #064e3b; margin: 0; line-height: 1.7; font-weight: 600;">${t.instructions}</p>
+        </div>
         <div style="display: flex; gap: 1rem;">
+            <button type="button" class="thank-you-button cta-button" style="flex: 1;">${t.thankYou}</button>
             <button type="button" class="cancel-button" style="flex: 1; background: #e5e7eb; color: #000000; padding: 1rem 2rem; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">${t.cancel}</button>
         </div>
     `;
@@ -471,6 +468,79 @@ function showBookingModal(retreat) {
     });
     
     modalContent.querySelector('.cancel-button').addEventListener('click', closeModal);
+
+    const thankYouBtn = modalContent.querySelector('.thank-you-button');
+    if (thankYouBtn) {
+        thankYouBtn.addEventListener('click', () => {
+            closeModal();
+            setTimeout(() => {
+                showInquirySentMessage();
+            }, 300);
+        });
+    }
+}
+
+function showInquirySentMessage() {
+    const t = translations[currentLanguage].bookingModal;
+
+    const overlay = document.createElement('div');
+    overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    `;
+
+    const content = document.createElement('div');
+    content.style.cssText = `
+        background: white;
+        padding: 2.5rem 2rem;
+        border-radius: 8px;
+        max-width: 420px;
+        width: 90%;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+    `;
+
+    content.innerHTML = `
+        <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
+        <h2 style="color: #000000; margin-bottom: 0.75rem; font-size: 1.5rem;">${t.sentTitle}</h2>
+        <p style="color: #333333; margin-bottom: 1.75rem; line-height: 1.6;">${t.sentBody}</p>
+        <button class="close-sent cta-button" style="width: 100%;">${t.close}</button>
+    `;
+
+    overlay.appendChild(content);
+    document.body.appendChild(overlay);
+
+    setTimeout(() => {
+        overlay.style.opacity = '1';
+        content.style.transform = 'scale(1)';
+    }, 10);
+
+    const close = () => {
+        overlay.style.opacity = '0';
+        content.style.transform = 'scale(0.9)';
+        setTimeout(() => {
+            if (document.body.contains(overlay)) {
+                document.body.removeChild(overlay);
+            }
+        }, 300);
+    };
+
+    content.querySelector('.close-sent').addEventListener('click', close);
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) close();
+    });
 }
 
 // Show About Hosts modal
@@ -934,11 +1004,10 @@ const translations = {
             date: 'Preferred Date',
             confirmBooking: 'Ask for details',
             instructions: 'Please send your inquiry to info@4apero.com, add your name, email, number of people, and desired dates. And we will get back to you as soon as possible.',
-            emailCta: 'Email info@4apero.com',
-            emailSubjectPrefix: 'Inquiry:',
-            emailBodyIntro: 'Hello,\n\nI would like to ask for details about this retreat.',
-            emailBodyFields: 'Name:\nEmail:\nNumber of people:\nDesired dates:',
-            emailBodyOutro: 'Thank you!\n\nSent via 4apero.com',
+            thankYou: 'Thank you',
+            sentTitle: 'Email sent',
+            sentBody: 'Your email has been sent. We will get back to you shortly.',
+            close: 'Close',
             cancel: 'Cancel'
         },
         aboutHostModal: {
@@ -997,11 +1066,10 @@ const translations = {
             date: 'Pageidaujama data',
             confirmBooking: 'Klausti',
             instructions: 'Prašome siųsti užklausą į info@4apero.com, nurodykite savo vardą, el. paštą, žmonių skaičių ir pageidaujamas datas. Atsakysime kuo greičiau.',
-            emailCta: 'Rašyti į info@4apero.com',
-            emailSubjectPrefix: 'Užklausa:',
-            emailBodyIntro: 'Sveiki,\n\nNorėčiau gauti daugiau informacijos apie šią kelionę.',
-            emailBodyFields: 'Vardas:\nEl. paštas:\nŽmonių skaičius:\nPageidaujamos datos:',
-            emailBodyOutro: 'Ačiū!\n\nIšsiųsta per 4apero.com',
+            thankYou: 'Ačiū',
+            sentTitle: 'El. laiškas išsiųstas',
+            sentBody: 'Jūsų el. laiškas išsiųstas. Netrukus su jumis susisieksime.',
+            close: 'Uždaryti',
             cancel: 'Atšaukti'
         },
         aboutHostModal: {
