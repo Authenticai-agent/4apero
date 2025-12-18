@@ -1256,7 +1256,7 @@ const translations = {
             email: 'El. paštas',
             people: 'Žmonių skaičius',
             date: 'Pageidaujama data',
-            confirmBooking: 'Patvirtinti rezervaciją',
+            confirmBooking: 'Klausti',
             cancel: 'Atšaukti'
         },
         aboutHostModal: {
