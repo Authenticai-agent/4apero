@@ -91,7 +91,57 @@ document.addEventListener('DOMContentLoaded', function() {
     setupEventListeners();
     setupScrollEffects();
     setupIntersectionObserver();
+    setupGalleryImageErrorHandling();
 });
+
+function setupGalleryImageErrorHandling() {
+    const mainImage = document.getElementById('mainGalleryImage');
+    const thumbnails = Array.from(document.querySelectorAll('.gallery-thumbnails .thumbnail'));
+
+    const isSmallScreen = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+    const maxThumbnailsOnMobile = 18;
+
+    thumbnails.forEach((thumb) => {
+        if (!thumb.getAttribute('loading')) {
+            thumb.setAttribute('loading', 'lazy');
+        }
+
+        if (!thumb.getAttribute('decoding')) {
+            thumb.setAttribute('decoding', 'async');
+        }
+
+        thumb.addEventListener('error', () => {
+            thumb.style.display = 'none';
+        }, { once: true });
+
+        if (thumb.complete && thumb.naturalWidth === 0) {
+            thumb.style.display = 'none';
+        }
+    });
+
+    if (isSmallScreen) {
+        const visibleThumbs = thumbnails.filter(t => t.style.display !== 'none');
+        visibleThumbs.slice(maxThumbnailsOnMobile).forEach((thumb) => {
+            thumb.style.display = 'none';
+        });
+    }
+
+    if (mainImage) {
+        mainImage.addEventListener('error', () => {
+            const firstVisibleThumb = thumbnails.find(t => t.style.display !== 'none' && t.getAttribute('src'));
+            if (firstVisibleThumb) {
+                mainImage.src = firstVisibleThumb.getAttribute('src');
+            }
+        }, { once: true });
+
+        if (mainImage.complete && mainImage.naturalWidth === 0) {
+            const firstVisibleThumb = thumbnails.find(t => t.style.display !== 'none' && t.getAttribute('src'));
+            if (firstVisibleThumb) {
+                mainImage.src = firstVisibleThumb.getAttribute('src');
+            }
+        }
+    }
+}
 
 // Render travel cards
 function renderTravelCards() {
