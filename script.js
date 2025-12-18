@@ -1235,7 +1235,7 @@ const translations = {
             contact: 'Kontaktai'
         },
         hero: {
-            title: 'Castellane <span class="highlight">Cvartai į Verdoną</span>',
+            title: 'Castellane <span class="highlight">Vartai į Verdoną</span>',
             subtitle: 'Paslėptas brangakmenis Provanso širdyje',
             text1: 'Castellane yra žavingas miestelis Pietų Prancūzijoje, įsikūręs Provence-Alpes-Côte d’Azur regione, Alpes-de-Haute-Provence departamente. Miestelis stovi 724 m virš jūros lygio, prie Verdono upės, šalia vieno įspūdingiausių kanjonų Europoje - Gorges du Verdon.',
             text2: 'Senamiestyje galima pasivaikščioti siaurų akmenimis grįstų gatvelių labirintais, aplankyti Notre-Dame du Roc bažnyčią ant uolos virš miesto ir pajusti autentišką pietų Prancūzijos atmosferą. Castellane gyvena apie 1 200 žmonių, tačiau vasaros sezonu miestelis atgyja turistų deka.',
