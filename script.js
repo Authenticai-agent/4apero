@@ -569,146 +569,6 @@ function showAboutHostsModal() {
     }
 }
 
-// Show Contact modal
-function showContactModal() {
-    const t = translations[currentLanguage].contactModal;
-    
-    const modalOverlay = document.createElement('div');
-    modalOverlay.className = 'modal-overlay';
-    modalOverlay.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 2000;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    `;
-    
-    const modalContent = document.createElement('div');
-    modalContent.className = 'modal-content';
-    modalContent.style.cssText = `
-        background: white;
-        padding: 2.5rem;
-        border-radius: 8px;
-        max-width: 500px;
-        width: 90%;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        transform: scale(0.9);
-        transition: transform 0.3s ease;
-    `;
-    
-    modalContent.innerHTML = `
-        <h2 style="color: #000000; margin-bottom: 1.5rem; font-size: 1.8rem;">${t.title}</h2>
-        <form id="contactForm">
-            <div style="margin-bottom: 1.5rem;">
-                <label style="display: block; color: #000000; margin-bottom: 0.5rem; font-weight: 500;">${t.name}</label>
-                <input type="text" name="name" required style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 1rem;">
-            </div>
-            <div style="margin-bottom: 1.5rem;">
-                <label style="display: block; color: #000000; margin-bottom: 0.5rem; font-weight: 500;">${t.email}</label>
-                <input type="email" name="email" required style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 1rem;">
-            </div>
-            <div style="margin-bottom: 1.5rem;">
-                <label style="display: block; color: #000000; margin-bottom: 0.5rem; font-weight: 500;">${t.message}</label>
-                <textarea name="message" required rows="5" style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 1rem; resize: vertical;"></textarea>
-            </div>
-            <div style="display: flex; gap: 1rem;">
-                <button type="submit" class="cta-button" style="flex: 1;">${t.send}</button>
-                <button type="button" class="cancel-button" style="flex: 1; background: #f3f4f6; color: #000000; border: 1px solid #e5e7eb;">${t.cancel}</button>
-            </div>
-        </form>
-    `;
-    
-    modalOverlay.appendChild(modalContent);
-    document.body.appendChild(modalOverlay);
-    
-    // Animate in
-    setTimeout(() => {
-        modalOverlay.style.opacity = '1';
-        modalContent.style.transform = 'scale(1)';
-    }, 10);
-    
-    // Close modal handlers
-    const closeModal = () => {
-        modalOverlay.style.opacity = '0';
-        modalContent.style.transform = 'scale(0.9)';
-        setTimeout(() => {
-            document.body.removeChild(modalOverlay);
-        }, 300);
-    };
-    
-    modalOverlay.addEventListener('click', (e) => {
-        if (e.target === modalOverlay) closeModal();
-    });
-    
-    modalContent.querySelector('.cancel-button').addEventListener('click', closeModal);
-    
-    // Form submission handler
-    modalContent.querySelector('#contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-        
-        const formData = new FormData(this);
-        const formValues = Object.fromEntries(formData);
-        
-        console.log('Contact form submission intercepted - no redirect will happen');
-        
-        // Send email using WebForms
-        const emailData = {
-            access_key: 'c703a095-66f9-47ca-b0cb-09bffc9fd03d',
-            subject: `Contact Inquiry from ${formValues.name}`,
-            message: `
-New Contact Inquiry:
-
-Name: ${formValues.name}
-Email: ${formValues.email}
-
-Message:
-${formValues.message}
-
-Please respond to this inquiry as soon as possible.
-            `,
-            from_name: formValues.name,
-            reply_to: formValues.email
-        };
-        
-        console.log('Sending contact email to WebForms with data:', emailData);
-        
-        // Send to WebForms
-        fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(emailData)
-        }).then(response => {
-            console.log('WebForms contact response status:', response.status);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        }).then(data => {
-            console.log('Contact email sent successfully to info@4apero.com:', data);
-            alert('Thank you for your message! We will get back to you soon.');
-        }).catch(error => {
-            console.error('Contact email service error:', error);
-            alert('There was an error sending your message. Please try again.');
-        });
-        
-        // Close modal
-        closeModal();
-        
-        return false; // EXTRA PREVENTION
-    });
-}
-
 // Show notification
 function showNotification(message) {
     const notification = document.createElement('div');
@@ -945,14 +805,6 @@ const translations = {
             bio4: 'Living in 4 totally different countries (Lithuania, France, USA, and Singapore), gathering impressions and experiences, made a deep imprint to my art: joyful soul of different cultures and traditions, expanded boundaries of world vision, linking universal human senses in vivid compositions.',
             bio5: 'While traveling abroad, inspiration of colors, tones and shapes revealed my passion for cooking and food smoking. I\'m certified in food protection in Ohio, USA. Also for the last 14 years I have been teaching a drawing, painting and creation of stained glass in Universities and private schools in France, Singapore and USA.'
         },
-        contactModal: {
-            title: 'Contact Us',
-            name: 'Name',
-            email: 'Email',
-            message: 'Message',
-            send: 'Send Message',
-            cancel: 'Cancel'
-        },
         footer: {
             tagline: 'Your gateway to Castellane, Provence region, France',
             explore: 'Explore',
@@ -1002,14 +854,6 @@ const translations = {
             bio3: 'Jau penkerius metus kartu su vyru prancūzu, gyvename Castellane, Pietų Prancūzijoje. Mūsų namai visada atviri svečiams. Čia dalijamės tuo, ką patys labiausiai mylime: ramybe, kalnų grožiu, naminiu maistu ir prancūziškais atradimais.',
             bio4: 'Kviečiu atvykti taip, tarsi lankytumėtės pas seniai matytą gerą draugą – šiltai, paprastai ir nuoširdžiai. Aš pasirūpinsiu viskuo, o jums liks tik mėgautis Pietų Prancūzijos ritmu ir skoniais.',
             bio5: 'Esu sertifikuota maisto saugos srityje, todėl užtikrinsiu, kad viskas būtų ne tik skanu, bet ir saugu. Labai jūsų lauksime, Aušra'
-        },
-        contactModal: {
-            title: 'Susisiekite su mumis',
-            name: 'Vardas',
-            email: 'El. paštas',
-            message: 'Žinutė',
-            send: 'Siųsti žinutę',
-            cancel: 'Atšaukti'
         },
         footer: {
             tagline: 'Jūsų vartai į Castellane, Provanso regioną, Prancūziją',
@@ -1137,7 +981,9 @@ function updatePageContent() {
     const footerLinks = document.querySelectorAll('.footer-links a');
     if (footerLinks[0]) footerLinks[0].textContent = t.footer.retreats;
     if (footerLinks[1]) footerLinks[1].textContent = t.footer.aboutHosts;
-    if (footerLinks[2]) footerLinks[2].textContent = t.footer.contactUs;
+
+    const footerContactLabel = document.querySelector('.footer-contact-label');
+    if (footerContactLabel) footerContactLabel.textContent = `${t.footer.contactUs}:`;
     
     const footerRights = document.querySelector('.footer-bottom p');
     if (footerRights) footerRights.textContent = t.footer.rights;
