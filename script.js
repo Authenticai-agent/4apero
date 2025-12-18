@@ -1197,7 +1197,7 @@ const translations = {
             email: 'Email',
             people: 'Number of People',
             date: 'Preferred Date',
-            confirmBooking: 'Confirm Booking',
+            confirmBooking: 'Ask for details',
             cancel: 'Cancel'
         },
         aboutHostModal: {
