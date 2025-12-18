@@ -473,74 +473,8 @@ function showBookingModal(retreat) {
     if (thankYouBtn) {
         thankYouBtn.addEventListener('click', () => {
             closeModal();
-            setTimeout(() => {
-                showInquirySentMessage();
-            }, 300);
         });
     }
-}
-
-function showInquirySentMessage() {
-    const t = translations[currentLanguage].bookingModal;
-
-    const overlay = document.createElement('div');
-    overlay.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 3000;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    `;
-
-    const content = document.createElement('div');
-    content.style.cssText = `
-        background: white;
-        padding: 2.5rem 2rem;
-        border-radius: 8px;
-        max-width: 420px;
-        width: 90%;
-        text-align: center;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        transform: scale(0.9);
-        transition: transform 0.3s ease;
-    `;
-
-    content.innerHTML = `
-        <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
-        <h2 style="color: #000000; margin-bottom: 0.75rem; font-size: 1.5rem;">${t.sentTitle}</h2>
-        <p style="color: #333333; margin-bottom: 1.75rem; line-height: 1.6;">${t.sentBody}</p>
-        <button class="close-sent cta-button" style="width: 100%;">${t.close}</button>
-    `;
-
-    overlay.appendChild(content);
-    document.body.appendChild(overlay);
-
-    setTimeout(() => {
-        overlay.style.opacity = '1';
-        content.style.transform = 'scale(1)';
-    }, 10);
-
-    const close = () => {
-        overlay.style.opacity = '0';
-        content.style.transform = 'scale(0.9)';
-        setTimeout(() => {
-            if (document.body.contains(overlay)) {
-                document.body.removeChild(overlay);
-            }
-        }, 300);
-    };
-
-    content.querySelector('.close-sent').addEventListener('click', close);
-    overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) close();
-    });
 }
 
 // Show About Hosts modal
@@ -1005,9 +939,6 @@ const translations = {
             confirmBooking: 'Ask for details',
             instructions: 'Please send your inquiry to info@4apero.com, add your name, email, number of people, and desired dates. And we will get back to you as soon as possible.',
             thankYou: 'Thank you',
-            sentTitle: 'Email sent',
-            sentBody: 'Your email has been sent. We will get back to you shortly.',
-            close: 'Close',
             cancel: 'Cancel'
         },
         aboutHostModal: {
@@ -1067,9 +998,6 @@ const translations = {
             confirmBooking: 'Klausti',
             instructions: 'Prašome siųsti užklausą į info@4apero.com, nurodykite savo vardą, el. paštą, žmonių skaičių ir pageidaujamas datas. Atsakysime kuo greičiau.',
             thankYou: 'Ačiū',
-            sentTitle: 'El. laiškas išsiųstas',
-            sentBody: 'Jūsų el. laiškas išsiųstas. Netrukus su jumis susisieksime.',
-            close: 'Uždaryti',
             cancel: 'Atšaukti'
         },
         aboutHostModal: {
