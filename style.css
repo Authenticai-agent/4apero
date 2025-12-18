@@ -54,7 +54,7 @@ body {
     right: 0;
     background: #ffffff;
     z-index: 1000;
-    transition: var(--transition);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
     border-bottom: 1px solid #e5e7eb;
 }
 
@@ -653,6 +653,64 @@ body {
 }
 
 /* Responsive Design */
+
+/* Mobile Navigation Menu */
+.nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.3s ease;
+    gap: 0;
+}
+
+.nav-menu.active .nav-link {
+    padding: 1rem 1.5rem;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.nav-menu.active .nav-link:last-child {
+    border-bottom: none;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+    .hero-container {
+        gap: 3rem;
+    }
+    
+    .hero-title {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+    }
+    
+    .hero-image {
+        height: 700px;
+    }
+    
+    .travel-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile landscape and below */
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
@@ -662,10 +720,30 @@ body {
         display: flex;
     }
     
+    .language-toggle {
+        margin-left: auto;
+        margin-right: 1rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    .hero {
+        padding: 100px 20px 60px;
+        min-height: auto;
+    }
+    
     .hero-container {
         grid-template-columns: 1fr;
-        text-align: center;
         gap: 2rem;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: clamp(2rem, 8vw, 3rem);
+        margin-bottom: 1rem;
     }
     
     .hero-description {
@@ -674,39 +752,117 @@ body {
     }
     
     .hero-subtitle {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         text-align: center;
     }
     
     .hero-text {
         font-size: 0.95rem;
+        line-height: 1.6;
     }
     
     .hero-highlights {
-        padding: 1rem;
+        padding: 1.25rem;
+        margin-top: 1rem;
     }
     
     .hero-highlights h4 {
         text-align: center;
+        font-size: 1rem;
+    }
+    
+    .hero-highlights li {
+        font-size: 0.9rem;
     }
     
     .hero-image {
         order: -1;
-        height: 300px;
+        height: 400px;
     }
     
     .region-photo {
         max-width: 100%;
+        border-radius: 8px;
+    }
+    
+    .gallery-thumbnails {
+        gap: 0.5rem;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+    
+    .thumbnail {
+        width: 80px;
+        height: 60px;
+    }
+    
+    .cta-button {
+        width: 100%;
+        justify-content: center;
+        margin-top: 2rem;
+        padding: 0.9rem 1.5rem;
+    }
+    
+    .lt-promo {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .lt-promo .promo-title {
+        font-size: 1.5rem;
+    }
+    
+    .lt-promo .price-highlight {
+        font-size: 1.1rem;
+        padding: 0.8rem 1rem;
+    }
+    
+    .retreats {
+        padding: 3rem 0;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+    }
+    
+    .travel-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .travel-card {
         flex-direction: column;
         height: auto;
+        min-height: auto;
     }
     
     .travel-card-image {
         width: 100%;
-        height: 200px;
+        height: 250px;
+    }
+    
+    .travel-card-content {
+        padding: 1.5rem;
+    }
+    
+    .travel-card-title {
+        font-size: 1.3rem;
+    }
+    
+    .travel-card-description {
+        font-size: 1rem;
+    }
+    
+    .travel-card-highlights {
+        font-size: 0.9rem;
+    }
+    
+    .travel-card-price {
+        font-size: 1.2rem;
     }
     
     .footer-content {
@@ -716,21 +872,229 @@ body {
     
     .footer-links {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 }
 
+/* Mobile portrait */
 @media (max-width: 480px) {
-    .travel-cards {
-        grid-template-columns: 1fr;
+    .nav-container {
+        padding: 0 15px;
+        height: 60px;
+    }
+    
+    .nav-logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .language-toggle {
+        padding: 0.35rem 0.7rem;
+        font-size: 0.8rem;
+        margin-right: 0.5rem;
+    }
+    
+    .hero {
+        padding: 80px 15px 40px;
+    }
+    
+    .hero-title {
+        font-size: clamp(1.75rem, 10vw, 2.5rem);
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-text {
+        font-size: 0.9rem;
+    }
+    
+    .hero-image {
+        height: 300px;
+    }
+    
+    .gallery-thumbnails {
+        gap: 0.4rem;
+    }
+    
+    .thumbnail {
+        width: 70px;
+        height: 55px;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.95rem;
+    }
+    
+    .lt-promo {
+        padding: 1.25rem;
+    }
+    
+    .lt-promo .promo-title {
+        font-size: 1.3rem;
+    }
+    
+    .lt-promo .promo-content {
+        font-size: 0.95rem;
     }
     
     .container {
         padding: 0 15px;
     }
     
-    .nav-container {
-        padding: 0 15px;
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+    
+    .travel-cards {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    
+    .travel-card-image {
+        height: 220px;
+    }
+    
+    .travel-card-content {
+        padding: 1.25rem;
+    }
+    
+    .travel-card-title {
+        font-size: 1.2rem;
+    }
+    
+    .travel-card-description {
+        font-size: 0.95rem;
+    }
+    
+    .detail-item {
+        font-size: 0.9rem;
+    }
+    
+    .travel-card-highlights {
+        font-size: 0.85rem;
+        margin: 0.75rem 0;
+    }
+    
+    .card-book-button {
+        padding: 0.65rem 1.25rem;
+        font-size: 0.95rem;
+    }
+    
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+    
+    .footer-logo h3 {
+        font-size: 1.3rem;
+    }
+    
+    .link-group h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .nav-logo h1 {
+        font-size: 1.3rem;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-image {
+        height: 250px;
+    }
+    
+    .thumbnail {
+        width: 60px;
+        height: 48px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .travel-card-image {
+        height: 200px;
+    }
+}
+
+/* Modal Responsive Styles */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 1.5rem !important;
+        width: 95% !important;
+        max-width: 95% !important;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    .modal-content h3 {
+        font-size: 1.2rem !important;
+    }
+    
+    .modal-content p {
+        font-size: 0.95rem !important;
+    }
+    
+    .modal-content input,
+    .modal-content select,
+    .modal-content textarea {
+        font-size: 16px !important;
+    }
+    
+    .modal-content button {
+        padding: 0.75rem 1rem !important;
+        font-size: 0.95rem !important;
+    }
+    
+    .modal-content form > div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .modal-content form > div:last-child {
+        flex-direction: column !important;
+    }
+    
+    .modal-content form > div:last-child button {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 1.25rem !important;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.3rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .modal-content img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
+    .modal-content > div:first-child {
+        flex-direction: column !important;
+        gap: 1rem !important;
     }
 }
 
