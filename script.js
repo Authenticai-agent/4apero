@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
     renderTravelCards();
     setupEventListeners();
     setupScrollEffects();
-    setupIntersectionObserver();
+    updatePageContent();
     setupGalleryImageErrorHandling();
 });
 
@@ -1058,11 +1058,12 @@ const translations = {
             contact: 'Kontaktai'
         },
         hero: {
-            title: 'Atraskite <span class="highlight">Castellane, Prancūziją</span>',
+            title: 'Castellane <span class="highlight">Cvartai į Verdoną</span>',
             subtitle: 'Paslėptas brangakmenis Provanso širdyje',
-            text1: 'Tarp levandų laukų ir turkio spalvos Verdono upės vandenų įsikūręs Castellane miestas kviečia sulėtinti, giliai įkvėpti ir iš naujo susisieti su tuo, kas iš tiesų svarbu. Per keturias nepamirštamas dienas ir tris atgaivinančias naktis pasinerkite į jausmų pilną kelionę, kuri sujungia gamtą, meną, sveikatą ir amžiną Pietų Prancūzijos žavesį.',
-            text2: 'Pabuskite pajutę laukinių žolelių aromatą ir tolimą varpų skambėjimą iš Notre-Dame du Roc koplyčios, stūksančios aukštai virš kaimo. Pasivaikščiokite pasteliniais fasadais išmargintomis akmenimis grįstomis gatvelėmis, paragaukite geriausių regiono sūrių ir rožinio vyno ir leiskite auksinei Provanso šviesai pažadinti jūsų kūrybiškumą ir ramybę.',
-            text3: 'Mūsų išskirtinės kelionės sujungia jaukų komfortą su autentiškomis vietinėmis patirtimis, nuo žygių i gamtą ir piknikų prie upės iki amatininkų dirbtuvių ir nuostabių vakarų po žvaigždėmis. Nesvarbu, ar atvykstate tapyti, gydytis, medituoti ar tiesiog pailsėti, Castellane siūlo tobulą nuotykio ir ramybės harmoniją.',
+            text1: 'Castellane yra žavingas miestelis Pietų Prancūzijoje, įsikūręs Provence-Alpes-Côte d’Azur regione, Alpes-de-Haute-Provence departamente. Miestelis stovi 724 m virš jūros lygio, prie Verdono upės, šalia vieno įspūdingiausių kanjonų Europoje - Gorges du Verdon.',
+            text2: 'Senamiestyje galima pasivaikščioti siaurų akmenimis grįstų gatvelių labirintais, aplankyti Notre-Dame du Roc bažnyčią ant uolos virš miesto ir pajusti autentišką pietų Prancūzijos atmosferą. Castellane gyvena apie 1 200 žmonių, tačiau vasaros sezonu miestelis atgyja turistų deka.',
+            text3: 'Turistams ir nuotykių ieškotojams: \n Raftingas, kanojos ir kitos vandens pramogos Verdon upėje \nŽygiai, kopimai ir fotografavimas Gorges du Verdon kanjone. \nLevandų laukų vizitai ir mažų kaimelių aplankymas. \nVietiniai turgeliai ir amatininkų dirbtuvės.',
+            text4: 'Castellane – ideali vieta jungiati gamtą, kultūrą, gastronomiją ir sportą.',
             highlightsTitle: 'Pagrindinis'
         },
         retreats: {
@@ -1145,16 +1146,58 @@ function updatePageContent() {
     
     const heroSubtitle = document.querySelector('.hero-subtitle');
     if (heroSubtitle) heroSubtitle.textContent = t.hero.subtitle;
-    
-    const heroTexts = document.querySelectorAll('.hero-text');
+
+    const heroDescription = document.querySelector('.hero-description');
+    const heroHighlights = document.querySelector('.hero-highlights');
+
+    const heroTexts = heroDescription
+        ? Array.from(heroDescription.querySelectorAll('.hero-text')).filter((el) => !el.closest('.hero-highlights'))
+        : [];
+
     if (heroTexts[0]) heroTexts[0].textContent = t.hero.text1;
     if (heroTexts[1]) heroTexts[1].textContent = t.hero.text2;
     if (heroTexts[2]) heroTexts[2].textContent = t.hero.text3;
+
+    heroTexts.forEach((el) => {
+        if (typeof el.textContent === 'string' && el.textContent.includes('\n')) {
+            el.style.whiteSpace = 'pre-line';
+        } else {
+            el.style.whiteSpace = '';
+        }
+    });
+
+    if (t.hero && typeof t.hero.text4 === 'string' && t.hero.text4.trim().length > 0 && heroDescription) {
+        const heroText4El = heroDescription.querySelector('.hero-text-4');
+        if (heroText4El) {
+            heroText4El.textContent = t.hero.text4;
+            heroText4El.style.display = '';
+            if (t.hero.text4.includes('\n')) {
+                heroText4El.style.whiteSpace = 'pre-line';
+            } else {
+                heroText4El.style.whiteSpace = '';
+            }
+        } else if (heroTexts[3]) {
+            heroTexts[3].textContent = t.hero.text4;
+        } else {
+            const newP = document.createElement('p');
+            newP.className = 'hero-text hero-text-4';
+            newP.textContent = t.hero.text4;
+            if (heroHighlights && heroHighlights.parentNode === heroDescription) {
+                heroDescription.insertBefore(newP, heroHighlights);
+            } else {
+                heroDescription.appendChild(newP);
+            }
+        }
+    } else {
+        const heroDescriptionEl = document.querySelector('.hero-description');
+        const heroText4El = heroDescriptionEl ? heroDescriptionEl.querySelector('.hero-text-4') : null;
+        if (heroText4El) heroText4El.style.display = 'none';
+    }
     
     // Show/hide hero highlights based on language
-    const heroHighlights = document.querySelector('.hero-highlights');
-    if (heroHighlights) {
-        heroHighlights.style.display = currentLanguage === 'en' ? 'block' : 'none';
+    const heroHighlightsEl = document.querySelector('.hero-highlights');
+    if (heroHighlightsEl) {
+        heroHighlightsEl.style.display = currentLanguage === 'en' ? 'block' : 'none';
     }
     
     const highlightsTitle = document.querySelector('.highlights-title');
