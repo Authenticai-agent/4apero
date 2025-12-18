@@ -116,7 +116,7 @@ const retreatsData = {
                 "Preparation of local meats and fish",
                 "Grilling techniques, marinades & smoky flavors",
                 "Culinary creativity: the art of fire & taste",
-                "4 apéro evenings with local cheeses, wine & conversation",
+                "2 apéro evenings with local cheeses, wine & conversation",
                 "Daily guided local excursions and hidden village visits",
                 "Shopping in local artisan stores",
                 "Accommodation, all meals and French wines included"
