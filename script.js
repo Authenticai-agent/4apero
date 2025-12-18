@@ -429,59 +429,21 @@ function showBookingModal(retreat) {
         `
         : '';
 
+    const mailToEmail = 'info@4apero.com';
+    const mailSubject = encodeURIComponent(`${t.emailSubjectPrefix} ${retreat.name}`);
+    const mailBody = encodeURIComponent(`${t.emailBodyIntro}\n\n${t.emailBodyFields}\n\n${t.emailBodyOutro}`);
+    const mailtoHref = `mailto:${mailToEmail}?subject=${mailSubject}&body=${mailBody}`;
+
     modalContent.innerHTML = `
         ${galleryHtml}
         <h2 style="color: #000000; margin-bottom: 1rem; font-size: 1.5rem;">${t.title}</h2>
         <h3 style="margin-bottom: 0.5rem; color: #000000;">${retreat.name}</h3>
         <p style="color: #333333; margin-bottom: 1.5rem;">${retreat.description}</p>
-        
-        <form id="bookingForm" style="margin-bottom: 1.5rem;">
-            <div style="margin-bottom: 1rem;">
-                <label style="display: block; margin-bottom: 0.5rem; color: #000000; font-weight: 500;">${t.firstName} *</label>
-                <input type="text" name="firstName" required style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 1rem;">
-            </div>
-            
-            <div style="margin-bottom: 1rem;">
-                <label style="display: block; margin-bottom: 0.5rem; color: #000000; font-weight: 500;">${t.lastName} *</label>
-                <input type="text" name="lastName" required style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 1rem;">
-            </div>
-            
-            <div style="margin-bottom: 1rem;">
-                <label style="display: block; margin-bottom: 0.5rem; color: #000000; font-weight: 500;">${t.phone} *</label>
-                <input type="tel" name="phone" required style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 1rem;">
-            </div>
-            
-            <div style="margin-bottom: 1rem;">
-                <label style="display: block; margin-bottom: 0.5rem; color: #000000; font-weight: 500;">${t.email} *</label>
-                <input type="email" name="email" required style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 1rem;">
-            </div>
-            
-            <div style="margin-bottom: 1rem;">
-                <label style="display: block; margin-bottom: 0.5rem; color: #000000; font-weight: 500;">${t.people} *</label>
-                <select name="people" required style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 1rem;">
-                    <option value="">Select number</option>
-                    <option value="1">1 person</option>
-                    <option value="2">2 people</option>
-                    <option value="3">3 people</option>
-                    <option value="4">4 people</option>
-                    <option value="5">5 people</option>
-                    <option value="6">6 people</option>
-                </select>
-            </div>
-            
-            <div style="margin-bottom: 1.5rem;">
-                <label style="display: block; margin-bottom: 0.5rem; color: #000000; font-weight: 500;">${t.date} *</label>
-                <input type="date" name="date" required style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 6px; font-size: 1rem;">
-            </div>
-            
-            <input type="hidden" name="retreatName" value="${retreat.name}">
-            <input type="hidden" name="retreatPrice" value="${retreat.price}">
-            
-            <div style="display: flex; gap: 1rem;">
-                <button type="submit" class="cta-button" style="flex: 1;">${t.confirmBooking}</button>
-                <button type="button" class="cancel-button" style="flex: 1; background: #e5e7eb; color: #000000; padding: 1rem 2rem; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">${t.cancel}</button>
-            </div>
-        </form>
+        <p style="color: #111827; margin-bottom: 1rem; line-height: 1.6;">${t.instructions}</p>
+        <a href="${mailtoHref}" class="cta-button" style="display: inline-flex; justify-content: center; align-items: center; width: 100%; text-decoration: none; margin-bottom: 1rem;">${t.emailCta}</a>
+        <div style="display: flex; gap: 1rem;">
+            <button type="button" class="cancel-button" style="flex: 1; background: #e5e7eb; color: #000000; padding: 1rem 2rem; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">${t.cancel}</button>
+        </div>
     `;
     
     modalOverlay.appendChild(modalContent);
@@ -509,157 +471,6 @@ function showBookingModal(retreat) {
     });
     
     modalContent.querySelector('.cancel-button').addEventListener('click', closeModal);
-    
-    // Handle form submission - COMPLETELY PREVENT DEFAULT SUBMISSION
-    const form = modalContent.querySelector('#bookingForm');
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-        
-        console.log('Form submission intercepted - no redirect will happen');
-        
-        const formValues = new FormData(form);
-        const data = Object.fromEntries(formValues);
-        
-        // Create email content
-        const emailSubject = `BOOKING FOR info@4apero.com - ${data.retreatName}`;
-        const emailBody = `
-IMPORTANT: This booking is for 4apero.com - Please forward to info@4apero.com
-
-New Booking Request:
-
-Retreat: ${data.retreatName}
-Price: ${data.retreatPrice}
-
-Personal Information:
-First Name: ${data.firstName}
-Last Name: ${data.lastName}
-Phone: ${data.phone}
-Email: ${data.email}
-
-Booking Details:
-Number of People: ${data.people}
-Preferred Date: ${data.date}
-
-ACTION REQUIRED: Forward this email to info@4apero.com
-Please contact the customer soon to confirm availability and provide payment information.
-        `;
-        
-        // Send email using WebForms
-        const emailData = {
-            access_key: 'c703a095-66f9-47ca-b0cb-09bffc9fd03d',
-            subject: `Booking Request - ${data.retreatName}`,
-            message: `
-New Booking Request:
-
-Retreat: ${data.retreatName}
-Price: ${data.retreatPrice}
-
-Personal Information:
-First Name: ${data.firstName}
-Last Name: ${data.lastName}
-Phone: ${data.phone}
-Email: ${data.email}
-
-Booking Details:
-Number of People: ${data.people}
-Preferred Date: ${data.date}
-
-Please contact the customer soon to confirm availability and provide payment information.
-            `,
-            from_name: `${data.firstName} ${data.lastName}`,
-            reply_to: data.email,
-            phone: data.phone,
-            people: data.people,
-            date: data.date,
-            retreat: data.retreatName,
-            price: data.retreatPrice
-        };
-        
-        console.log('Sending email to WebForms with data:', emailData);
-        
-        // Send to WebForms (for admin)
-        fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(emailData)
-        }).then(response => {
-            console.log('WebForms response status:', response.status);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        }).then(data => {
-            console.log('Email sent successfully to info@4apero.com:', data);
-            
-            // Send payment link to customer automatically
-            sendPaymentLinkToCustomer(data);
-            
-        }).catch(error => {
-            console.error('Email service error:', error);
-            alert('There was an error sending your booking. Please try again.');
-            // Still show thank you message even if email fails
-        });
-        
-        // Close modal and show thank you message immediately
-        closeModal();
-        setTimeout(() => {
-            showThankYouMessage();
-        }, 300);
-        
-        return false; // EXTRA PREVENTION
-    });
-}
-
-// Send payment link to customer automatically
-function sendPaymentLinkToCustomer(bookingData) {
-    const customerEmailData = {
-        access_key: 'c703a095-66f9-47ca-b0cb-09bffc9fd03d',
-        subject: 'Payment Link for Your 4apero.com Booking',
-        message: `
-Dear Customer,
-
-Thank you for your booking request!
-
-To complete your reservation, please proceed with payment using the link below:
-
-🔗 PAYMENT LINK: https://your-payment-link-here.com
-
-Booking Details:
-- Retreat: ${bookingData.retreat || 'Selected Retreat'}
-- Price: ${bookingData.price || 'TBD'}
-- People: ${bookingData.people || 'TBD'}
-- Date: ${bookingData.date || 'TBD'}
-
-Once payment is completed, we'll send you a confirmation email with all the details.
-
-If you have any questions, please contact us at info@4apero.com
-
-Best regards,
-The 4apero.com Team
-        `,
-        from_name: '4apero.com Team',
-        reply_to: 'info@4apero.com'
-    };
-    
-    // Send payment email to customer
-    fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(customerEmailData)
-    }).then(response => {
-        console.log('Payment link sent to customer, status:', response.status);
-        return response.json();
-    }).then(data => {
-        console.log('Payment link email sent successfully to customer:', data);
-    }).catch(error => {
-        console.error('Error sending payment link to customer:', error);
-    });
 }
 
 // Show About Hosts modal
@@ -897,81 +708,6 @@ Please respond to this inquiry as soon as possible.
     });
 }
 
-// Show thank you message
-function showThankYouMessage() {
-    const thankYouOverlay = document.createElement('div');
-    thankYouOverlay.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 3000;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    `;
-    
-    const thankYouContent = document.createElement('div');
-    thankYouContent.style.cssText = `
-        background: white;
-        padding: 3rem 2rem;
-        border-radius: 8px;
-        max-width: 400px;
-        width: 90%;
-        text-align: center;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        transform: scale(0.9);
-        transition: transform 0.3s ease;
-    `;
-    
-    thankYouContent.innerHTML = `
-        <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
-        <h2 style="color: #000000; margin-bottom: 1rem; font-size: 1.5rem;">Thank You!</h2>
-        <p style="color: #333333; margin-bottom: 2rem; line-height: 1.6;">
-            Thank you for your inquiry. We will contact you soon with payment link and more details.
-        </p>
-        <button id="closeThankYou" style="
-            background: #059669;
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 500;
-        ">Close</button>
-    `;
-    
-    thankYouOverlay.appendChild(thankYouContent);
-    document.body.appendChild(thankYouOverlay);
-    
-    // Animate in
-    setTimeout(() => {
-        thankYouOverlay.style.opacity = '1';
-        thankYouContent.style.transform = 'scale(1)';
-    }, 10);
-    
-    // Close handler
-    const closeThankYou = () => {
-        thankYouOverlay.style.opacity = '0';
-        thankYouContent.style.transform = 'scale(0.9)';
-        setTimeout(() => {
-            if (document.body.contains(thankYouOverlay)) {
-                document.body.removeChild(thankYouOverlay);
-            }
-        }, 300);
-    };
-    
-    document.getElementById('closeThankYou').addEventListener('click', closeThankYou);
-    thankYouOverlay.addEventListener('click', (e) => {
-        if (e.target === thankYouOverlay) closeThankYou();
-    });
-}
-
 // Show notification
 function showNotification(message) {
     const notification = document.createElement('div');
@@ -1197,6 +933,12 @@ const translations = {
             people: 'Number of People',
             date: 'Preferred Date',
             confirmBooking: 'Ask for details',
+            instructions: 'Please send your inquiry to info@4apero.com, add your name, email, number of people, and desired dates. And we will get back to you as soon as possible.',
+            emailCta: 'Email info@4apero.com',
+            emailSubjectPrefix: 'Inquiry:',
+            emailBodyIntro: 'Hello,\n\nI would like to ask for details about this retreat.',
+            emailBodyFields: 'Name:\nEmail:\nNumber of people:\nDesired dates:',
+            emailBodyOutro: 'Thank you!\n\nSent via 4apero.com',
             cancel: 'Cancel'
         },
         aboutHostModal: {
@@ -1254,6 +996,12 @@ const translations = {
             people: 'Žmonių skaičius',
             date: 'Pageidaujama data',
             confirmBooking: 'Klausti',
+            instructions: 'Prašome siųsti užklausą į info@4apero.com, nurodykite savo vardą, el. paštą, žmonių skaičių ir pageidaujamas datas. Atsakysime kuo greičiau.',
+            emailCta: 'Rašyti į info@4apero.com',
+            emailSubjectPrefix: 'Užklausa:',
+            emailBodyIntro: 'Sveiki,\n\nNorėčiau gauti daugiau informacijos apie šią kelionę.',
+            emailBodyFields: 'Vardas:\nEl. paštas:\nŽmonių skaičius:\nPageidaujamos datos:',
+            emailBodyOutro: 'Ačiū!\n\nIšsiųsta per 4apero.com',
             cancel: 'Atšaukti'
         },
         aboutHostModal: {
