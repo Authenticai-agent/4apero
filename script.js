@@ -108,7 +108,7 @@ const retreatsData = {
             location: "Castellane, France",
             date: "4 days / 3 nights retreat",
             time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
-            price: '<strong style="color: #059669; font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">4 days / 3 nights retreat</small>',
+            price: '<strong style="color: #56331c; font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">4 days / 3 nights retreat</small>',
             images: photosByNumber([3, 8, 9, 13, 16, 18, 20, 34, 44, 45, 51, 56, 57, 60, 63, 64, 66, 67, 71, 72, 74, 80]),
             image: "./images/image05654.jpeg",
             highlights: [
@@ -129,7 +129,7 @@ const retreatsData = {
             location: "Grasse & Castellane, France",
             date: "4 days / 3 nights retreat",
             time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
-            price: '<strong style="color: #059669; font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">4 days / 3 nights retreat</small>',
+            price: '<strong style="color: #56331c; font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">4 days / 3 nights retreat</small>',
             images: photosByNumber([1, 2, 10, 11, 14, 19, 23, 28, 42, 53, 78, 69]),
             image: "./images/image05903.jpeg",
             highlights: [
@@ -149,7 +149,7 @@ const retreatsData = {
             location: "Castellane, France",
             date: "January 30 – February 2",
             time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
-            price: '<strong style="color: #059669; font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">Jan 30 – Feb 2</small>',
+            price: '<strong style="color: #56331c; font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">Jan 30 – Feb 2</small>',
             images: uniqueImages(["./images/image05919.jpeg", ...photosByNumber([4, 5, 7, 12, 15, 22, 26, 27, 29, 32, 33, 37, 38, 48, 49, 50, 76])]),
             image: "./images/image05919.jpeg",
             highlights: [
@@ -169,7 +169,7 @@ const retreatsData = {
             location: "Castellane, Prancūzija",
             date: "4 dienų / 3 naktų kelionė",
             time: "Atvykimas: 15:00, Išvykimas: 10:00",
-            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
+            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #56331c; font-weight: bold;">80% nuolaida</span><br><strong style="color: #56331c; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
             images: photosByNumber([3, 8, 9, 13, 16, 18, 20, 34, 44, 45, 51, 56, 57, 60, 63, 64, 66, 67, 71, 72, 74, 80]),
             image: "./images/image05654.jpeg",
             highlights: [
@@ -183,7 +183,7 @@ const retreatsData = {
             location: "Grasse ir Castellane, Prancūzija",
             date: "4 dienų / 3 naktų kelionė",
             time: "Atvykimas: 15:00, Išvykimas: 10:00",
-            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
+            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #56331c; font-weight: bold;">80% nuolaida</span><br><strong style="color: #56331c; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
             images: photosByNumber([1, 2, 10, 11, 14, 19, 23, 28, 42, 53, 78, 69]),
             image: "./images/image05903.jpeg",
             highlightsIntro: "Kelionė pilna kvapų ir prancūziškų skanumynų\n\nQuiche, Bourguignon, Tartiflette, Taboulé, Foie Gras, austres, sūriai, vynas, šampanas…\nKelionė, kurios tikrai nepamiršite!\n\nVos 1 val. 30 min. kelio – ir Jūs L’Occitane gamykloje.\nĮspūdinga ekskursija, kurios metu sužinosite apie prekės ženklo istoriją, ingredientus ir gamybos procesus.\nPo jos – boutique’as su fabriko kainomis – tobula proga parsivežti kvapnių atradimų.\n\nAplankysime ir Galimard / Fragonard Grasse – vietą, kur gimė Prancūzijos parfumerija.\nSusipažinsite su tradicine kvepalų gamyba, sužinosite, kaip gimsta aromatai, ir pasinersite į kvapų istorijas pačioje Grasse širdyje.\n\nKą patirsite šios kelionės metu\n\nTai ne tik degustacinė ir pažintinė kelionė, bet ir jutiminė patirtis, leidžianti atsipalaiduoti ir atitrūkti nuo kasdienybės.\nJūsų lauks dažų liejimas ant drobių – kūrybinis procesas be taisyklių, kuriame spalvos, judesys ir emocijos susilieja į unikalų rezultatą. Ši veikla padės paleisti kontrolę, pasinerti į momentą ir sukurti savo asmeninį kelionės prisiminimą.\n\nSužinosite, kaip gyvena prancūzai, kokios jų tradicijos, etiketas ir elgesys prie stalo.\nIšmoksite, kada valgomas sūris, kaip derinti skonius ir kaip ragauti taip, kaip tai daro vietiniai.\n\nAtraskite, kaip atskirti vynus iš skirtingų Prancūzijos regionų, kuo jie išsiskiria ir kaip juos teisingai derinti prie maisto.",
@@ -201,7 +201,7 @@ const retreatsData = {
             location: "Castellane, Prancūzija",
             date: "sausio 30 – vasario 2",
             time: "Atvykimas: 15:00, Išvykimas: 10:00",
-            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #059669; font-weight: bold;">80% nuolaida</span><br><strong style="color: #059669; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">sausio 30 – vasario 2</small>',
+            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: #56331c; font-weight: bold;">80% nuolaida</span><br><strong style="color: #56331c; font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">sausio 30 – vasario 2</small>',
             images: uniqueImages(["./images/image05919.jpeg", ...photosByNumber([4, 5, 7, 12, 15, 22, 26, 27, 29, 32, 33, 37, 38, 48, 49, 50, 76])]),
             image: "./images/image05919.jpeg",
             highlights: [
@@ -422,7 +422,7 @@ function showBookingModal(retreat) {
             <img id="modalMainImage" src="${modalImages[0]}" alt="${retreat.name}" style="width: 100%; height: auto; border-radius: 8px; background: #f3f4f6; object-fit: cover; aspect-ratio: 16 / 9;">
             ${modalImages.length > 1 ? `
                 <div style="display: flex; gap: 0.5rem; overflow-x: auto; padding-top: 0.75rem; -webkit-overflow-scrolling: touch;">
-                    ${modalImages.map((src, i) => `<img src="${src}" alt="${retreat.name} ${i + 1}" style="width: 64px; height: 64px; border-radius: 6px; object-fit: cover; cursor: pointer; flex: 0 0 auto; border: 2px solid ${i === 0 ? '#059669' : 'transparent'};" onclick="document.getElementById('modalMainImage').src='${src}'; Array.from(this.parentNode.children).forEach((el)=>el.style.borderColor='transparent'); this.style.borderColor='#059669';">`).join('')}
+                    ${modalImages.map((src, i) => `<img src="${src}" alt="${retreat.name} ${i + 1}" style="width: 64px; height: 64px; border-radius: 6px; object-fit: cover; cursor: pointer; flex: 0 0 auto; border: 2px solid ${i === 0 ? 'var(--brand-primary)' : 'transparent'};" onclick="document.getElementById('modalMainImage').src='${src}'; Array.from(this.parentNode.children).forEach((el)=>el.style.borderColor='transparent'); this.style.borderColor='var(--brand-primary)';">`).join('')}
                 </div>
             ` : ''}
         </div>
@@ -434,8 +434,8 @@ function showBookingModal(retreat) {
         <h2 style="color: #000000; margin-bottom: 1rem; font-size: 1.5rem;">${t.title}</h2>
         <h3 style="margin-bottom: 0.5rem; color: #000000;">${retreat.name}</h3>
         <p style="color: #333333; margin-bottom: 1.5rem;">${retreat.description}</p>
-        <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 10px; padding: 1rem; margin-bottom: 1.25rem;">
-            <p style="color: #064e3b; margin: 0; line-height: 1.7; font-weight: 600;">${t.instructions}</p>
+        <div style="background: var(--brand-primary-soft); border: 1px solid rgba(86, 51, 28, 0.25); border-radius: 10px; padding: 1rem; margin-bottom: 1.25rem;">
+            <p style="color: var(--brand-primary); margin: 0; line-height: 1.7; font-weight: 600;">${t.instructions}</p>
         </div>
         <div>
             <button type="button" class="thank-you-button cta-button" style="width: 100%;">${t.thankYou}</button>
