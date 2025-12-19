@@ -122,6 +122,13 @@ img {
     width: 100%;
 }
 
+.language-toggles {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+
 .language-toggle {
     background: var(--brand-primary);
     color: #ffffff;
@@ -132,7 +139,11 @@ img {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease;
-    margin-left: 1rem;
+    margin-left: 0;
+}
+
+.language-toggle.active {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85);
 }
 
 .language-toggle:hover {
@@ -758,9 +769,13 @@ img {
         display: flex;
     }
     
-    .language-toggle {
+    .language-toggles {
         margin-left: auto;
         margin-right: 1rem;
+        gap: 0.35rem;
+    }
+
+    .language-toggle {
         padding: 0.4rem 0.8rem;
         font-size: 0.85rem;
     }

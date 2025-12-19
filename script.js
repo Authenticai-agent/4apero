@@ -161,6 +161,67 @@ const retreatsData = {
             ]
         }
     ],
+    fr: [
+        {
+            id: 1,
+            name: "SAGE SMOKE — Atelier fumage de viande & poisson",
+            description: "Découvrez l’art ancestral du feu, de la fumée et de la conservation. Apprenez à saler, sécher, fumer et préparer vos propres spécialités locales. Savourez des arômes fumés et une cuisine créative en transformant des ingrédients simples en saveurs riches et complexes. Vivez la satisfaction de maîtriser des techniques d’autrefois qui vous relient à la tradition, à la nature et à l’essence d’une cuisine lente et consciente.<br><br><strong>Points forts du programme :</strong><br>• Atelier pratique de fumage avec les deux fumoirs d’Ausra<br>• Préparation de viandes et poissons locaux<br>• Techniques de grillades, marinades & saveurs fumées<br>• Créativité culinaire : l’art du feu et du goût<br>• 2 soirées apéro avec fromages locaux, vin & conversation<br>• Excursions locales guidées et visites de villages secrets<br>• Shopping dans des boutiques d’artisans locaux<br>• Hébergement, tous les repas et vins français inclus",
+            location: "Castellane, France",
+            date: "Séjour de 4 jours / 3 nuits",
+            time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
+            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">$2800 par personne</strong><br><small style="color: #666;">4 jours / 3 nuits</small>',
+            images: photosByNumber([3, 8, 9, 13, 16, 18, 20, 34, 44, 45, 51, 56, 57, 60, 63, 64, 66, 67, 71, 72, 74, 80]),
+            image: "./images/image05654.jpeg",
+            highlights: [
+                "Groupe de 4 à 6 personnes. Atelier pratique de fumage avec les deux fumoirs d’Ausra",
+                "Préparation de viandes et poissons locaux",
+                "Techniques de grillades, marinades & saveurs fumées",
+                "Créativité culinaire : l’art du feu et du goût",
+                "2 soirées apéro avec fromages locaux, vin & conversation",
+                "Excursions locales guidées et visites de villages secrets",
+                "Shopping dans des boutiques d’artisans locaux",
+                "Hébergement, tous les repas, vins et boissons inclus"
+            ]
+        },
+        {
+            id: 2,
+            name: "PARFUM & COULEUR — Grasse & Castellane",
+            description: "Embarquez pour un voyage sensoriel mêlant parfum, couleur et création. Visitez Grasse, capitale mondiale du parfum, et composez votre propre fragrance signature. Découvrez les secrets des accords olfactifs, expérimentez des essences rares et repartez avec un parfum qui raconte votre histoire et votre esprit.<br><br><strong>Points forts du programme :</strong><br>• Visite guidée d’une maison de parfum traditionnelle à Grasse<br>• Atelier : créer votre parfum naturel (mélange personnel)<br>• Dîner aux accents floraux et aromatiques<br>• 2 expériences apéro associant parfum & goût<br>• Balades guidées dans les villages et sentiers nature<br>• Shopping dans des boutiques de parfums et d’artisans<br>• Hébergement, repas, vins et boissons inclus",
+            location: "Grasse & Castellane, France",
+            date: "Séjour de 4 jours / 3 nuits",
+            time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
+            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">$2800 par personne</strong><br><small style="color: #666;">4 jours / 3 nuits</small>',
+            images: photosByNumber([1, 2, 10, 11, 14, 19, 23, 28, 42, 53, 78, 69]),
+            image: "./images/image05903.jpeg",
+            highlights: [
+                "Groupe de 4 à 6 personnes. Visite guidée d’une maison de parfum traditionnelle à Grasse",
+                "Atelier : créer votre parfum naturel (mélange personnel)",
+                "Dîner aux accents floraux et aromatiques",
+                "2 expériences apéro associant parfum & goût",
+                "Balades guidées dans les villages et sentiers nature",
+                "Shopping dans des boutiques de parfums et d’artisans",
+                "Hébergement, repas, vins et boissons inclus"
+            ]
+        },
+        {
+            id: 3,
+            name: "Festival du Petardier – escapade premium culinaire & culturelle (4 jours) à Castellane",
+            description: "Vivez une escapade exceptionnelle au cœur de la Provence pendant le légendaire Festival du Petardier à Castellane, où traditions séculaires riment avec gastronomie et art de vivre.",
+            location: "Castellane, France",
+            date: "30 janvier – 2 février",
+            time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
+            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">$2800 par personne</strong><br><small style="color: #666;">30 janv. – 2 fév.</small>',
+            images: uniqueImages(["./images/image05919.jpeg", ...photosByNumber([4, 5, 7, 12, 15, 22, 26, 27, 29, 32, 33, 37, 38, 48, 49, 50, 76])]),
+            image: "./images/image05919.jpeg",
+            highlights: [
+                "Accès exclusif au Festival du Petardier, célébration historique emblématique de Castellane",
+                "Repas traditionnels de Castellane partagés avec les habitants",
+                "Visites guidées de Castellane et des villages alentours : patrimoine, nature et charme provençal",
+                "Ateliers culinaires exclusifs : baguettes artisanales, quiches et spécialités régionales",
+                "Moments de dégustation, de partage et de convivialité – l’authenticité de la Provence"
+            ]
+        }
+    ],
     lt: [
         {
             id: 1,
@@ -226,10 +287,21 @@ const navbar = document.querySelector('.navbar');
 
 // Initialize the app
 document.addEventListener('DOMContentLoaded', function() {
-    renderTravelCards();
+    const storedLanguage = (() => {
+        try {
+            return localStorage.getItem('language');
+        } catch (e) {
+            return null;
+        }
+    })();
+
+    if (storedLanguage) {
+        currentLanguage = storedLanguage;
+    }
+
+    setLanguage(currentLanguage);
     setupEventListeners();
     setupScrollEffects();
-    updatePageContent();
     setupGalleryImageErrorHandling();
 });
 
@@ -779,7 +851,21 @@ const translations = {
             text1: 'Nestled between lavender fields and the turquoise waters of the Verdon River, Castellane invites you to slow down, breathe deeply, and reconnect with what truly matters. Over five unforgettable days and four restorative nights, immerse yourself in a sensorial journey that blends nature, art, wellness, and the timeless charm of Southern France.',
             text2: 'Wake up to the scent of wild herbs and the distant echo of church bells from the Notre-Dame du Roc chapel perched high above the village. Wander through cobbled streets lined with pastel façades, taste the region\'s finest cheeses and rosé, and let the golden Provençal light awaken your creativity and calm.',
             text3: 'Our exclusive retreats combine luxury comfort with authentic local experiences — from guided nature walks and riverside picnics to artisan workshops and mindful evenings under the stars. Whether you come to paint, heal, meditate, or simply rest, Castellane offers the perfect harmony of adventure and serenity.',
-            highlightsTitle: 'Highlights'
+            highlightsTitle: 'Highlights',
+            highlightsSection: {
+                title: '✨ Highlights',
+                items: [
+                    'Boutique accommodation with panoramic mountain views',
+                    'Gourmet Provençal cuisine and local wines',
+                    'Personalized wellness or creative workshops',
+                    'Visits to Grasse, the world\'s perfume capital',
+                    'Time to explore the Verdon Gorges and lavender valleys'
+                ],
+                strong: '🌸 4 Days / 3 Nights of Reconnection and Renewal',
+                em: 'Let Provence remind you how good life can feel.',
+                text: 'Book your retreat in Castellane today — where nature, color, and calm meet.'
+            },
+            cta: 'Book now'
         },
         retreats: {
             sectionTitle: 'Our Retreats',
@@ -813,6 +899,69 @@ const translations = {
             aboutHosts: 'About Hosts',
             contactUs: 'Contact Us',
             rights: '© 2025 4Apero. All rights reserved.'
+        }
+    },
+    fr: {
+        nav: {
+            home: 'Accueil',
+            retreats: 'Séjours',
+            aboutHosts: 'À propos des hôtes',
+            contact: 'Contact'
+        },
+        hero: {
+            title: 'Découvrez <span class="highlight">Castellane, France</span>',
+            subtitle: 'Un trésor caché au cœur de la Provence',
+            text1: 'Entre champs de lavande et eaux turquoise du Verdon, Castellane vous invite à ralentir, respirer et vous reconnecter à l’essentiel. Pendant quatre jours inoubliables et trois nuits réparatrices, vivez une expérience sensorielle qui mêle nature, art, bien-être et charme intemporel du Sud de la France.',
+            text2: 'Réveillez-vous au parfum des herbes sauvages et au lointain écho des cloches de la chapelle Notre-Dame du Roc, perchée au-dessus du village. Flânez dans les ruelles pavées aux façades pastel, goûtez les meilleurs fromages et rosés de la région, et laissez la lumière dorée de Provence éveiller votre créativité et votre calme.',
+            text3: 'Nos séjours exclusifs allient confort et expériences locales authentiques — randonnées guidées, pique-niques au bord de l’eau, ateliers artisanaux et soirées apaisantes sous les étoiles. Que vous veniez pour créer, vous ressourcer, méditer ou simplement vous reposer, Castellane offre l’équilibre parfait entre aventure et sérénité.',
+            highlightsTitle: 'Temps forts',
+            highlightsSection: {
+                title: '✨ Temps forts',
+                items: [
+                    'Hébergement de charme avec vue panoramique sur les montagnes',
+                    'Cuisine provençale et vins locaux',
+                    'Ateliers bien-être ou créatifs personnalisés',
+                    'Visites de Grasse, capitale mondiale du parfum',
+                    'Exploration des Gorges du Verdon et des vallées de lavande'
+                ],
+                strong: '🌸 4 jours / 3 nuits pour se reconnecter et se régénérer',
+                em: 'Laissez la Provence vous rappeler comme la vie peut être douce.',
+                text: 'Réservez votre séjour à Castellane — là où la nature, la couleur et le calme se rencontrent.'
+            },
+            cta: 'Réserver'
+        },
+        retreats: {
+            sectionTitle: 'Nos séjours',
+            sectionSubtitle: 'Trouvez votre escapade idéale au cœur de la Provence',
+            bookNow: 'Plus d’informations'
+        },
+        bookingModal: {
+            title: 'Demande',
+            firstName: 'Prénom',
+            lastName: 'Nom',
+            phone: 'Téléphone',
+            email: 'E-mail',
+            people: 'Nombre de personnes',
+            date: 'Dates souhaitées',
+            confirmBooking: 'Demander des détails',
+            instructions: 'Veuillez envoyer votre demande à info@4apero.com en indiquant votre nom, votre e-mail, le nombre de personnes et les dates souhaitées. Nous vous répondrons dès que possible.',
+            thankYou: 'Merci'
+        },
+        aboutHostModal: {
+            title: 'À propos de votre hôte',
+            bio1: 'Je suis Ausra, artiste professionnelle (peinture, dessin, calligraphie et vitrail), profondément inspirée par l’harmonie des sens : le toucher, la vue, l’ouïe, l’odorat, le goût et la perception extrasensorielle.',
+            bio2: 'Peindre à partir de l’émotion intérieure, nourrie par la musique et l’observation des musiciens, fait partie intégrante de mon travail. J’ai vécu des collaborations créatives marquantes avec l’Orchestre National de Lille (France) en 2009 (« Traits d\'Orchestre ») et avec le Dayton Philharmonic Orchestra (USA) en 2017 (« Symphony of Lines »).',
+            bio3: 'Ma passion pour le dessin et la peinture, associée au flux de l’inconscient, m’a menée vers l’expérimentation du vitrail : études de « Stained glass » et « Art therapy » en France, puis ouverture du studio « French stained glass » à Singapour en 2013.',
+            bio4: 'Vivre dans quatre pays très différents (Lituanie, France, États‑Unis et Singapour) a profondément marqué mon art : des cultures variées, des traditions et une vision du monde élargie, réunies dans des compositions vivantes.',
+            bio5: 'En voyage, les couleurs et les formes ont aussi révélé ma passion pour la cuisine et le fumage. Je suis certifiée en sécurité alimentaire (Ohio, USA). Depuis 14 ans, j’enseigne le dessin, la peinture et le vitrail dans des universités et écoles privées en France, à Singapour et aux États‑Unis.'
+        },
+        footer: {
+            tagline: 'Votre porte d’entrée vers Castellane, en Provence, France',
+            explore: 'Explorer',
+            retreats: 'Séjours',
+            aboutHosts: 'À propos des hôtes',
+            contactUs: 'Nous contacter',
+            rights: '© 2025 4Apero. Tous droits réservés.'
         }
     },
     lt: {
@@ -867,20 +1016,25 @@ const translations = {
     }
 };
 
-function toggleLanguage() {
-    const ltPromo = document.querySelector('.lt-promo');
-    const languageButton = document.querySelector('.language-toggle');
-    
-    if (currentLanguage === 'en') {
-        currentLanguage = 'lt';
-        languageButton.textContent = 'English';
-        ltPromo.style.display = 'block';
-    } else {
-        currentLanguage = 'en';
-        languageButton.textContent = 'Lietuviškai';
-        ltPromo.style.display = 'none';
+function setLanguage(lang) {
+    const nextLang = translations[lang] ? lang : 'en';
+    currentLanguage = nextLang;
+
+    try {
+        localStorage.setItem('language', currentLanguage);
+    } catch (e) {
+        // ignore
     }
-    
+
+    const ltPromo = document.querySelector('.lt-promo');
+    if (ltPromo) ltPromo.style.display = currentLanguage === 'lt' ? 'block' : 'none';
+
+    document.querySelectorAll('.language-toggle[data-lang]').forEach((btn) => {
+        const isActive = btn.getAttribute('data-lang') === currentLanguage;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+
     // Re-render retreat cards with new language
     renderTravelCards();
     updatePageContent();
@@ -950,14 +1104,41 @@ function updatePageContent() {
         if (heroText4El) heroText4El.style.display = 'none';
     }
     
+    const ctaButtonSpan = document.querySelector('.cta-button span');
+    if (ctaButtonSpan && t.hero && typeof t.hero.cta === 'string') {
+        ctaButtonSpan.textContent = t.hero.cta;
+    } else if (ctaButtonSpan && currentLanguage === 'en') {
+        ctaButtonSpan.textContent = 'Book now';
+    }
+
     // Show/hide hero highlights based on language
     const heroHighlightsEl = document.querySelector('.hero-highlights');
     if (heroHighlightsEl) {
-        heroHighlightsEl.style.display = currentLanguage === 'en' ? 'block' : 'none';
+        heroHighlightsEl.style.display = (currentLanguage === 'en' || currentLanguage === 'fr') ? 'block' : 'none';
     }
     
     const highlightsTitle = document.querySelector('.highlights-title');
     if (highlightsTitle) highlightsTitle.textContent = t.hero.highlightsTitle;
+
+    const highlightsSection = t.hero && t.hero.highlightsSection ? t.hero.highlightsSection : null;
+    if (heroHighlightsEl && highlightsSection) {
+        const h4 = heroHighlightsEl.querySelector('h4');
+        if (h4) h4.textContent = highlightsSection.title;
+
+        const lis = Array.from(heroHighlightsEl.querySelectorAll('ul li'));
+        if (Array.isArray(highlightsSection.items)) {
+            lis.forEach((li, idx) => {
+                if (typeof highlightsSection.items[idx] === 'string') {
+                    li.textContent = highlightsSection.items[idx];
+                }
+            });
+        }
+
+        const ps = Array.from(heroHighlightsEl.querySelectorAll('p.hero-text'));
+        if (ps[0] && highlightsSection.strong) ps[0].innerHTML = `<strong>${highlightsSection.strong}</strong>`;
+        if (ps[1] && highlightsSection.em) ps[1].innerHTML = `<em>${highlightsSection.em}</em>`;
+        if (ps[2] && highlightsSection.text) ps[2].textContent = highlightsSection.text;
+    }
     
     // Update Retreats Section
     const sectionTitle = document.querySelector('.section-header h2');
