@@ -507,7 +507,7 @@ function showBookingModal(retreat) {
         <h2 style="color: #000000; margin-bottom: 1rem; font-size: 1.5rem;">${t.title}</h2>
         <h3 style="margin-bottom: 0.5rem; color: #000000;">${retreat.name}</h3>
         <p style="color: #333333; margin-bottom: 1.5rem;">${retreat.description}</p>
-        <div style="background: var(--brand-primary-soft); border: 1px solid rgba(162, 132, 119, 0.25); border-radius: 10px; padding: 1rem; margin-bottom: 1.25rem;">
+        <div style="background: var(--brand-primary-soft); border: 1px solid rgba(255, 162, 39, 0.25); border-radius: 10px; padding: 1rem; margin-bottom: 1.25rem;">
             <p style="color: var(--brand-primary); margin: 0; line-height: 1.7; font-weight: 600;">${t.instructions}</p>
         </div>
         <div>
