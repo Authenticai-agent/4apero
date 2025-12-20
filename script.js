@@ -229,7 +229,7 @@ const retreatsData = {
             description: "4 dienų kulinarinė kelionė Castellane regione. Per keturias įkvepiančias dienas išmoksite, sužinosite ir pamatysite svarbiausias prancūziškos gastronomijos paslaptis. O svarbiausia – ragau­sit­e, valgysite ir gersite tiek, kiek širdis geidžia, niekuo nereikės rūpintis – jums beliks tik mėgautis.",
             location: "Castellane, Prancūzija",
             date: "4 dienų / 3 naktų kelionė",
-            time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
+            time: "",
             price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: var(--brand-primary); font-weight: bold;">80% nuolaida</span><br><strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
             images: photosByNumber([3, 8, 9, 13, 16, 18, 20, 34, 44, 45, 51, 56, 57, 60, 63, 64, 66, 67, 71, 72, 74, 80]),
             image: "./images/image05654.jpeg",
@@ -243,7 +243,7 @@ const retreatsData = {
             description: "4 dienų kvapų ir skonių kelionė į Castellane",
             location: "Grasse ir Castellane, Prancūzija",
             date: "4 dienų / 3 naktų kelionė",
-            time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
+            time: "",
             price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: var(--brand-primary); font-weight: bold;">80% nuolaida</span><br><strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
             images: photosByNumber([1, 2, 10, 11, 14, 19, 23, 28, 42, 53, 78, 69]),
             image: "./images/image05903.jpeg",
@@ -262,7 +262,7 @@ const retreatsData = {
             description: "Patirkite išskirtinę akimirką Provanso širdyje, dalyvaudami legendinėje Petardier šventėje Castellane, kur susilieja senovinės tradicijos, prancūziška gastronomija ir gyvenimo džiaugsmas.",
             location: "Castellane, Prancūzija",
             date: "sausio 30 – vasario 2",
-            time: "Check-in: 3:00 PM, Check-out: 10:00 AM",
+            time: "",
             price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: var(--brand-primary); font-weight: bold;">80% nuolaida</span><br><strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">sausio 30 – vasario 2</small>',
             images: uniqueImages(["./images/image05919.jpeg", ...photosByNumber([4, 5, 7, 12, 15, 22, 26, 27, 29, 32, 33, 37, 38, 48, 49, 50, 76])]),
             image: "./images/image05919.jpeg",
@@ -395,6 +395,15 @@ function createTravelCard(retreat, index) {
     const highlightsList = retreat.highlights && retreat.highlights.length > 0 
         ? `<ul class="travel-card-highlights">${retreat.highlights.map(h => `<li>${h}</li>`).join('')}</ul>` 
         : '';
+
+    const timeRow = retreat.time
+        ? `
+                    <div class="detail-item">
+                        <i class="fas fa-clock"></i>
+                        <span>${retreat.time}</span>
+                    </div>
+        `
+        : '';
     
     card.innerHTML = `
         <img src="${retreat.image}" alt="${retreat.name}" class="travel-card-image" loading="lazy">
@@ -415,10 +424,7 @@ function createTravelCard(retreat, index) {
                         <i class="fas fa-calendar-alt"></i>
                         <span>${retreat.date}</span>
                     </div>
-                    <div class="detail-item">
-                        <i class="fas fa-clock"></i>
-                        <span>${retreat.time}</span>
-                    </div>
+                    ${timeRow}
                 </div>
                 <div class="travel-card-price">${retreat.price}</div>
                 <button class="card-book-button" onclick="handleCardClickById(${retreat.id})">${bookNowLabel}</button>
@@ -429,7 +435,6 @@ function createTravelCard(retreat, index) {
     return card;
 }
 
-// Handle card click
 function handleCardClick(retreat) {
     console.log('Card clicked:', retreat.name);
     // Here you could open a modal, navigate to a detail page, or trigger a booking flow
