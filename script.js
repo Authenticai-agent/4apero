@@ -980,7 +980,7 @@ const translations = {
             title: 'Castellane <span class="highlight">Vartai į Verdoną</span>',
             subtitle: 'Paslėptas brangakmenis Provanso širdyje',
             text1: 'Castellane yra žavingas miestelis Pietų Prancūzijoje, įsikūręs Provence-Alpes-Côte d’Azur regione, Alpes-de-Haute-Provence departamente. Miestelis stovi 724 m virš jūros lygio, prie Verdono upės, šalia vieno įspūdingiausių kanjonų Europoje - Gorges du Verdon.',
-            text2: 'Senamiestyje galima pasivaikščioti siaurų akmenimis grįstų gatvelių labirintais, aplankyti Notre-Dame du Roc bažnyčią ant uolos virš miesto ir pajusti autentišką pietų Prancūzijos atmosferą. Castellane gyvena apie 1 200 žmonių, tačiau vasaros sezonu miestelis atgyja turistų deka.',
+            text2: 'Senamiestyje galima pasivaikščioti siaurų akmenimis grįstų gatvelių labirintais, aplankyti Notre-Dame du Roc bažnyčią ant uolos virš miesto ir pajusti autentišką pietų Prancūzijos atmosferą. Castellane žiemą gyvena apie 1 200 žmonių, tačiau vasaros sezonu miestelis atgyja turistų deka iki 30 000.',
             text3: 'Turistams ir nuotykių ieškotojams: \n Raftingas, kanojos ir kitos vandens pramogos Verdon upėje \nŽygiai, kopimai ir fotografavimas Gorges du Verdon kanjone. \nLevandų laukų vizitai ir mažų kaimelių aplankymas. \nVietiniai turgeliai ir amatininkų dirbtuvės.',
             text4: 'Castellane – ideali vieta jungiati gamtą, kultūrą, gastronomiją ir sportą.',
             highlightsTitle: 'Pagrindinis'
@@ -1003,7 +1003,7 @@ const translations = {
             thankYou: 'Ačiū'
         },
         aboutHostModal: {
-            title: 'Apie jūsų šeimininkę Aušrą',
+            title: 'Laiškas nuo jūsų šeimininkės Aušros',
             bio1: 'Sveiki, aš esu Aušra, grafikė ir vitražistė. Didžiausia mano kūrybos įkvėpimo jėga visada buvo kelionės, žmonės ir įvairių pasaulio grožio formų įvairovė.',
             bio2: 'Gyvenau ir kūriau Lietuvoje, Prancūzijoje, JAV ir Singapūre – keturiose labai skirtingose šalyse, kurios paliko gilių įspūdžių ir atvėrė mano kūrybai bei virtuvei dar platesnį pasaulį. Laikui bėgant menas natūraliai susijungė su mano meile maistui. Gastronomija, degustacijos ir vietinių skonių atradimas tapo antra mano kūrybos forma.',
             bio3: 'Jau penkerius metus kartu su vyru prancūzu, gyvename Castellane, Pietų Prancūzijoje. Mūsų namai visada atviri svečiams. Čia dalijamės tuo, ką patys labiausiai mylime: ramybe, kalnų grožiu, naminiu maistu ir prancūziškais atradimais.',
