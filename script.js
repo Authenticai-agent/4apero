@@ -267,7 +267,7 @@ const retreatsData = {
             images: uniqueImages(["./images/image05919.jpeg", ...photosByNumber([4, 5, 7, 12, 15, 22, 26, 27, 29, 32, 33, 37, 38, 48, 49, 50, 76])]),
             image: "./images/image05919.jpeg",
             highlights: [
-                "Išskirtinė prieiga prie Petardier šventės, Castellane istorinio renginio",
+                "Išskirtinis dalyvavimas Petardier šventėje, Castellane istoriniame renginyje",
                 "Tradiciniai Castellane patiekalai, dalinami su vietiniais gyventojais",
                 "Ekskursijos po Castellane ir apylinkes, atrandant paveldą, gamtą ir žavingus kaimelius",
                 "Išskirtiniai kulinariniai užsiėmimai: kepkite rankų darbo bagetes ir gaminkite quiches bei regioninius patiekalus",
