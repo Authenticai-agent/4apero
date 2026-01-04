@@ -282,7 +282,6 @@ const travelCardsContainer = document.getElementById('travelCards');
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
-const ctaButton = document.querySelector('.cta-button');
 const navbar = document.querySelector('.navbar');
 
 // Initialize the app
@@ -716,20 +715,6 @@ function setupEventListeners() {
             }
         });
     });
-    
-    // CTA button click
-    if (ctaButton) {
-        ctaButton.addEventListener('click', () => {
-            const retreatsSection = document.querySelector('#retreats');
-            if (retreatsSection) {
-                const offsetTop = retreatsSection.offsetTop - 70;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    }
 }
 
 // Toggle mobile menu
@@ -1107,13 +1092,6 @@ function updatePageContent() {
         const heroDescriptionEl = document.querySelector('.hero-description');
         const heroText4El = heroDescriptionEl ? heroDescriptionEl.querySelector('.hero-text-4') : null;
         if (heroText4El) heroText4El.style.display = 'none';
-    }
-    
-    const ctaButtonSpan = document.querySelector('.cta-button span');
-    if (ctaButtonSpan && t.hero && typeof t.hero.cta === 'string') {
-        ctaButtonSpan.textContent = t.hero.cta;
-    } else if (ctaButtonSpan && currentLanguage === 'en') {
-        ctaButtonSpan.textContent = 'Book now';
     }
 
     // Show/hide hero highlights based on language
