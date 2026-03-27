@@ -1007,7 +1007,7 @@ const translations = {
             retreats: 'Retreats',
             aboutHosts: 'About Hosts',
             contactUs: 'Contact Us',
-            rights: '© 2025 4Apero. All rights reserved.'
+            rights: '© 2026 4Apero. All rights reserved.'
         },
         logistics: {
             accommodationTransportationHtml: '<br><br><strong>Accommodation & Transportation</strong><br>Accommodation is not included in this experience.<br>Guests are free to book their preferred stay in Castellane.<br><br>• You will be picked up at Nice Airport upon arrival<br>• You will be picked up each morning directly from your accommodation in Castellane<br>• Transportation to all experiences is included<br>• You will be returned to Nice Airport or another agreed-upon location at the end of the experience<br><br>Everything is designed to ensure a seamless, comfortable, and stress-free journey.'
@@ -1072,10 +1072,10 @@ const translations = {
             retreats: 'Séjours',
             aboutHosts: 'À propos des hôtes',
             contactUs: 'Nous contacter',
-            rights: '© 2025 4Apero. Tous droits réservés.'
+            rights: '© 2026 4Apero. Tous droits réservés.'
         },
         logistics: {
-            accommodationTransportationHtml: '<br><br><strong>Hébergement & Transport</strong><br>L’hébergement n’est pas inclus dans cette expérience.<br>Les participants réservent librement leur séjour à Castellane.<br><br>• Accueil à l’aéroport de Nice à l’arrivée<br>• Chaque matin, prise en charge à votre hébergement à Castellane<br>• Transport inclus pour toutes les activités<br>• Retour à l’aéroport de Nice (ou autre lieu convenu) à la fin de l’expérience<br><br>Tout est conçu pour garantir un séjour fluide, confortable et sans stress.'
+            accommodationTransportationHtml: '<br><br><strong>Hébergement & Transport</strong><br>L’hébergement n’est pas inclus dans cette expérience.<br>Les participants sont libres de réserver l’hébergement de leur choix à Castellane.<br><br>• Vous serez récupéré(e) à l’aéroport de Nice à votre arrivée<br>• Vous serez récupéré(e) chaque matin directement depuis votre hébergement à Castellane<br>• Le transport vers toutes les activités est inclus<br>• Vous serez reconduit(e) à l’aéroport de Nice ou à un autre lieu convenu à la fin de l’expérience<br><br>Tout est pensé pour vous offrir un voyage fluide, confortable et sans stress.'
         }
     },
     lt: {
@@ -1088,7 +1088,7 @@ const translations = {
         hero: {
             title: 'Castellane <span class="highlight">Vartai į Verdoną</span>',
             subtitle: 'Paslėptas brangakmenis Provanso širdyje',
-            text1: 'Castellane yra žavingas miestelis Pietų Prancūzijoje, įsikūręs Provence-Alpes-Côte d’Azur regione, Alpes-de-Haute-Provence departamente. Miestelis stovi 724 m virš jūros lygio, prie Verdono upės, šalia vieno įspūdingiausių kanjonų Europoje - Gorges du Verdon.',
+            text1: 'Castellane yra žavingas miestelis Pietų Prancūzijoje, įsikūręs Provence-Alpes-Côte d’Azur regione, Alpes-de-Haute-Provance departamente. Miestelis stovi 724 m virš jūros lygio, prie Verdono upės, šalia vieno įspūdingiausių kanjonų Europoje - Gorges du Verdon.',
             text2: 'Senamiestyje galima pasivaikščioti siaurų akmenimis grįstų gatvelių labirintais, aplankyti Notre-Dame du Roc bažnyčią ant uolos virš miesto ir pajusti autentišką pietų Prancūzijos atmosferą. Castellane žiemą gyvena apie 1 200 žmonių, tačiau vasaros sezonu miestelis atgyja turistų deka iki 30 000.',
             text3: 'Turistams ir nuotykių ieškotojams: \n Raftingas, kanojos ir kitos vandens pramogos Verdon upėje \nŽygiai, kopimai ir fotografavimas Gorges du Verdon kanjone. \nLevandų laukų vizitai ir mažų kaimelių aplankymas. \nVietiniai turgeliai ir amatininkų dirbtuvės.',
             text4: 'Castellane – ideali vieta jungiati gamtą, kultūrą, gastronomiją ir sportą.',
@@ -1125,10 +1125,10 @@ const translations = {
             retreats: 'Kelionės',
             aboutHosts: 'Apie šeimininkus',
             contactUs: 'Susisiekite su mumis',
-            rights: '© 2025 4Apero. Visos teisės saugomos.'
+            rights: '© 2026 4Apero. Visos teisės saugomos.'
         },
         logistics: {
-            accommodationTransportationHtml: '<br><br><strong>Apgyvendinimas ir transportas</strong><br>Apgyvendinimas į šią patirtį neįtrauktas.<br>Svečiai patys užsisako norimą nakvynę Castellane.<br><br>• Pasitikimas Nicos oro uoste atvykus<br>• Kiekvieną rytą paėmimas iš jūsų apgyvendinimo vietos Castellane<br>• Transportas į visas veiklas įskaičiuotas<br>• Parvežimas į Nicos oro uostą (arba kitą sutartą vietą) patirties pabaigoje<br><br>Viskas suorganizuota taip, kad kelionė būtų sklandi, patogi ir be streso.'
+            accommodationTransportationHtml: '<br><br><strong>Apgyvendinimas ir transportas</strong><br>Apgyvendinimas į šią patirtį neįtrauktas.<br>Svečiai gali laisvai užsisakyti jiems tinkamiausią apgyvendinimą Castellane.<br><br>• Jus pasitiksime Nicos oro uoste atvykimo dieną<br>• Kiekvieną rytą paimsime tiesiai iš jūsų apgyvendinimo vietos Castellane<br>• Transportas į visas veiklas yra įskaičiuotas<br>• Kelionės pabaigoje parvešime į Nicos oro uostą arba į kitą sutartą vietą<br><br>Viskas suorganizuota taip, kad kelionė būtų sklandi, patogi ir be streso.'
         }
     }
 };
