@@ -108,7 +108,7 @@ const retreatsData = {
             location: "Castellane, France",
             date: "4 days / 3 nights retreat",
             time: "",
-            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">4 days / 3 nights retreat</small>',
+            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 per person</strong><br><small style="color: #666;">4 days / 3 nights retreat</small>',
             images: photosByNumber([3, 8, 9, 13, 16, 18, 20, 34, 44, 45, 51, 56, 57, 60, 63, 64, 66, 67, 71, 72, 74, 80]),
             image: "./images/image05654.jpeg",
             highlights: [
@@ -119,17 +119,17 @@ const retreatsData = {
                 "2 apéro evenings with local cheeses, wine & conversation",
                 "Daily guided local excursions and hidden village visits",
                 "Shopping in local artisan stores",
-                "Accommodation, all meals and French wines included"
+                "All meals and French wines included"
             ]
         },
         {
             id: 2,
-            name: "PERFUME & COLOR — Grasse & Castellane",
+            name: "PERFUME & COLOR - Grasse & Castellane",
             description: "Embark on a sensorial journey that weaves together scent, color, and creation. Visit Grasse, the perfume capital of the world, and craft your own signature fragrance. Discover the secrets of aromatic blending, experiment with rare essences, and leave with a scent that captures your story and spirit.<br><br><strong>Program Highlights:</strong><br>• Guided visit to a traditional perfume house in Grasse<br>• Workshop: create your own natural perfume (personal blend)<br>• Dinner with floral & aromatic accents<br>• 4 apéro experiences pairing scent & taste<br>• Guided tours through local villages and nature trails<br>• Shopping in local perfume & artisan boutiques<br>• All meals, wines, and drinks included",
             location: "Grasse & Castellane, France",
             date: "4 days / 3 nights retreat",
             time: "",
-            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">4 days / 3 nights retreat</small>',
+            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 per person</strong><br><small style="color: #666;">4 days / 3 nights retreat</small>',
             images: photosByNumber([1, 2, 10, 11, 14, 19, 23, 28, 42, 53, 78, 69]),
             image: "./images/image05903.jpeg",
             highlights: [
@@ -139,7 +139,7 @@ const retreatsData = {
                 "2 apéro experiences pairing scent & taste",
                 "Guided tours through local villages and nature trails",
                 "Shopping in local perfume & artisan boutiques",
-                "Accommodation, all meals, wines, and drinks included"
+                "All meals, wines, and drinks included"
             ]
         },
         {
@@ -149,7 +149,7 @@ const retreatsData = {
             location: "Castellane, France",
             date: "January 30 – February 2",
             time: "",
-            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">$2800 per person</strong><br><small style="color: #666;">Jan 30 – Feb 2</small>',
+            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 per person</strong><br><small style="color: #666;">Jan 30 – Feb 2</small>',
             images: uniqueImages(["./images/image05919.jpeg", ...photosByNumber([4, 5, 7, 12, 15, 22, 26, 27, 29, 32, 33, 37, 38, 48, 49, 50, 76])]),
             image: "./images/image05919.jpeg",
             highlights: [
@@ -163,13 +163,13 @@ const retreatsData = {
         {
             id: 4,
             name: "4-Day Lavender & Culinary Experience in Castellane, France",
-            description: "A 4-day immersive journey through the lavender fields and flavors of Provence. Over four unforgettable days, you will explore the iconic lavender landscapes of southern France while learning the art of French cooking and gastronomy.<br><br>Everything is thoughtfully curated—so you can simply relax, taste, and enjoy.<br><br><strong>During this experience, you will:</strong><br><strong>DISCOVER LAVENDER PROVENCE</strong><br>• Walk through breathtaking blooming lavender fields (seasonal peak experience)<br>• Learn about lavender cultivation, harvesting, and distillation<br>• Visit local producers and explore lavender-based products (oils, honey, cosmetics)<br>• Capture stunning photography moments in the iconic purple landscapes<br>• Experience the calming and therapeutic atmosphere of Provence<br><br><strong>LEARN FRENCH CULINARY ART</strong><br>• Bake your own traditional French bread and baguettes<br>• Create classic French spreads and regional specialties<br>• Prepare Provençal dishes using fresh, local ingredients (vegetarian-friendly)<br>• Make tapenade and other local delicacies<br>• Learn simple, elegant techniques used in French home cooking<br><br><strong>EXPLORE & EXPERIENCE</strong><br>• The breathtaking Verdon Gorge and Lake Sainte-Croix<br>• Charming Provençal mountain villages<br>• Traditional bakeries and artisan food shops<br>• Local markets filled with fresh regional ingredients<br>• Hands-on cooking experiences from preparation to tasting<br><br><strong>INDULGE</strong><br>• Daily gourmet meals inspired by Provençal cuisine<br>• Wine tastings featuring local wines<br>• Fresh, seasonal, locally sourced ingredients<br>• Lavender-inspired dishes and desserts<br>• A relaxed, sensory-rich atmosphere combining nature, food, and culture<br><br><strong>Accommodation & Transportation</strong><br>Accommodation is not included. Guests are free to book their preferred stay in Castellane.<br><br>• Pick-up at Nice Airport upon arrival<br>• Morning pick-up from your accommodation in Castellane<br>• Transportation to all experiences included<br>• Return to Nice Airport (or another agreed location) at the end of the experience",
+            description: "A 4-day immersive journey through the lavender fields and flavors of Provence. Over four unforgettable days, you will explore the iconic lavender landscapes of southern France while learning the art of French cooking and gastronomy.<br><br>Everything is thoughtfully curated - so you can simply relax, taste, and enjoy.<br><br><strong>During this experience, you will:</strong><br><strong>DISCOVER LAVENDER PROVENCE</strong><br>• Walk through breathtaking blooming lavender fields (seasonal peak experience)<br>• Learn about lavender cultivation, harvesting, and distillation<br>• Visit local producers and explore lavender-based products (oils, honey, cosmetics)<br>• Capture stunning photography moments in the iconic purple landscapes<br>• Experience the calming and therapeutic atmosphere of Provence<br><br><strong>LEARN FRENCH CULINARY ART</strong><br>• Bake your own traditional French bread and baguettes<br>• Create classic French spreads and regional specialties<br>• Prepare Provençal dishes using fresh, local ingredients (vegetarian-friendly)<br>• Make tapenade and other local delicacies<br>• Learn simple, elegant techniques used in French home cooking<br><br><strong>EXPLORE & EXPERIENCE</strong><br>• The breathtaking Verdon Gorge and Lake Sainte-Croix<br>• Charming Provençal mountain villages<br>• Traditional bakeries and artisan food shops<br>• Local markets filled with fresh regional ingredients<br>• Hands-on cooking experiences from preparation to tasting<br><br><strong>INDULGE</strong><br>• Daily gourmet meals inspired by Provençal cuisine<br>• Wine tastings featuring local wines<br>• Fresh, seasonal, locally sourced ingredients<br>• Lavender-inspired dishes and desserts<br>• A relaxed, sensory-rich atmosphere combining nature, food, and culture",
             location: "Castellane, France",
             date: "4 Days / 3 Nights",
             time: "",
             price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 per person</strong><br><small style="color: #666;">Includes activities, food, transportation, guided experiences (excluding accommodation)</small>',
-            images: uniqueImages(["./images/hero-provence.jpeg", ...photosByNumber([54, 55, 56, 57, 60, 61, 62])]),
-            image: "./images/hero-provence.jpeg",
+            images: uniqueImages(["./images/StockSnap_G1Z1H18HCQ.jpg", ...photosByNumber([54, 55, 56, 57, 60, 61, 62])]),
+            image: "./images/StockSnap_G1Z1H18HCQ.jpg",
             highlights: [
                 "Lavender fields at seasonal peak (blooming experience)",
                 "French cooking & Provençal gastronomy workshops (vegetarian-friendly)",
@@ -177,17 +177,35 @@ const retreatsData = {
                 "Local markets, artisan shops, producers & wine tastings",
                 "Pick-up/transport included (accommodation not included)"
             ]
+        },
+        {
+            id: 5,
+            name: "4-Day Culinary & Verdon Gorge Experience in Castellane, France",
+            description: "A 4-day immersive journey through the flavors and landscapes of Provence. Over four unforgettable days, you will explore the breathtaking Verdon Gorge while learning the art of French cooking and gastronomy.<br><br>Enjoy a perfect balance of nature, food, and relaxation - indulging in exceptional meals, local wines, and unforgettable experiences. Everything is thoughtfully curated so you can simply relax and enjoy.<br><br><strong>During this experience, you will:</strong><br><strong>EXPERIENCE VERDON GORGE</strong><br>• Discover the breathtaking beauty of the Verdon Gorge, the largest canyon in Europe<br>• Glide through turquoise waters by kayak, exploring hidden corners and dramatic cliffs at your own pace<br>• Paddle through one of the most iconic natural landscapes in France<br>• Enjoy a curated picnic featuring local Provençal specialties paired with rosé from nearby vineyards<br>• Swim in secluded spots or simply relax and take in the stunning scenery<br>• Experience a unique blend of adventure, nature, and indulgence<br><br><strong>LEARN FRENCH CULINARY ART</strong><br>• Bake your own traditional French bread and baguettes<br>• Create classic French spreads and regional specialties<br>• Prepare Provençal dishes using fresh, local ingredients (vegetarian-friendly)<br>• Make tapenade and other local delicacies<br>• Learn simple, elegant techniques used in French home cooking<br><br><strong>EXPLORE & EXPERIENCE</strong><br>• The breathtaking Verdon Gorge and Lake Sainte-Croix<br>• Charming Provençal mountain villages<br>• Traditional bakeries and artisan food shops<br>• Local markets filled with fresh regional ingredients<br>• Hands-on cooking experiences from preparation to tasting<br><br><strong>INDULGE</strong><br>• Daily gourmet meals inspired by Provençal cuisine<br>• Wine tastings featuring local wines<br>• Fresh, seasonal, locally sourced ingredients<br>• Regional desserts and delicacies<br>• A relaxed, sensory-rich atmosphere combining nature, food, and culture<br><br><strong>Accommodation & Transportation</strong><br><br>Accommodation is not included in this experience.<br>Guests are free to book their preferred stay in Castellane.<br><br>You will be picked up at Nice Airport upon arrival<br>You will be picked up each morning directly from your accommodation in Castellane<br>Transportation to all experiences is included<br>You will be returned to Nice Airport or another agreed-upon location at the end of the experience<br><br>Everything is designed to ensure a seamless, comfortable, and stress-free journey.",
+            location: "Castellane, France",
+            date: "4 Days / 3 Nights",
+            time: "",
+            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 per person</strong><br><small style="color: #666;">Includes activities, food, transportation, guided experiences (excluding accommodation)</small>',
+            images: uniqueImages(["./images/image05458.jpeg", ...photosByNumber([12, 15, 22, 26, 27, 29, 32, 33, 37, 38, 48, 49, 50, 76])]),
+            image: "./images/image05458.jpeg",
+            highlights: [
+                "Verdon Gorge kayaking + curated picnic with local specialties",
+                "Swimming stops and scenic relaxation in turquoise waters",
+                "French bread & baguette baking + Provençal cooking workshops (vegetarian-friendly)",
+                "Wine tastings and daily gourmet meals inspired by Provençal cuisine",
+                "Transport included (accommodation not included)"
+            ]
         }
     ],
     fr: [
         {
             id: 1,
-            name: "SAGE SMOKE — Atelier fumage de viande & poisson",
-            description: "Découvrez l’art ancestral du feu, de la fumée et de la conservation. Apprenez à saler, sécher, fumer et préparer vos propres spécialités locales. Savourez des arômes fumés et une cuisine créative en transformant des ingrédients simples en saveurs riches et complexes. Vivez la satisfaction de maîtriser des techniques d’autrefois qui vous relient à la tradition, à la nature et à l’essence d’une cuisine lente et consciente.<br><br><strong>Points forts du programme :</strong><br>• Atelier pratique de fumage avec les deux fumoirs d’Ausra<br>• Préparation de viandes et poissons locaux<br>• Techniques de grillades, marinades & saveurs fumées<br>• Créativité culinaire : l’art du feu et du goût<br>• 2 soirées apéro avec fromages locaux, vin & conversation<br>• Excursions locales guidées et visites de villages secrets<br>• Shopping dans des boutiques d’artisans locaux<br>• Hébergement, tous les repas et vins français inclus",
+            name: "SAGE SMOKE - Atelier fumage de viande & poisson",
+            description: "Découvrez l’art ancestral du feu, de la fumée et de la conservation. Apprenez à saler, sécher, fumer et préparer vos propres spécialités locales. Savourez des arômes fumés et une cuisine créative en transformant des ingrédients simples en saveurs riches et complexes. Vivez la satisfaction de maîtriser des techniques d’autrefois qui vous relient à la tradition, à la nature et à l’essence d’une cuisine lente et consciente.<br><br><strong>Points forts du programme :</strong><br>• Atelier pratique de fumage avec les deux fumoirs d’Ausra<br>• Préparation de viandes et poissons locaux<br>• Techniques de grillades, marinades & saveurs fumées<br>• Créativité culinaire : l’art du feu et du goût<br>• 2 soirées apéro avec fromages locaux, vin & conversation<br>• Excursions locales guidées et visites de villages secrets<br>• Shopping dans des boutiques d’artisans locaux<br>• Tous les repas et vins français inclus",
             location: "Castellane, France",
             date: "Séjour de 4 jours / 3 nuits",
             time: "",
-            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">$2800 par personne</strong><br><small style="color: #666;">4 jours / 3 nuits</small>',
+            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">600 € par personne</strong><br><small style="color: #666;">4 jours / 3 nuits</small>',
             images: photosByNumber([3, 8, 9, 13, 16, 18, 20, 34, 44, 45, 51, 56, 57, 60, 63, 64, 66, 67, 71, 72, 74, 80]),
             image: "./images/image05654.jpeg",
             highlights: [
@@ -198,17 +216,17 @@ const retreatsData = {
                 "2 soirées apéro avec fromages locaux, vin & conversation",
                 "Excursions locales guidées et visites de villages secrets",
                 "Shopping dans des boutiques d’artisans locaux",
-                "Hébergement, tous les repas, vins et boissons inclus"
+                "Tous les repas, vins et boissons inclus"
             ]
         },
         {
             id: 2,
-            name: "PARFUM & COULEUR — Grasse & Castellane",
-            description: "Embarquez pour un voyage sensoriel mêlant parfum, couleur et création. Visitez Grasse, capitale mondiale du parfum, et composez votre propre fragrance signature. Découvrez les secrets des accords olfactifs, expérimentez des essences rares et repartez avec un parfum qui raconte votre histoire et votre esprit.<br><br><strong>Points forts du programme :</strong><br>• Visite guidée d’une maison de parfum traditionnelle à Grasse<br>• Atelier : créer votre parfum naturel (mélange personnel)<br>• Dîner aux accents floraux et aromatiques<br>• 2 expériences apéro associant parfum & goût<br>• Balades guidées dans les villages et sentiers nature<br>• Shopping dans des boutiques de parfums et d’artisans<br>• Hébergement, repas, vins et boissons inclus",
+            name: "PARFUM & COULEUR - Grasse & Castellane",
+            description: "Embarquez pour un voyage sensoriel mêlant parfum, couleur et création. Visitez Grasse, capitale mondiale du parfum, et composez votre propre fragrance signature. Découvrez les secrets des accords olfactifs, expérimentez des essences rares et repartez avec un parfum qui raconte votre histoire et votre esprit.<br><br><strong>Points forts du programme :</strong><br>• Visite guidée d’une maison de parfum traditionnelle à Grasse<br>• Atelier : créer votre parfum naturel (mélange personnel)<br>• Dîner aux accents floraux et aromatiques<br>• 2 expériences apéro associant parfum & goût<br>• Balades guidées dans les villages et sentiers nature<br>• Shopping dans des boutiques de parfums et d’artisans<br>• Repas, vins et boissons inclus",
             location: "Grasse & Castellane, France",
             date: "Séjour de 4 jours / 3 nuits",
             time: "",
-            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">$2800 par personne</strong><br><small style="color: #666;">4 jours / 3 nuits</small>',
+            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">600 € par personne</strong><br><small style="color: #666;">4 jours / 3 nuits</small>',
             images: photosByNumber([1, 2, 10, 11, 14, 19, 23, 28, 42, 53, 78, 69]),
             image: "./images/image05903.jpeg",
             highlights: [
@@ -218,7 +236,7 @@ const retreatsData = {
                 "2 expériences apéro associant parfum & goût",
                 "Balades guidées dans les villages et sentiers nature",
                 "Shopping dans des boutiques de parfums et d’artisans",
-                "Hébergement, repas, vins et boissons inclus"
+                "Repas, vins et boissons inclus"
             ]
         },
         {
@@ -228,7 +246,7 @@ const retreatsData = {
             location: "Castellane, France",
             date: "30 janvier – 2 février",
             time: "",
-            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">$2800 par personne</strong><br><small style="color: #666;">30 janv. – 2 fév.</small>',
+            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">600 € par personne</strong><br><small style="color: #666;">30 janv. – 2 fév.</small>',
             images: uniqueImages(["./images/image05919.jpeg", ...photosByNumber([4, 5, 7, 12, 15, 22, 26, 27, 29, 32, 33, 37, 38, 48, 49, 50, 76])]),
             image: "./images/image05919.jpeg",
             highlights: [
@@ -242,18 +260,36 @@ const retreatsData = {
         {
             id: 4,
             name: "Expérience Lavande & Gastronomie (4 jours) à Castellane, France",
-            description: "Un voyage immersif de 4 jours à travers les champs de lavande et les saveurs de la Provence. Pendant quatre journées inoubliables, vous découvrirez les paysages emblématiques de la lavande du Sud de la France tout en apprenant l’art de la cuisine française et de la gastronomie.<br><br>Tout est soigneusement organisé — vous n’avez plus qu’à vous détendre, goûter et profiter.<br><br><strong>Au programme :</strong><br><strong>DÉCOUVRIR LA PROVENCE DE LA LAVANDE</strong><br>• Balades dans de superbes champs de lavande en fleur (période de floraison, selon la saison)<br>• Découverte de la culture, de la récolte et de la distillation de la lavande<br>• Visites de producteurs locaux et produits à base de lavande (huiles, miel, cosmétiques)<br>• Moments photo dans les paysages violets iconiques<br>• Atmosphère apaisante et bienfaits sensoriels de la Provence<br><br><strong>APPRENDRE L’ART CULINAIRE FRANÇAIS</strong><br>• Cuire votre pain traditionnel et vos baguettes<br>• Réaliser des tartinables classiques et des spécialités régionales<br>• Cuisiner des plats provençaux avec des produits frais et locaux (option végétarienne)<br>• Préparer de la tapenade et autres délices locaux<br>• Techniques simples et élégantes de la cuisine familiale française<br><br><strong>EXPLORER & VIVRE</strong><br>• Les Gorges du Verdon et le lac de Sainte-Croix<br>• Villages de montagne provençaux pleins de charme<br>• Boulangeries traditionnelles et boutiques artisanales<br>• Marchés locaux riches en produits régionaux<br>• Ateliers cuisine de la préparation à la dégustation<br><br><strong>SE RÉGALER</strong><br>• Repas gourmets quotidiens inspirés de la cuisine provençale<br>• Dégustations de vins locaux<br>• Ingrédients frais, saisonniers et issus de producteurs locaux<br>• Recettes et desserts inspirés par la lavande<br>• Une ambiance détendue, riche en sensations : nature, goût et culture<br><br><strong>Hébergement & Transport</strong><br>L’hébergement n’est pas inclus. Les participants réservent librement leur séjour à Castellane.<br><br>• Accueil à l’aéroport de Nice à l’arrivée<br>• Chaque matin, prise en charge à votre hébergement à Castellane<br>• Transport inclus pour toutes les activités<br>• Retour à l’aéroport de Nice (ou lieu convenu) à la fin du séjour",
+            description: "Un voyage immersif de 4 jours à travers les champs de lavande et les saveurs de la Provence. Pendant quatre journées inoubliables, vous découvrirez les paysages emblématiques de la lavande du Sud de la France tout en apprenant l’art de la cuisine française et de la gastronomie.<br><br>Tout est soigneusement organisé - vous n’avez plus qu’à vous détendre, goûter et profiter.<br><br><strong>Au programme :</strong><br><strong>DÉCOUVRIR LA PROVENCE DE LA LAVANDE</strong><br>• Balades dans de superbes champs de lavande en fleur (période de floraison, selon la saison)<br>• Découverte de la culture, de la récolte et de la distillation de la lavande<br>• Visites de producteurs locaux et produits à base de lavande (huiles, miel, cosmétiques)<br>• Moments photo dans les paysages violets iconiques<br>• Atmosphère apaisante et bienfaits sensoriels de la Provence<br><br><strong>APPRENDRE L’ART CULINAIRE FRANÇAIS</strong><br>• Cuire votre pain traditionnel et vos baguettes<br>• Réaliser des tartinables classiques et des spécialités régionales<br>• Cuisiner des plats provençaux avec des produits frais et locaux (option végétarienne)<br>• Préparer de la tapenade et autres délices locaux<br>• Techniques simples et élégantes de la cuisine familiale française<br><br><strong>EXPLORER & VIVRE</strong><br>• Les Gorges du Verdon et le lac de Sainte-Croix<br>• Villages de montagne provençaux pleins de charme<br>• Boulangeries traditionnelles et boutiques artisanales<br>• Marchés locaux riches en produits régionaux<br>• Ateliers cuisine de la préparation à la dégustation<br><br><strong>SE RÉGALER</strong><br>• Repas gourmets quotidiens inspirés de la cuisine provençale<br>• Dégustations de vins locaux<br>• Ingrédients frais, saisonniers et issus de producteurs locaux<br>• Recettes et desserts inspirés par la lavande<br>• Une ambiance détendue, riche en sensations : nature, gastronomie et culture",
             location: "Castellane, France",
             date: "4 jours / 3 nuits",
             time: "",
             price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">600 € par personne</strong><br><small style="color: #666;">Inclut activités, repas, transports et accompagnement (hors hébergement)</small>',
-            images: uniqueImages(["./images/hero-provence.jpeg", ...photosByNumber([54, 55, 56, 57, 60, 61, 62])]),
-            image: "./images/hero-provence.jpeg",
+            images: uniqueImages(["./images/StockSnap_G1Z1H18HCQ.jpg", ...photosByNumber([54, 55, 56, 57, 60, 61, 62])]),
+            image: "./images/StockSnap_G1Z1H18HCQ.jpg",
             highlights: [
                 "Champs de lavande en fleur (selon la saison)",
                 "Ateliers cuisine française & spécialités provençales (option végétarienne)",
                 "Exploration des Gorges du Verdon & du lac de Sainte-Croix",
                 "Marchés, artisans, producteurs & dégustations de vin",
+                "Transports inclus (hébergement non inclus)"
+            ]
+        },
+        {
+            id: 5,
+            name: "Expérience Gastronomie & Gorges du Verdon (4 jours) à Castellane, France",
+            description: "Un voyage immersif de 4 jours à travers les saveurs et les paysages de la Provence. Pendant quatre journées inoubliables, vous explorerez les spectaculaires Gorges du Verdon tout en apprenant l’art de la cuisine française et de la gastronomie.<br><br>Profitez d’un équilibre parfait entre nature, gourmandise et détente - avec des repas d’exception, des vins locaux et des expériences inoubliables. Tout est soigneusement organisé pour que vous n’ayez plus qu’à vous détendre et profiter.<br><br><strong>Au programme :</strong><br><strong>VIVRE LES GORGES DU VERDON</strong><br>• Découvrir la beauté saisissante des Gorges du Verdon, le plus grand canyon d’Europe<br>• Glisser en kayak sur des eaux turquoise, à votre rythme, entre falaises et recoins secrets<br>• Pagayer dans l’un des paysages naturels les plus emblématiques de France<br>• Profiter d’un pique-nique soigneusement préparé avec des spécialités provençales, accompagné d’un rosé de vignobles voisins<br>• Se baigner dans des coins préservés ou simplement se détendre face aux panoramas<br>• Vivre un mélange unique d’aventure, de nature et de plaisir<br><br><strong>APPRENDRE L’ART CULINAIRE FRANÇAIS</strong><br>• Cuire votre pain traditionnel et vos baguettes<br>• Réaliser des tartinables classiques et des spécialités régionales<br>• Cuisiner des plats provençaux avec des produits frais et locaux (option végétarienne)<br>• Préparer de la tapenade et autres délices locaux<br>• Techniques simples et élégantes de la cuisine familiale française<br><br><strong>EXPLORER & VIVRE</strong><br>• Les Gorges du Verdon et le lac de Sainte-Croix<br>• Villages de montagne provençaux pleins de charme<br>• Boulangeries traditionnelles et boutiques artisanales<br>• Marchés locaux riches en produits régionaux<br>• Ateliers cuisine de la préparation à la dégustation<br><br><strong>SE RÉGALER</strong><br>• Repas gourmets quotidiens inspirés de la cuisine provençale<br>• Dégustations de vins locaux<br>• Ingrédients frais, saisonniers et issus de producteurs locaux<br>• Desserts et délices régionaux<br>• Une ambiance détendue, riche en sensations : nature, gastronomie et culture<br><br><strong>Hébergement & Transport</strong><br><br>L’hébergement n’est pas inclus dans cette expérience.<br>Les participants sont libres de réserver l’hébergement de leur choix à Castellane.<br><br>Vous serez récupéré(e) à l’aéroport de Nice à votre arrivée<br>Vous serez récupéré(e) chaque matin directement depuis votre hébergement à Castellane<br>Le transport vers toutes les activités est inclus<br>Vous serez reconduit(e) à l’aéroport de Nice ou à un autre lieu convenu à la fin de l’expérience<br><br>Tout est pensé pour vous offrir un voyage fluide, confortable et sans stress.",
+            location: "Castellane, France",
+            date: "4 jours / 3 nuits",
+            time: "",
+            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">600 € par personne</strong><br><small style="color: #666;">Inclut activités, repas, transports et accompagnement (hors hébergement)</small>',
+            images: uniqueImages(["./images/image05458.jpeg", ...photosByNumber([12, 15, 22, 26, 27, 29, 32, 33, 37, 38, 48, 49, 50, 76])]),
+            image: "./images/image05458.jpeg",
+            highlights: [
+                "Kayak dans les Gorges du Verdon + pique-nique provençal (spécialités locales)",
+                "Baignade et moments détente dans des eaux turquoise",
+                "Ateliers de pain/baguettes + cuisine provençale (option végétarienne)",
+                "Dégustations de vins et repas gourmets quotidiens",
                 "Transports inclus (hébergement non inclus)"
             ]
         }
@@ -266,7 +302,7 @@ const retreatsData = {
             location: "Castellane, Prancūzija",
             date: "4 dienų / 3 naktų kelionė",
             time: "",
-            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: var(--brand-primary); font-weight: bold;">80% nuolaida</span><br><strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
+            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
             images: photosByNumber([3, 8, 9, 13, 16, 18, 20, 34, 44, 45, 51, 56, 57, 60, 63, 64, 66, 67, 71, 72, 74, 80]),
             image: "./images/image05654.jpeg",
             highlights: [
@@ -275,12 +311,12 @@ const retreatsData = {
         },
         {
             id: 2,
-            name: "KVEPALAI IR SPALVOS — Grasse ir Castellane",
+            name: "KVEPALAI IR SPALVOS - Grasse ir Castellane",
             description: "4 dienų kvapų ir skonių kelionė į Castellane",
             location: "Grasse ir Castellane, Prancūzija",
             date: "4 dienų / 3 naktų kelionė",
             time: "",
-            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: var(--brand-primary); font-weight: bold;">80% nuolaida</span><br><strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
+            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Visa kaina</small>',
             images: photosByNumber([1, 2, 10, 11, 14, 19, 23, 28, 42, 53, 78, 69]),
             image: "./images/image05903.jpeg",
             description: "Leiskitės į pojūčių kelionę, kurioje susipina kvapai, spalvos ir kūryba. Aplankykite Grasse – pasaulio parfumerijos sostinę – ir susikurkite savo unikalų aromatą. Atraskite kvapų derinimo paslaptis, išbandykite retas esencijas ir parsivežkite kvapą, atspindintį jūsų istoriją bei dvasią.",
@@ -299,7 +335,7 @@ const retreatsData = {
             location: "Castellane, Prancūzija",
             date: "sausio 30 – vasario 2",
             time: "",
-            price: '<span style="text-decoration: line-through; color: #999;">€2800</span> <span style="color: var(--brand-primary); font-weight: bold;">80% nuolaida</span><br><strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">sausio 30 – vasario 2</small>',
+            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">sausio 30 – vasario 2</small>',
             images: uniqueImages(["./images/image05919.jpeg", ...photosByNumber([4, 5, 7, 12, 15, 22, 26, 27, 29, 32, 33, 37, 38, 48, 49, 50, 76])]),
             image: "./images/image05919.jpeg",
             highlights: [
@@ -313,18 +349,36 @@ const retreatsData = {
         {
             id: 4,
             name: "4 dienų levandų ir gastronomijos patirtis Castellane, Prancūzijoje",
-            description: "4 dienų pojūčių kelionė po levandų laukus ir Provanso skonius. Per keturias nepamirštamas dienas tyrinėsite ikoniškus Pietų Prancūzijos levandų kraštovaizdžius ir mokysitės prancūziškos virtuvės bei gastronomijos meno.<br><br>Viskas apgalvota ir suorganizuota — jums lieka tik atsipalaiduoti, ragauti ir mėgautis.<br><br><strong>Šios patirties metu:</strong><br><strong>ATRASITE LEVANDŲ PROVANSĄ</strong><br>• Pasivaikščiosite kvapą gniaužiančiuose žydinčių levandų laukuose (sezoninis, žydėjimo piko metu)<br>• Sužinosite apie levandų auginimą, derliaus nuėmimą ir distiliavimą<br>• Aplankysite vietinius gamintojus ir susipažinsite su levandų produktais (aliejai, medus, kosmetika)<br>• Įamžinsite įspūdingus kadrus legendiniuose violetiniuose peizažuose<br>• Patirsite raminančią ir terapinę Provanso atmosferą<br><br><strong>MOKYSITĖS PRANCŪZIŠKOS KULINARIJOS</strong><br>• Kepsite tradicinę prancūzišką duoną ir bagetes<br>• Gaminsite klasikinius užtepėles ir regioninius patiekalus<br>• Ruošite provansietiškus patiekalus iš šviežių vietinių ingredientų (tinka vegetarams)<br>• Gaminsite tapenade ir kitus vietinius skanėstus<br>• Išmoksite paprastų, elegantiškų prancūziškos namų virtuvės technikų<br><br><strong>KELIAUSITE IR PATIRSITE</strong><br>• Įspūdingą Verdono kanjoną ir Sainte-Croix ežerą<br>• Žavingus Provanso kalnų kaimelius<br>• Tradicines kepyklas ir amatininkų maisto krautuvėles<br>• Vietinius turgus su šviežiais regiono produktais<br>• Praktinius maisto gaminimo užsiėmimus nuo paruošimo iki degustacijos<br><br><strong>LEPINSITĖS</strong><br>• Kasdieniais gurmaniškais patiekalais, įkvėptais Provanso virtuvės<br>• Vietinių vynų degustacijomis<br>• Šviežiais, sezoniniais, vietoje užaugintais ingredientais<br>• Levandomis įkvėptais patiekalais ir desertais<br>• Laisva, pojūčiais turtinga atmosfera, jungianti gamtą, maistą ir kultūrą<br><br><strong>Apgyvendinimas ir transportas</strong><br>Apgyvendinimas į šią patirtį neįtrauktas. Svečiai patys užsisako norimą nakvynę Castellane.<br><br>• Pasitikimas Nicos oro uoste atvykus<br>• Kiekvieną rytą paėmimas iš jūsų apgyvendinimo vietos Castellane<br>• Transportas į visas veiklas įskaičiuotas<br>• Parvežimas į Nicos oro uostą (arba kitą sutartą vietą) patirties pabaigoje",
+            description: "4 dienų pojūčių kelionė po levandų laukus ir Provanso skonius. Per keturias nepamirštamas dienas tyrinėsite ikoniškus Pietų Prancūzijos levandų kraštovaizdžius ir mokysitės prancūziškos virtuvės bei gastronomijos meno.<br><br>Viskas apgalvota ir suorganizuota - jums lieka tik atsipalaiduoti, ragauti ir mėgautis.<br><br><strong>Šios patirties metu:</strong><br><strong>ATRASITE LEVANDŲ PROVANSĄ</strong><br>• Pasivaikščiosite kvapą gniaužiančiuose žydinčių levandų laukuose (sezoninis, žydėjimo piko metu)<br>• Sužinosite apie levandų auginimą, derliaus nuėmimą ir distiliavimą<br>• Aplankysite vietinius gamintojus ir susipažinsite su levandų produktais (aliejai, medus, kosmetika)<br>• Įamžinsite įspūdingus kadrus legendiniuose violetiniuose peizažuose<br>• Patirsite raminančią ir terapinę Provanso atmosferą<br><br><strong>MOKYSITĖS PRANCŪZIŠKOS KULINARIJOS</strong><br>• Kepsite tradicinę prancūzišką duoną ir bagetes<br>• Gaminsite klasikinius užtepėles ir regioninius patiekalus<br>• Ruošite provansietiškus patiekalus iš šviežių vietinių ingredientų (tinka vegetarams)<br>• Gaminsite tapenade ir kitus vietinius skanėstus<br>• Išmoksite paprastų, elegantiškų prancūziškos namų virtuvės technikų<br><br><strong>KELIAUSITE IR PATIRSITE</strong><br>• Įspūdingą Verdono kanjoną ir Sainte-Croix ežerą<br>• Žavingus Provanso kalnų kaimelius<br>• Tradicines kepyklas ir amatininkų maisto krautuvėles<br>• Vietinius turgus su šviežiais regiono produktais<br>• Praktinius maisto gaminimo užsiėmimus nuo paruošimo iki degustacijos<br><br><strong>LEPINSITĖS</strong><br>• Kasdieniais gurmaniškais patiekalais, įkvėptais Provanso virtuvės<br>• Vietinių vynų degustacijomis<br>• Šviežiais, sezoniniais, vietoje užaugintais ingredientais<br>• Levandomis įkvėptais patiekalais ir desertais<br>• Laisva, pojūčiais turtinga atmosfera, jungianti gamtą, maistą ir kultūrą",
             location: "Castellane, Prancūzija",
             date: "4 dienos / 3 naktys",
             time: "",
             price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Įskaičiuota: veiklos, maistas, transportas, gidavimas (be apgyvendinimo)</small>',
-            images: uniqueImages(["./images/hero-provence.jpeg", ...photosByNumber([54, 55, 56, 57, 60, 61, 62])]),
-            image: "./images/hero-provence.jpeg",
+            images: uniqueImages(["./images/StockSnap_G1Z1H18HCQ.jpg", ...photosByNumber([54, 55, 56, 57, 60, 61, 62])]),
+            image: "./images/StockSnap_G1Z1H18HCQ.jpg",
             highlights: [
                 "Levandų laukų patirtis žydėjimo piko metu (sezoninė)",
                 "Prancūziškos kulinarijos ir provansietiškų patiekalų gaminimas (tinka vegetarams)",
                 "Verdono kanjonas ir Sainte-Croix ežeras",
                 "Vietiniai turgūs, amatininkai, gamintojai ir vyno degustacijos",
+                "Transportas įskaičiuotas (apgyvendinimas neįtrauktas)"
+            ]
+        },
+        {
+            id: 5,
+            name: "4 dienų gastronomijos ir Verdono kanjono patirtis Castellane, Prancūzijoje",
+            description: "4 dienų kelionė po Provanso skonius ir įspūdingus kraštovaizdžius. Per keturias nepamirštamas dienas tyrinėsite kvapą gniaužiantį Verdono kanjoną ir mokysitės prancūziškos virtuvės bei gastronomijos meno.<br><br>Puikus balansas tarp gamtos, maisto ir poilsio - išskirtiniai patiekalai, vietiniai vynai ir nepamirštamos patirtys. Viskas kruopščiai suorganizuota, kad jums liktų tik atsipalaiduoti ir mėgautis.<br><br><strong>Šios patirties metu:</strong><br><strong>PATIRSITE VERDONO KANJONĄ</strong><br>• Atrasite įspūdingą Verdono kanjono grožį - didžiausią kanjoną Europoje<br>• Plauksite baidarėmis turkio spalvos vandenyse, tyrinėdami paslėptus kampelius ir įspūdingas uolas savo tempu<br>• Irkluosite viename ikoniškiausių Prancūzijos gamtos peizažų<br>• Mėgausitės kruopščiai paruoštu pikniku su provansietiškais skanėstais ir rožiniu vynu iš netolimų vynuogynų<br>• Maudysitės ramesnėse vietose arba tiesiog ilsėsitės grožėdamiesi vaizdais<br>• Patirsite unikalų nuotykių, gamtos ir malonumų derinį<br><br><strong>MOKYSITĖS PRANCŪZIŠKOS KULINARIJOS</strong><br>• Kepsite tradicinę prancūzišką duoną ir bagetes<br>• Gaminsite klasikinius užtepėles ir regioninius patiekalus<br>• Ruošite provansietiškus patiekalus iš šviežių vietinių ingredientų (tinka vegetarams)<br>• Gaminsite tapenade ir kitus vietinius skanėstus<br>• Išmoksite paprastų, elegantiškų prancūziškos namų virtuvės technikų<br><br><strong>KELIAUSITE IR PATIRSITE</strong><br>• Verdono kanjoną ir Sainte-Croix ežerą<br>• Žavingus Provanso kalnų kaimelius<br>• Tradicines kepyklas ir amatininkų maisto krautuvėles<br>• Vietinius turgus su šviežiais regiono produktais<br>• Praktinius maisto gaminimo užsiėmimus nuo paruošimo iki degustacijos<br><br><strong>LEPINSITĖS</strong><br>• Kasdieniais gurmaniškais patiekalais, įkvėptais Provanso virtuvės<br>• Vietinių vynų degustacijomis<br>• Šviežiais, sezoniniais, vietoje užaugintais ingredientais<br>• Regioniniais desertais ir skanėstais<br>• Laisva, pojūčiais turtinga atmosfera, jungianti gamtą, maistą ir kultūrą<br><br><strong>Apgyvendinimas ir transportas</strong><br><br>Apgyvendinimas į šią patirtį neįtrauktas.<br>Svečiai gali laisvai užsisakyti jiems tinkamiausią apgyvendinimą Castellane.<br><br>Jus pasitiksime Nicos oro uoste atvykimo dieną<br>Kiekvieną rytą paimsime tiesiai iš jūsų apgyvendinimo vietos Castellane<br>Transportas į visas veiklas yra įskaičiuotas<br>Kelionės pabaigoje parvešime į Nicos oro uostą arba į kitą sutartą vietą<br><br>Viskas suorganizuota taip, kad kelionė būtų sklandi, patogi ir be streso.",
+            location: "Castellane, Prancūzija",
+            date: "4 dienos / 3 naktys",
+            time: "",
+            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Įskaičiuota: veiklos, maistas, transportas, gidavimas (be apgyvendinimo)</small>',
+            images: uniqueImages(["./images/image05458.jpeg", ...photosByNumber([12, 15, 22, 26, 27, 29, 32, 33, 37, 38, 48, 49, 50, 76])]),
+            image: "./images/image05458.jpeg",
+            highlights: [
+                "Baidarės Verdono kanjone + provansietiškas piknikas (vietiniai skoniai)",
+                "Maudynės ir poilsio akimirkos turkio spalvos vandenyse",
+                "Duonos/bagečių kepimas + provansietiškos virtuvės dirbtuvės (tinka vegetarams)",
+                "Vyno degustacijos ir kasdieniai gurmaniški patiekalai",
                 "Transportas įskaičiuotas (apgyvendinimas neįtrauktas)"
             ]
         }
@@ -422,8 +476,12 @@ function renderTravelCards() {
         travelCardsContainer.innerHTML = '';
         
         retreats.forEach((retreat, index) => {
-            const card = createTravelCard(retreat, index);
-            travelCardsContainer.appendChild(card);
+            try {
+                const card = createTravelCard(retreat, index);
+                travelCardsContainer.appendChild(card);
+            } catch (e) {
+                console.error('Failed to render retreat card:', { id: retreat && retreat.id, retreat }, e);
+            }
         });
 
         updatePageContent();
@@ -440,6 +498,10 @@ function createTravelCard(retreat, index) {
 
     const t = translations[currentLanguage];
     const bookNowLabel = t && t.retreats && t.retreats.bookNow ? t.retreats.bookNow : 'Book Now';
+
+    const logisticsHtml = getAccommodationTransportationHtml();
+    const hasLogisticsAlready = hasAccommodationTransportationSection(retreat.description || '');
+    const descriptionHtml = `${retreat.description || ''}${hasLogisticsAlready ? '' : logisticsHtml}`;
 
     const highlightsIntro = retreat.highlightsIntro
         ? `<p class="travel-card-highlights-intro" style="white-space: pre-line; color: #111827; margin: 0 0 0.75rem; line-height: 1.6;">${retreat.highlightsIntro}</p>`
@@ -463,7 +525,7 @@ function createTravelCard(retreat, index) {
         <div class="travel-card-content">
             <div>
                 <h3 class="travel-card-title">${retreat.name}</h3>
-                <p class="travel-card-description">${retreat.description}</p>
+                <p class="travel-card-description">${descriptionHtml}</p>
                 ${highlightsIntro}
                 ${highlightsList}
             </div>
@@ -560,11 +622,15 @@ function showBookingModal(retreat) {
         `
         : '';
 
+    const logisticsHtml = getAccommodationTransportationHtml();
+    const hasLogisticsAlready = hasAccommodationTransportationSection(retreat.description || '');
+    const descriptionHtml = `${retreat.description || ''}${hasLogisticsAlready ? '' : logisticsHtml}`;
+
     modalContent.innerHTML = `
         ${galleryHtml}
         <h2 style="color: #000000; margin-bottom: 1rem; font-size: 1.5rem;">${t.title}</h2>
         <h3 style="margin-bottom: 0.5rem; color: #000000;">${retreat.name}</h3>
-        <p style="color: #333333; margin-bottom: 1.5rem;">${retreat.description}</p>
+        <p style="color: #333333; margin-bottom: 1.5rem;">${descriptionHtml}</p>
         <div style="background: var(--brand-primary-soft); border: 1px solid rgba(185, 119, 34, 0.25); border-radius: 10px; padding: 1rem; margin-bottom: 1.25rem;">
             <p style="color: var(--brand-primary); margin: 0; line-height: 1.7; font-weight: 600;">${t.instructions}</p>
         </div>
@@ -894,12 +960,11 @@ const translations = {
             subtitle: 'A Hidden Gem in the Heart of Provence',
             text1: 'Nestled between lavender fields and the turquoise waters of the Verdon River, Castellane invites you to slow down, breathe deeply, and reconnect with what truly matters. Over five unforgettable days and four restorative nights, immerse yourself in a sensorial journey that blends nature, art, wellness, and the timeless charm of Southern France.',
             text2: 'Wake up to the scent of wild herbs and the distant echo of church bells from the Notre-Dame du Roc chapel perched high above the village. Wander through cobbled streets lined with pastel façades, taste the region\'s finest cheeses and rosé, and let the golden Provençal light awaken your creativity and calm.',
-            text3: 'Our exclusive retreats combine luxury comfort with authentic local experiences — from guided nature walks and riverside picnics to artisan workshops and mindful evenings under the stars. Whether you come to paint, heal, meditate, or simply rest, Castellane offers the perfect harmony of adventure and serenity.',
+            text3: 'Our exclusive retreats combine luxury comfort with authentic local experiences - from guided nature walks and riverside picnics to artisan workshops and mindful evenings under the stars. Whether you come to paint, heal, meditate, or simply rest, Castellane offers the perfect harmony of adventure and serenity.',
             highlightsTitle: 'Highlights',
             highlightsSection: {
                 title: '✨ Highlights',
                 items: [
-                    'Boutique accommodation with panoramic mountain views',
                     'Gourmet Provençal cuisine and local wines',
                     'Personalized wellness or creative workshops',
                     'Visits to Grasse, the world\'s perfume capital',
@@ -907,7 +972,7 @@ const translations = {
                 ],
                 strong: '🌸 4 Days / 3 Nights of Reconnection and Renewal',
                 em: 'Let Provence remind you how good life can feel.',
-                text: 'Book your retreat in Castellane today — where nature, color, and calm meet.'
+                text: 'Book your retreat in Castellane today - where nature, color, and calm meet.'
             },
             cta: 'Book now'
         },
@@ -925,7 +990,7 @@ const translations = {
             people: 'Number of People',
             date: 'Preferred Date',
             confirmBooking: 'Ask for details',
-            instructions: 'Please send your inquiry to info@4apero.com, add your name, email, number of people, and desired dates. And we will get back to you as soon as possible.',
+            instructions: 'Please send your inquiry to a.janka@yahoo.fr, add your name, email, number of people, and desired dates. And we will get back to you as soon as possible.',
             thankYou: 'Thank you'
         },
         aboutHostModal: {
@@ -943,6 +1008,9 @@ const translations = {
             aboutHosts: 'About Hosts',
             contactUs: 'Contact Us',
             rights: '© 2025 4Apero. All rights reserved.'
+        },
+        logistics: {
+            accommodationTransportationHtml: '<br><br><strong>Accommodation & Transportation</strong><br>Accommodation is not included in this experience.<br>Guests are free to book their preferred stay in Castellane.<br><br>• You will be picked up at Nice Airport upon arrival<br>• You will be picked up each morning directly from your accommodation in Castellane<br>• Transportation to all experiences is included<br>• You will be returned to Nice Airport or another agreed-upon location at the end of the experience<br><br>Everything is designed to ensure a seamless, comfortable, and stress-free journey.'
         }
     },
     fr: {
@@ -957,12 +1025,11 @@ const translations = {
             subtitle: 'Un trésor caché au cœur de la Provence',
             text1: 'Entre champs de lavande et eaux turquoise du Verdon, Castellane vous invite à ralentir, respirer et vous reconnecter à l’essentiel. Pendant quatre jours inoubliables et trois nuits réparatrices, vivez une expérience sensorielle qui mêle nature, art, bien-être et charme intemporel du Sud de la France.',
             text2: 'Réveillez-vous au parfum des herbes sauvages et au lointain écho des cloches de la chapelle Notre-Dame du Roc, perchée au-dessus du village. Flânez dans les ruelles pavées aux façades pastel, goûtez les meilleurs fromages et rosés de la région, et laissez la lumière dorée de Provence éveiller votre créativité et votre calme.',
-            text3: 'Nos séjours exclusifs allient confort et expériences locales authentiques — randonnées guidées, pique-niques au bord de l’eau, ateliers artisanaux et soirées apaisantes sous les étoiles. Que vous veniez pour créer, vous ressourcer, méditer ou simplement vous reposer, Castellane offre l’équilibre parfait entre aventure et sérénité.',
+            text3: 'Nos séjours exclusifs allient confort et expériences locales authentiques - randonnées guidées, pique-niques au bord de l’eau, ateliers artisanaux et soirées apaisantes sous les étoiles. Que vous veniez pour créer, vous ressourcer, méditer ou simplement vous reposer, Castellane offre l’équilibre parfait entre aventure et sérénité.',
             highlightsTitle: 'Temps forts',
             highlightsSection: {
                 title: '✨ Temps forts',
                 items: [
-                    'Hébergement de charme avec vue panoramique sur les montagnes',
                     'Cuisine provençale et vins locaux',
                     'Ateliers bien-être ou créatifs personnalisés',
                     'Visites de Grasse, capitale mondiale du parfum',
@@ -970,7 +1037,7 @@ const translations = {
                 ],
                 strong: '🌸 4 jours / 3 nuits pour se reconnecter et se régénérer',
                 em: 'Laissez la Provence vous rappeler comme la vie peut être douce.',
-                text: 'Réservez votre séjour à Castellane — là où la nature, la couleur et le calme se rencontrent.'
+                text: 'Réservez votre séjour à Castellane - là où la nature, la couleur et le calme se rencontrent.'
             },
             cta: 'Réserver'
         },
@@ -988,7 +1055,7 @@ const translations = {
             people: 'Nombre de personnes',
             date: 'Dates souhaitées',
             confirmBooking: 'Demander des détails',
-            instructions: 'Veuillez envoyer votre demande à info@4apero.com en indiquant votre nom, votre e-mail, le nombre de personnes et les dates souhaitées. Nous vous répondrons dès que possible.',
+            instructions: 'Veuillez envoyer votre demande à a.janka@yahoo.fr en indiquant votre nom, votre e-mail, le nombre de personnes et les dates souhaitées. Nous vous répondrons dès que possible.',
             thankYou: 'Merci'
         },
         aboutHostModal: {
@@ -1006,6 +1073,9 @@ const translations = {
             aboutHosts: 'À propos des hôtes',
             contactUs: 'Nous contacter',
             rights: '© 2025 4Apero. Tous droits réservés.'
+        },
+        logistics: {
+            accommodationTransportationHtml: '<br><br><strong>Hébergement & Transport</strong><br>L’hébergement n’est pas inclus dans cette expérience.<br>Les participants réservent librement leur séjour à Castellane.<br><br>• Accueil à l’aéroport de Nice à l’arrivée<br>• Chaque matin, prise en charge à votre hébergement à Castellane<br>• Transport inclus pour toutes les activités<br>• Retour à l’aéroport de Nice (ou autre lieu convenu) à la fin de l’expérience<br><br>Tout est conçu pour garantir un séjour fluide, confortable et sans stress.'
         }
     },
     lt: {
@@ -1038,7 +1108,7 @@ const translations = {
             people: 'Žmonių skaičius',
             date: 'Pageidaujama data',
             confirmBooking: 'Klausti',
-            instructions: 'Prašome siųsti užklausą į info@4apero.com, nurodykite savo vardą, el. paštą, žmonių skaičių ir pageidaujamas datas. Atsakysime kuo greičiau.',
+            instructions: 'Prašome siųsti užklausą į a.janka@yahoo.fr, nurodykite savo vardą, el. paštą, žmonių skaičių ir pageidaujamas datas. Atsakysime kuo greičiau.',
             thankYou: 'Ačiū'
         },
         aboutHostModal: {
@@ -1056,9 +1126,28 @@ const translations = {
             aboutHosts: 'Apie šeimininkus',
             contactUs: 'Susisiekite su mumis',
             rights: '© 2025 4Apero. Visos teisės saugomos.'
+        },
+        logistics: {
+            accommodationTransportationHtml: '<br><br><strong>Apgyvendinimas ir transportas</strong><br>Apgyvendinimas į šią patirtį neįtrauktas.<br>Svečiai patys užsisako norimą nakvynę Castellane.<br><br>• Pasitikimas Nicos oro uoste atvykus<br>• Kiekvieną rytą paėmimas iš jūsų apgyvendinimo vietos Castellane<br>• Transportas į visas veiklas įskaičiuotas<br>• Parvežimas į Nicos oro uostą (arba kitą sutartą vietą) patirties pabaigoje<br><br>Viskas suorganizuota taip, kad kelionė būtų sklandi, patogi ir be streso.'
         }
     }
 };
+
+function getAccommodationTransportationHtml() {
+    const t = translations[currentLanguage];
+    const html = t && t.logistics && t.logistics.accommodationTransportationHtml ? t.logistics.accommodationTransportationHtml : '';
+    if (!html) return '';
+
+    return html;
+}
+
+function hasAccommodationTransportationSection(description) {
+    if (!description) return false;
+
+    return description.includes('Accommodation & Transportation')
+        || description.includes('Hébergement & Transport')
+        || description.includes('Apgyvendinimas ir transportas');
+}
 
 function setLanguage(lang) {
     const nextLang = translations[lang] ? lang : 'en';
