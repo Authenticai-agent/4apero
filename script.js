@@ -353,7 +353,7 @@ const retreatsData = {
             location: "Castellane, Prancūzija",
             date: "4 dienos / 3 naktys",
             time: "Birželis - Liepa",
-            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Įskaičiuota: veiklos, maistas, transportas, gidavimas (be apgyvendinimo)</small>',
+            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Įskaičiuota: veiklos, maistas, transportas, gidas (be apgyvendinimo)</small>',
             images: uniqueImages(["./images/StockSnap_G1Z1H18HCQ.jpg", ...photosByNumber([54, 55, 56, 57, 60, 61, 62])]),
             image: "./images/StockSnap_G1Z1H18HCQ.jpg",
             highlights: [
@@ -371,7 +371,7 @@ const retreatsData = {
             location: "Castellane, Prancūzija",
             date: "4 dienos / 3 naktys",
             time: "",
-            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Įskaičiuota: veiklos, maistas, transportas, gidavimas (be apgyvendinimo)</small>',
+            price: '<strong style="color: var(--brand-primary); font-size: 1.3rem;">€600 asmeniui</strong><br><small style="color: #666;">Įskaičiuota: veiklos, maistas, transportas, gidas (be apgyvendinimo)</small>',
             images: uniqueImages(["./images/image05458.jpeg", ...photosByNumber([12, 15, 22, 26, 27, 29, 32, 33, 37, 38, 48, 49, 50, 76])]),
             image: "./images/image05458.jpeg",
             highlights: [
